@@ -1,0 +1,97 @@
+---
+title: "Basics of R"
+output: html_notebook
+---
+
+
+##Instructions for how to use an R Markdown Notebook
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file).
+
+
+##R Studio Basics
+1. How to write and execute commands:
+```{r}
+#Comments are always written with a pound sign preceding them in R. This tells R not to execute the writing as a command.
+#if you are in the grey box where you are reading this, this is where you can write and save commands. To execute the command, press the play button to the upper right if you are in an R Markdown Notebook. If you are in the white space of a regular file or a new script, place your cursor within the line you want to run and press the Run button above or the command and enter buttons for a mac and control enter for a windows machine. Another way is to write your command in the console below. Then just press enter to run the command. Example:
+?mean #run this code
+```
+
+2. How to change the working directory
+```{r}
+#When working with genetic data in R, it is common to have data stored on your computer that you would like to work with in R (e.g., text files). To tell R what data you would like to use, you need to tell R where to search in your computer. To do this, there are two options: 
+#1) Go to Session in the top menu and choose Set Working Directory, then Choose Directory. Navigate to where the files are, and pick the folder. 
+#2) Set the working directory using the command line with the following commands:
+getwd()#prints the working directory to your console; this tells you where R is currently searching on your computer
+setwd("insert_path_here") #this allows you to set the working directory. An example path would be "~/Documents/Teaching/Evolutionary Genetics/"
+```
+
+3. How to load a dataset  
+```{r}
+#loading a dataset into R requires that you are in the correct directory. See #2.
+read.table("exampletextfile.txt", header = TRUE, sep = "\t") #load an example text file from Canvas; results appear below. sep refers to the type of separator that delimits data in the file, which is a tab for this example file.
+
+#To save the data file to continue working with it in R Studio, you can assign it a name, like so:
+data <- read.table("exampletextfile.txt", header = TRUE, sep = "\t")
+#This creates a variable named "data". You can create variables that are saved to the R environment with the '<-'
+
+#To view the dataset, either click on it in the environment (upper right) or:
+View(data)
+
+```
+
+4. How to download packages (note, this code doesn't work unless you actually insert a real package name in the quotation marks)
+```{r}
+#To use R, many functions can be found in packages that people have created and shared for general use. To access these packages, 
+install.packages("name_of_package") #this command would install the package "name of package" to your R program. 
+library(name_of_package) #to actually use the package, you have to load it to your R library using this command. You only need to install once, but every time you reopen R you need to use library to call the packages you want to use.
+```
+
+```{r}
+#Try running this chunk to install a package!
+install.packages("ape")
+#you need to type y for yes and then enter to install
+library(ape)
+```
+
+
+5. Help functions
+```{r}
+#if you ever need help with a command or a package, simply put a "?" in front of the name of the command or package; example:
+?data
+#this can tell you all about the command or package, including what information is needed for the command to run, what it does, and often examples of how to use it.
+```
+
+#On your own:
+
+1. Can you successfully set your directory to open a file? Try to open the additional file I have included in Canvas (species.txt) and create a dataframe with the file. Name your new dataframe "Heliconius".
+```{r}
+
+```
+To make sure it downloaded correctly, open it by clicking it in the environment to the right.
+
+2. Can you successfully download the packages we need for the first computational activity? The packages are ape (should have been installed above) and pegas
+```{r}
+
+```
+
+3. When you want to load a package for use in your current R Studio session, what should you do? Do this for pegas.
+```{r}
+
+```
+
+4. Can you look up how to do things in a package? For example, can you figure out what the seg.sites command does in ape, and how to use it?
+```{r}
+
+```
+
+Once you have completed the above tasks, check your answers by downloading the Basics_of_R_Answers.Rmd from Canvas and opening the file in R Studio. If you have mastered these basics, you may move on to the Module 1 computational activities for sections 2.1 and 2.2.

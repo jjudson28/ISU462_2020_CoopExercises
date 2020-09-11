@@ -1,0 +1,3 @@
+Species	NumberGenotyped	Location
+Heliconius melpomene	154	central Panama
+Heliconius cydno	123	central Panama

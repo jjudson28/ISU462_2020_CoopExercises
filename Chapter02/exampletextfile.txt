@@ -1,0 +1,4 @@
+Number of Species	Location	Number of Families
+2	Antarctica	1
+430	Africa	14
+352	North America	34

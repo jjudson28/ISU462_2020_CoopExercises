@@ -1,0 +1,65 @@
+---
+title: "Chapter 3.0.1 Computational Work"
+output: html_notebook
+---
+
+###Preparation:
+1. Set your working directory: 
+```{r}
+
+```
+
+2. Install the required package hierfstat, and load hierfstat and adegenet (which should already be installed from your installation of pegas) into your library.
+```{r}
+install.packages("hierfstat")
+library(hierfstat) #load our new package
+library(adegenet) #load adegenet
+```
+
+
+#Analyzing Population Genetic Structure: F-statistics (p. 32-33 of Ch. 3)
+
+##First, let's load some data included in the adegenet package:
+```{r}
+data(nancycats) #remember, if you are provided a dataset from a file, you need to use the read.table command to read in the file! Today, we are using a dataset already in the package we are using.
+nancycats #type the name of the variable and run as a command to view the data
+```
+
+##In genetics and genomics, there are dozens of file formatting conventions, which makes it difficult to do multiple analyses on a single file format. Thus, an important skill to learn is how to search for conversion tools between file formats. Here, we will convert our genind variable nancycats to a hierfstat variable, so that it can be used by the hierfstat package:
+```{r}
+fstnancycats <- genind2hierfstat(nancycats) #convert a genind variable format (used by adegenet and pegas) to a hierfstat variable
+fstnancycats #get information on our newly formatted hierfstat variable
+```
+
+##Let's learn a bit about the individuals, loci, and alleles in the hierfstat dataset we just created (called fstnancycats):
+```{r}
+ind.count(fstnancycats) #number of individuals sampled per population and per locus (population is represented by the rows, and the columns of the table are the loci)
+```
+```{r}
+allele.count(fstnancycats) #Counts the number of copies of the different alleles at each locus and population (populations are the columns in this, loci are shown by the $locusname (ex:$fca8), and the alleles for the locus are listed by row)
+```
+```{r}
+allelic.richness(fstnancycats) #calculates average number of alleles per locus for each population in the dataset (populations are columns, loci are rows)
+```
+```{r}
+nb.alleles(fstnancycats) #number of different alleles for each population (loci are the rows, populations are the columns)
+```
+
+##By looking at the statistics above, you should notice that calculating values like F-statistics by hand would be very difficult and time-consuming, as there are many loci with more than two alleles. R packages can be a useful tool for calculating these statistics for us.
+
+##Calculating F-statistics:
+```{r}
+Fstats <- basic.stats(fstnancycats) #the basic.stats command creates a variable, which we are calling Fstats, that contains the F-statistics calculated with Nei's estimator of Fst (1987)
+Fstats #look at the table
+Fstats$overall #if you want to just call the overall results
+```
+###Important summary statistics:
+1. Ho = Observed heterozygosity averaged across all loci
+
+2. Fst = Sewall Wright's F-statistics were based on loci with two alleles. With the discovery of new markers, like allozymes and microsatellites, with many alleles per locus, new estimators were created by Nei, Weir and Cockerham, and others. The principles of interpretation, however, are still the same. Fst compares the expected heterozygosity in the subpopulation (S) to that expected in the total population (T) and ranges from 0 to 1 (Equation 3.3 in Coop 2020). As we have multiple subpopulation designations in our dataset, the equation is 3.5 which averages expected heterozygosity across subpopulations. 
+
+Fst=0.08 in this example. This suggests that only a small proportion of variance (8%) in allele frequencies in our sample can be explained by subpopulation labels. Another way of looking at Fst, there is a slight increase in homozygosity within subpopulations relative to the total population, as subpopulations are breeding with one another more often than with individuals from other subpopulations.
+
+Despite this number seeming small, in many species this would reflect a moderate amount of genetic differentiation among subpopulations.
+
+3. Fis = 1-Ho/He from equation 3.1. Fis is "the relative difference between observed and expected heterozygosity due to a deviation from random mating within the subpopulation", also known as the inbreeding coefficient between individual and subpopulation. Based on our value of Fis, there is some excess homozygosity observed in individuals relative to that expected in the subpopulation if random mating were occurring. This value can be negative, and the maximum value of Fis is 1, meaning that there are no heterozygotes in the population (all are homozygotes).

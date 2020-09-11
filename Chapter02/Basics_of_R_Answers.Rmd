@@ -1,0 +1,32 @@
+---
+title: "Basics of R Answers"
+output: html_notebook
+---
+
+#Answers to questions from Basics_of_R.Rmd
+
+1. Can you successfully set your directory to open a file? Try to open the additional file I have included in Canvas (species.txt) and create a dataframe with the file. Name your new dataframe "Heliconius".
+```{r}
+setwd("/Users/jessicajudson/Downloads/") #an example directory to set
+getwd() #prints your working directory (where you are in your computer)
+#the dataset we want to download is a text file (the ending of the filename is .txt), so we use the read.table command. Let's name the file "Heliconius". **IMPORTANT** if you name the object "data", R overwrites your old variable called "data". Make sure you don't overwrite your variables!
+Heliconius <- read.table("species.txt", header = TRUE, sep = "\t")
+```
+To make sure it downloaded correctly, open it by clicking it in the environment to the right.
+
+2. Can you successfully download the packages we need for the first computational activity? The packages are ape (should have been installed above) and pegas
+```{r}
+install.packages("ape")
+install.packages("pegas")
+```
+
+3. When you want to load a package for use in your current R Studio session, what should you do? Do this for pegas.
+```{r}
+library(pegas)
+```
+
+4. Can you look up how to do things in a package? For example, can you figure out what the seg.sites command does in ape, and how to use it?
+```{r}
+?seg.sites
+```
+

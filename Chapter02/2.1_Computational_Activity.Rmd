@@ -1,0 +1,103 @@
+---
+title: "Chapter 2.1 Computational Work"
+output: html_notebook
+---
+
+###Preparation:
+1. While you do not need to set a working directory for this activity, as there are no text files or other data files needed, do you remember how to set your working directory? Do so here! 
+```{r}
+
+```
+
+2. Install required packages, ape and pegas, and load to your library. You shouldn't need to install them if you did last class, but you DO need to load them into your library.
+```{r}
+#install.packages("ape") #Analyses of Phylogenetics and Evolution
+library(ape)
+#install.packages("pegas")
+library(pegas)
+```
+
+
+#Chapter 2.1: Allele Frequencies
+```{r}
+?woodmouse #get info about the dataset
+data(woodmouse) #load the data into your environment
+woodmouse #executing the name of a variable will give you information about the variable
+```
+```{r}
+as.alignment(woodmouse) #view the sequences themselves
+```
+```{r}
+#looking at genetic variability:
+?seg.sites
+seg.sites(woodmouse) #gives the positions of segregating sites
+```
+```{r}
+length(seg.sites(woodmouse)) #counts the number of segregating sites by calculating the number of items in the outputted list
+```
+```{r}
+?nuc.div
+nuc.div(woodmouse)
+```
+
+##2.1.2: Hardy-Weinberg Equilibrium
+### Before you begin this section, pause the video and work through Question 3 on p. 15 of your textbook by hand. Then continue here.
+```{r}
+#First, let's set up the variables to solve question 3 about the Kermode’s bears, "What are the expected frequencies of the three genotypes under HWE?"
+
+#You are given the following genotype counts in your text (from Ritland et al. 2001): AA=42 ; AG=24 ; GG=21
+
+#We can use these counts to get observed genotype frequencies. We will create variables by naming them (on the left of the equation) and assigning values to those variable names (on the right of the equation)
+total <- 42+24+21 #put total number of individuals genotyped as a variable
+AA <- 42/total
+AG <- 24/total
+GG <- 21/total
+```
+
+```{r}
+#Next, we can calculate our observed allele frequencies. Let's write equations in R that will calculate allele frequencies from the genotype frequencies above
+
+p <- AA+0.5*AG #From equation 2.1 of your text
+q <- GG+0.5*AG
+```
+
+```{r}
+#Now we have everything we need to answer question 3 about expected genotype frequencies. Using the expected Hardy Weinberg proportions on the top of p. 15 of your text, we see that:
+eAA <- p^2
+eAG <- 2*p*q
+eGG <-q^2
+eAA #if you type a variable's name and execute this line, it will print the value of that variable
+eAG
+eGG
+```
+#Based on the answers above, what are the expected genotype frequencies of the genotypes in the Kermode’s bear population? Do they match what you calculated by hand?
+
+#While this will give us our expected genotype frequencies, it does not tell us whether the observed genotype frequencies significantly differ from those expected under Hardy-Weinberg Equilibrium (HWE). One method that is used to test whether the genotypes differ from HWE is a chi-square test, which is a hypothesis test of whether the expected and observed frequencies of a variable are statistically different. Let's try a chi-square test with our Kermode’s bear data.
+```{r}
+#The chi-square will calculate differences between observed (obs) versus expected (exp) COUNTS with the equation: (obs-exp)^2 / exp 
+
+#Our observed counts are 42, 24, and 21, respectively (see p. 15 of text). How do we calculate expected counts?
+
+#Take the frequency expected (calculated above), and multiply by our total number of individuals genotyped
+
+cAAe <- eAA*total
+cAGe <- eAG*total
+cGGe <- eGG*total
+```
+
+```{r}
+#Now we can calculate deviations between observed and expected counts (obs-exp)^2 / exp:
+diffAA <- (42-cAAe)^2/cAAe
+diffAG <- (24-cAGe)^2/cAGe
+diffGG <- (21-cGGe)^2/cGGe
+#Sum the differences to get the total deviation from HWE expectations at this locus (the chi-square statistic)
+sum(diffAA, diffAG, diffGG)
+```
+
+```{r}
+#What is the significance of this value? To determine significance for a chi-square test, you use a chi-square table like the one here: https://people.richland.edu/james/lecture/m170/tbl-chi.html
+
+#The chi-square test's critical value for a p-value of <0.05 is 5.991 for 2 degrees of freedom. Our value is much higher, meaning that we can reject the null that our observed and expected counts of genotypes are the same. There is a significant deviation in counts, and thus, HWE is violated in these bears. 
+```
+
+#Take a moment to think about what it means for a locus to not be in HWE. What might the population be experiencing? Use your lecture and text to write up some thoughts (no need to turn this in, just to test your knowledge!)

@@ -1,0 +1,263 @@
+---
+title: "Chapter 4.1 Computational Work"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+#This activity covers the introductory section 4.1: Loss of heterozygosity due to drift
+
+###Preparation:
+1. Set your working directory: 
+```{r}
+
+```
+
+2. Install required package plotrix and load to your library. 
+```{r}
+install.packages("plotrix")
+library(plotrix)
+```
+
+3. Create a function called simulate.pop that simulates inheritance of alleles across generations like the figures seen in your chapter 4 text (Coop 2020)
+
+A few notes on important variables in this simulation:
+  1. N.vec sets up how many individuals (N) and how many generations you would like to simulate.
+  2. const.RS refers to whether the reproductive success is constant for all individuals (comes into play when we consider effective population size)
+  3. mutation refers to whether we allow mutations in the simulation, and
+  4. mut.rate refers to the rate at which we see mutations in each allele per generation. We assume that these alleles are neutral, and not subject to constraints.
+  5. for.class is a plotting setting
+  6. initial.state is the initial color setting of all alleles, and can be set as all black to start with, all different colors, two alleles colored differently, or a setting where one allele is a different color than the others, which are all the same color.
+  7. We won't need the other settings available for this function in this chapter.
+  
+Just focus on understanding the above settings. You will not need to understand how to build this function, only how to use it. If you were answering a question on your homework, you could create a new R Notebook, and copy and paste the chunk below and run it after you have loaded plotrix to your library. Then, you will have the function loaded into your environment, and whenever you want to use it, you would call the function simulate.pop with the settings you need to answer the question. I will demonstrate this below.
+```{r}
+simulate.pop<-function(N.vec=rep(5,30), const.RS=TRUE,  mutation= TRUE, mut.rate=  0.1, for.class= TRUE, initial.state="all.black",plot.freqs=FALSE,mult.pop=FALSE,pops=FALSE){
+   #  c(rep(10,5),rep(3,2),rep(10,5),rep(3,2),rep(10,5))  #
+	stopifnot(initial.state %in% c("all.black","all.diff","two.alleles","single.mut") )
+
+	if(plot.freqs){ layout(c(1,2)); par(mar=c(1,2,0,1))}
+	if(for.class){
+		line.lwd<-1
+		line.col<-"black"
+		mut.line.lwd<-1
+		mut.line.col<-"black"
+	
+	}else{
+		line.lwd<-0.5
+		line.col<-"grey"
+		mut.line.lwd<-1
+		mut.line.col<-"grey"
+	}
+
+	num.gens<- length(N.vec)-1	
+
+	if(!mult.pop){
+		ind.pop.par<-matrix(1,nrow=max(N.vec),ncol=num.gens+1)
+		ind.pop<-matrix(1,nrow=max(N.vec),ncol=num.gens+1)
+	}else{
+			ind.pop.par<-pops[["ind.pop.par"]]
+			ind.pop<-pops[["ind.pop"]]
+	}
+	
+	num.gens<- length(N.vec)-1
+	offset<-0.1
+	plot(c(1,num.gens),c(0.5,max(N.vec))+c(-offset,offset),type="n",axes=FALSE,xlab="",ylab="")
+	mtext(side=1,line=0,"Generations")
+	 text(1,0.5,"Past")
+	 text(num.gens-1,0.5,"Present")
+	 
+	 track.cols<- list()
+	N <-N.vec[1]
+	 if(initial.state=="all.black") my.cols<-rep("black",2*N)  #sample(rainbow(2*N))
+	 if(initial.state=="all.diff") my.cols<-sample(rainbow(2*N))
+	 if(initial.state=="two.alleles")  my.cols<-  rep(c("blue","red"),N)
+	 if(initial.state=="single.mut")  my.cols<-  c("red",rep("blue",2*N-1))
+	 stopifnot((2*N)==length(my.cols))
+	
+	 track.cols[[1]]<-my.cols
+	points(rep(1,N),1:N+offset, pch=19,cex=1.3,col=my.cols[(1:N)*2])
+	 points(rep(1,N),1:N-offset, pch=19,cex=1.3,col=my.cols[(1:N)*2-1])
+	
+	for(i in 1:num.gens){
+			
+		N.new<-N.vec[i+1]
+		N.old<-N.vec[i]
+		points(rep(i,N.old),1:N.old+offset, pch=19,cex=1.3,col=my.cols[(1:N.old)*2])
+		points(rep(i,N.old),1:N.old-offset, pch=19,cex=1.3,col=my.cols[(1:N.old)*2-1])
+
+		 new.cols<-rep("black",2*N.new)
+		
+		if(const.RS){ 
+			repro.success<-rep(1/N.old,N.old)
+		}else{
+			repro.success<-sample(c(rep(0.5/(N.old),N.old-2),c(0.25,0.25)),replace=FALSE)
+			}
+	
+		 for(ind in 1:N.new){
+
+				this.pop.par <- ind.pop.par[ind,i+1]
+				available.pars <- (1:N.old)[which(ind.pop[1:N.old,i] == this.pop.par)]
+				par<-sample(available.pars,2,replace=FALSE,prob=repro.success[which(ind.pop[1:N.old,i] == this.pop.par)])
+		
+				which.allele.1<-sample(c(-1,1),1)
+				if(i != num.gens){ lines(c(i,i+1), c(par[1]+which.allele.1*offset,ind-offset),col=line.col,lwd=line.lwd)}
+				new.cols[2*ind-1]<- my.cols[2*par[1] +ifelse(which.allele.1==1,0,-1)]
+		
+				which.allele.2<-sample(c(-1,1),1)
+				if(i != num.gens){ lines(c(i,i+1), c(par[2]+which.allele.2*offset,ind+offset),col=line.col,lwd=line.lwd)}
+				new.cols[2*ind]<- my.cols[2*par[2] +ifelse(which.allele.2==1,0,-1)]
+		
+				if(mutation){
+					if(runif(1)<mut.rate){ 
+							new.cols[2*ind-1]<- sample(rainbow(4*N),1)
+							if(i != num.gens){ lines(c(i,i+1), c(par[1]+which.allele.1*offset,ind-offset),col=mut.line.col,lwd=mut.line.lwd)}
+		
+						}
+					if(runif(1)<mut.rate){ 
+						new.cols[2*ind]<- sample(rainbow(4*N),1)
+						if(i != num.gens){ lines(c(i,i+1), c(par[2]+which.allele.2*offset,ind+offset),col=mut.line.col,lwd=mut.line.lwd)}
+				} 
+				
+			}
+		}	
+		##redraw points to cover lines		 
+		points(rep(i,N.old),1:N.old+offset, pch=19,cex=1.3,col=my.cols[(1:N.old)*2])
+		points(rep(i,N.old),1:N.old-offset, pch=19,cex=1.3,col=my.cols[(1:N.old)*2-1])
+
+		 my.cols<-new.cols
+		 track.cols[[i+1]]<-my.cols
+		if(!const.RS) sapply(which(repro.success>1/N.old), function(ind){ draw.circle(x=i,y=ind,radius=0.2,nv=100,border=NULL,col=NA,lty=1,lwd=1)})
+	}
+#	recover()
+	if(plot.freqs){
+		plot(c(1,num.gens),c(0,1),type="n",axes=FALSE,xlab="",ylab="")
+		all.my.cols<-unique(unlist(track.cols))
+		
+		if(!mult.pop){ 
+			my.col.freqs<-sapply(track.cols,function(my.gen){sapply(all.my.cols,function(my.col){sum(my.gen==my.col)})})
+
+			sapply(all.my.cols,function(col.name){lines(my.col.freqs[col.name,]/(2*N.vec),col=col.name,lwd=2)});
+			}else{
+			
+			for(pop in 1:max(ind.pop)){
+				my.col.freqs<-sapply(1:num.gens, function(gen){
+	#			recover()
+					my.gen<-track.cols[[gen]]
+					if(all(ind.pop.par[ind.pop[,gen]==pop,gen]==0)) return(rep(NA,length(all.my.cols)))  #if pop doesn't exist in this gen.
+				
+					these.inds<-which(ind.pop[,gen]==pop)
+					my.gen<-c(my.gen[these.inds*2],my.gen[these.inds*2-1])
+					sapply(all.my.cols,function(my.col){
+						sum(my.gen==my.col)
+					})})
+				rownames(my.col.freqs)<-		all.my.cols
+				sapply(all.my.cols[-length(all.my.cols)],function(col.name){lines(my.col.freqs[col.name,]/(2*5),col=col.name,lwd=2,lty=pop)});	
+			}
+			}
+		
+		axis(2)
+	}
+}
+
+```
+
+#Make sure to run the following simulations multiple times to get an idea of patterns before making your conclusions.
+
+
+###Let's simulate genetic drift with no mutation:
+```{r}
+	simulate.pop(N.vec=rep(5,15), const.RS=TRUE,  mutation= FALSE, for.class= TRUE, initial.state="all.diff") #runs the simulation function created above, with no mutations and an initial allele color setting of "all.diff" (all different colors; see figure 4.2). There are 5 individuals tracked over 15 generations (5,15)
+
+#every time you run this, you should get a different result of final alleles, as the simulations are a random process, just like genetic drift! However, importantly, the variation in alleles within the population (heterozygosity) decreases with time across simulations.
+```
+
+#You should see that in the absence of new mutations, genetic drift will remove neutral genetic diversity from the population over time. (p. 51, Coop 2020). 
+
+#If you want to run multiple simulations and compare them simultaneously, you can put the same code into a chunk multiple times:
+```{r}
+simulate.pop(N.vec=rep(5,15), const.RS=TRUE,  mutation= FALSE, for.class= TRUE, initial.state="all.diff")
+simulate.pop(N.vec=rep(5,15), const.RS=TRUE,  mutation= FALSE, for.class= TRUE, initial.state="all.diff")
+simulate.pop(N.vec=rep(5,15), const.RS=TRUE,  mutation= FALSE, for.class= TRUE, initial.state="all.diff")
+```
+
+#To save a plot you have created, you can either right-click the thumbnail image and select Save As, or you can run the code in the console below and it will show up in the plot panel to the right. You can then export as image or as pdf. If asked in your homework, insert the pictures into your word document to answer the questions.
+
+
+Important concept #1: Heterozygosity decays exponentially at a rate of 1/(2N), where N is the population size. Thus, population size is directly linked to the rate at which heterozygosity is lost in our population.
+
+##Let's test this concept. What happens to heterozygosity if you change the number of individuals in the population?
+```{r}
+simulate.pop(N.vec=rep(10,15), const.RS=TRUE,  mutation= FALSE, for.class= TRUE, initial.state="all.diff")
+simulate.pop(N.vec=rep(10,15), const.RS=TRUE,  mutation= FALSE, for.class= TRUE, initial.state="all.diff")
+simulate.pop(N.vec=rep(10,15), const.RS=TRUE,  mutation= FALSE, for.class= TRUE, initial.state="all.diff")
+#On average, heterozygosity is lost more slowly in larger populations than smaller populations. -see black-footed ferret example
+```
+
+Important Concept #2: Despite the loss of variation over time, we can still expect that on average across all simulations, the allele frequency of p in a two-allele model does not change, but on average heterozygosity is lost over time.
+
+#To demonstrate this concept, let's simulate the change in allele frequency and the loss of heterozygosity over time in a population (See Fig. 4.3)
+
+Details about this simulation function:
+  1. wf is the name of the function
+  2. N is the number of diploid individuals in the population
+  3. ngens is the number of generations
+  4. p0 is the initial allele frequency of the p allele.
+  5. mu is the mutation rate, which is set at 0
+```{r}
+wf <- function(N, ngens, p0, mu=0) {
+ N <- 2*N  # diploid adjustment
+ # initialize an empty matrix
+ gns <- matrix(NA, nrow=ngens, ncol=N)
+ # initialize the first generation, with two alleles, one at freq
+ # p0
+ alleles <- 2
+ gns[1, ] <- sample(1:2, N, replace=TRUE, prob=c(p0, 1-p0))
+ for (i in 2:ngens) {
+  gns[i, ] <- gns[i-1, sample(1:N, N, replace=TRUE)]
+  if (mu > 0) {
+    # add mutations to this generation
+    muts <- rbinom(N, 1, prob=mu)
+    new_alleles <- sum(muts)
+    alleles <- alleles + new_alleles
+    if (new_alleles) {
+      # there are mutations, add to population.
+      gns[i, ] <- ifelse(muts, sample(alleles), gns[i, ])
+    }
+  }
+ }
+ gns
+}
+
+#create simulation to track change in overall heterozygosity over time
+het <- function(x) {
+ tbl <- table(x)
+ 1 - sum((tbl/sum(tbl))^2)
+}
+
+#simulation settings:
+p0<-0.3 #if you wanted to adjust initial allele frequency of p
+N<-50 #change to adjust number of individuals in the simulation
+ngens<-150 #changes the number of generations simulated
+my.sims<-replicate(40,wf(N=N, ngens=ngens,p0=p0))
+
+#set up plotting:
+layout(t(1:2))
+plot(type="n",y=c(0,1),x=c(0,ngens),xlab="Time, generations",ylab="Frequency, p", cex.lab=1.4,cex.axis=1.2)
+apply(my.sims,3,function(sim){
+	lines(c(p0,apply(sim==1,1,mean)),col=adjustcolor("black",0.3))
+	})
+lines(c(p0,apply(my.sims[,,1]==1,1,mean)),col="red",lwd=2)
+ lines(rowMeans(apply(my.sims,3,function(sim){c(p0,apply(sim==1,1,mean))})),col="blue",lwd=2)
+abline(h=p0,col="blue",lwd=2,lty=3)
+legend(x="topleft",legend=c("1 sim.","Mean sim.","Expectation"),col=c("red","blue","blue"),lty=c(1,1,2),bg="white", cex = 0.5)
+plot(type="n",y=c(0,0.5),x=c(0,ngens),xlab="Time, generations",ylab="Heterozygosity", cex.lab=1.4,cex.axis=1.2)
+apply(my.sims,3,function(sim){
+	lines(c(2*p0*(1-p0),apply(sim,1,het)),col=adjustcolor("black",0.3))
+	})
+lines(c(2*p0*(1-p0),apply(my.sims[,,1],1,het)),col="red",lwd=2)
+ lines(rowMeans(apply(my.sims,3,function(sim){apply(sim,1,het)})),col="blue",lwd=2)
+ lines(0:ngens,2*p0*(1-p0)*(1-1/(2*N))^(0:ngens),col="blue",lty=3,lwd=2)
+```
+
+On your own, adjust the number of individuals in the population by adjusting the N variable. Choose a number that is very different from the original population size of 50. What happens to the rate of decline in heterozygosity?

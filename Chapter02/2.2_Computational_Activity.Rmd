@@ -1,0 +1,54 @@
+---
+title: "Chapter 2.2 Computational Work"
+output: html_notebook
+---
+
+#2.2: Inbreeding
+
+##Let's go back to the bear example in Question 3, p. 15. We can also use R to estimate F, the inbreeding coefficient, by comparing our observed heterozygosity to that expected under Hardy-Weinberg Equilibrium (HWE).
+```{r}
+#We can use equation 2.13 on p. 27 of your text to calculate an estimate of the inbreeding coefficient. The equation calculates the "deviation due to inbreeding of the observed heterozygosity from the one expected under random mating" (Coop 2020).
+
+#Equation 2.13: F=1-(Het_obs/Het_exp)
+```
+
+#Set up for Equation 2.13: Calculate observed heterozygosity (Het_obs)
+```{r}
+#Calculate observed genotype frequencies (from 2.1_Computational_Activity.Rmd)
+total <- 42+24+21 #put total number of individuals genotyped as a variable
+AA <- 42/total
+AG <- 24/total
+GG <- 21/total
+
+Het_obs <- AG #observed heterozygosity is the frequency of heterozygotes. We have assigned observed heterozygosity as the variable AG, which is the count of heterozygotes divided by the total sampled
+```
+
+#Set up for Equation 2.13: Calculate expected heterozygosity (Het_exp) under HWE
+```{r}
+#calculate allele frequencies
+p <- AA+0.5*AG #From equation 2.1 of your text
+q <- GG+0.5*AG
+
+#Calculate expected genotype frequencies under HWE
+eAA <- p^2
+eAG <- 2*p*q
+eGG <-q^2
+
+Het_exp <- eAG
+```
+
+#Solve for F, the inbreeding coefficient:
+```{r}
+1-(Het_obs/Het_exp)
+```
+
+#What does this value mean? Think about what F would be if both observed and expected heterozygosity are the same. You can even do the math in R Studio here and calculate what F would be if the observed and expected heterozygosities are the same. Example:
+```{r}
+#1-(Het_obs/Het_exp)
+1-(0.42/0.42)
+1-(0/0.42)
+```
+If F is "the deviation due to inbreeding of the observed heterozygosity from the one expected under random mating" (Coop 2020), what does an F of zero mean? There is no decrease in observed heterozygosity, and thus no increase in homozygosity due to inbreeding. What would an F of 1 mean? Based on this information, how would you interpret the value of F for the Kermode's bear population? Is there deviation due to inbreeding?
+
+
+

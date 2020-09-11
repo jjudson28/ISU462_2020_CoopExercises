@@ -1,0 +1,75 @@
+---
+title: "Chapter 3.0.4 Computational Work"
+output: html_notebook
+---
+
+###Preparation:
+1. Set your working directory: 
+```{r}
+
+```
+
+2. Install the required package BiocManager, which is a package manager for genetic and genomic R packages, and SNPRelate, a package that runs Principal Components Analysis (PCA) on genetic data. Load SNPRelate into your library.
+```{r}
+install.packages("BiocManager")
+```
+```{r}
+#BiocManager::install() #this line will update any BiocManager packages you have to the current version
+BiocManager::install(c("SNPRelate"))
+```
+```{r}
+library(SNPRelate)
+```
+
+#Analyzing Population Genetic Structure: Principal Components Analysis (PCA)
+
+When we work with genetic data, often many of the loci we use are uninformative for distinguishing populations/subpopulations/sampling sites from one another (i.e. the allele frequencies are the same for the two populations). PCA is a great way to reduce the dimensionality of the data from lots of loci to just a few really important ones that explain most of the variation among individuals.
+
+##Using example data from the SNPRelate package:
+```{r}
+snpgdsSummary(snpgdsExampleFileName()) #example data that comes with the package; from the hapmap project. (https://www.genome.gov/10001688/international-hapmap-project)
+genofile <- snpgdsOpen(snpgdsExampleFileName()) #save as a variable called genofile using the package's snpgdsOpen command (which is performing a similar function to the data command from 3.0.1 computational)
+```
+
+
+##Get subpopulation info and assign to variable pop_code so that we can compare the subpopulations:
+```{r}
+pop_code <- read.gdsn(index.gdsn(genofile, path="sample.annot/pop.group")) #note that you can nest commands, like shown here. This code is very specific to this package, so don't get too caught up if you don't understand what this is doing! Short answer is we are saving information about the population designations of the individuals into a variable called pop_code
+```
+
+##Run a PCA:
+```{r}
+pca <- snpgdsPCA(genofile) #snpgdsPCA command will run a principal components analysis.
+#let's look at the pca variable we have created:
+pca
+```
+```{r}
+#Remember that for variables that are not dataframes, we can index them using the $ and the name of the variable (ex: $eigenvect)
+head(pca$eigenvect) #head command takes the first six lines of the table output
+```
+
+
+##Let's visualize the results, similar to Figure 3.5 of your text:
+```{r}
+#reminder: Eigenvectors are axes of variation in the data, with the first eigenvector representing the axis of largest genotype variance in the data.
+
+#create a table, called tab, so we can easily plot results:
+tab <- data.frame(pop = factor(pop_code), #the factor command is a way of grouping similar labels together so R treats them as one group
+                  EV1 = pca$eigenvect[,1],# the first eigenvector
+                  EV2 = pca$eigenvect[,2],# the second eigenvector
+                  stringsAsFactors = FALSE)
+head(tab) #looks at the first 6 entries of a dataframe
+#you should see we have created a table which contains the scores on the first two principal components (eigenvectors) for each of the 279 genotyped humans, and we have labeled each individual by population.
+```
+##Plotting results:
+```{r}
+?plot
+plot(tab$EV1, tab$EV2, col=as.integer(tab$pop), xlab="Eigenvector 1", ylab="Eigenvector 2")
+legend("top", legend=levels(tab$pop), pch="o", col=1:nlevels(tab$pop))
+```
+
+##To give some context to these population labels, 
+CEU = Utah residents with Northern and Western European ancestry from the CEPH collection
+HCB = Han Chinese in Beijing, China
+JPT = Japanese in Tokyo, Japan
+YRI = Yoruba in Ibadan, Nigeria
