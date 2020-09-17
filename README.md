@@ -37,7 +37,7 @@ Chapter06
 |->   6_Computational_Activity.Rmd   
 ```
 
-###FILE LIST 
+**FILE LIST**
 
 
 1. `Chapter02`: Folder containing introductory R materials and Chapter 2 ("Allele and Genotype Frequencies") exercises for Population and Quantitative Genetics text (Coop 2020)  
