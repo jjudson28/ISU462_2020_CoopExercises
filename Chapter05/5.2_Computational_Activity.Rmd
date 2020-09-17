@@ -1,0 +1,47 @@
+---
+title: "Chapter 5.2: The Population Genetics of Divergence and Molecular Substitution"
+output: html_notebook
+---
+
+#Chapter 5.2: Tests of Molecular Evolution
+
+###Preparation:
+1. Set your working directory: 
+```{r}
+#make sure you remember how to do this, you will need to do it for your homework
+```
+
+2. Load ape to your library. 
+```{r}
+library(ape)
+```
+
+#We are now going to estimate dn/ds of the woodmouse dataset from the Chapter 2.1 Computational Activity.
+
+#Remember, dn = the number of nonsynonymous substitutions in a sequence, divided by the total number of sites where a nonsynonymous substitution is possible. ds=the number of synonymous substitutions in a sequence, divided by the total number of sites where a synonymous substitution is possible.
+
+```{r}
+data(woodmouse) #this reads in data from a package. For your homework, you will have to read in data from a file!
+woodmouse #remember that typing the name of a variable will give you information about that variable
+```
+
+#To calculate dn/ds, we need to know a little about the gene sequenced. If you use the help page for the woodmouse dataset, you will see that these data are from the cytochrome b gene, which is a mitochondrial gene. This is important to know, because mutation rates in mitochondrial genes are typically much higher than nuclear DNA, particularly in vertebrates. We will specify that this gene is mitochondrial in our command.
+```{r}
+#the command to estimate dn/ds, from ape, is dnds. It requires a DNAbin object (like you created for homework #1). First call the name of your DNAbin object, then code=2 to specify a mitochondrial gene, then the codonstart option refers to the base to start the translation into amino acids, and finally quiet is set to True, to indicate that we don't want a progress bar as the command is running:
+dnds(woodmouse, code=2, codonstart = 1, quiet = T)
+```
+#Your result is a table comparing each individual sequence to every other sequence. You may notice that the first row is shifted, and the table isn't very easy to read. We can convert our results to a matrix for easier viewing:
+```{r}
+woodmousednds <- as.matrix(dnds(woodmouse, code=2, codonstart = 1, quiet = T))
+```
+
+#You can click on the resulting matrix in your environment to view it like you would a dataframe.
+
+#Some observations:
+
+1. dn/ds in all comparisons is < 1. This suggests at least some level of constraint on mutations (substitutions) at nonsynonymous sites. Our conclusion is consistent with the claim from your text that nonsynonymous substitutions are more likely to be deleterious and removed from the population, leaving more neutral synonymous substitutions in greater abundance in the sequences.
+
+2. dn/ds in many of these comparisons is actually pretty high by comparison with other mammals (final column of table below). I have put this table in canvas if you want to view it on your own computer, and if you want to view it in the R notebook like I am doing, change the location below to match where you have downloaded the picture. If you do not do this, you may get an error saying the file is not found in the resource path. This may cause issues saving the document, so you can delete the line below if you do not want to view the table in the document.
+
+![](/Users/jessicajudson/Desktop/dndscytb.png)
+3. Based on the higher scores for dn/ds comparisons in the woodmouse dataset, what might you say about how the cytochrome b gene is evolving? Is cytochrome b highly constrained, more neutrally evolving (like a pseudogene), or under positive selection?

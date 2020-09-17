@@ -1,0 +1,240 @@
+---
+title: "Chapter 5.1: The Population Genetics of Divergence and Molecular Substitution"
+output: html_notebook
+---
+
+#Chapter 5.1: The neutral substitution process
+
+###Preparation:
+1. Set your working directory: 
+```{r}
+
+```
+
+2. Load plotrix to your library, and install and load reshape2 to your library if you do not already have it.
+```{r}
+#install.packages("plotrix")
+library(plotrix)
+install.packages("reshape2")
+library(reshape2)
+install.packages("ggplot2")
+library(ggplot2)
+```
+
+3. Reload the simulate.pop function into your R functions for use:
+```{r}
+#Reminders: const.RS refers to whether the reproductive success is constant for all individuals; mutation refers to whether mutations are allowed in the simulation or not; mut.rate is the mutation rate for an allele, for.class is a plotting setting. The initial state refers to the color setting of the alleles in the initial sample.
+
+simulate.pop<-function(N.vec=rep(5,30), const.RS=TRUE,  mutation= TRUE, mut.rate=  0.1, for.class= TRUE, initial.state="all.black",plot.freqs=FALSE,mult.pop=FALSE,pops=FALSE){
+   #  c(rep(10,5),rep(3,2),rep(10,5),rep(3,2),rep(10,5))  #
+	stopifnot(initial.state %in% c("all.black","all.diff","two.alleles","single.mut") )
+
+	if(plot.freqs){ layout(c(1,2)); par(mar=c(1,2,0,1))}
+	if(for.class){
+		line.lwd<-1
+		line.col<-"black"
+		mut.line.lwd<-1
+		mut.line.col<-"black"
+	
+	}else{
+		line.lwd<-0.5
+		line.col<-"grey"
+		mut.line.lwd<-1
+		mut.line.col<-"grey"
+	}
+
+	num.gens<- length(N.vec)-1	
+
+	if(!mult.pop){
+		ind.pop.par<-matrix(1,nrow=max(N.vec),ncol=num.gens+1)
+		ind.pop<-matrix(1,nrow=max(N.vec),ncol=num.gens+1)
+	}else{
+			ind.pop.par<-pops[["ind.pop.par"]]
+			ind.pop<-pops[["ind.pop"]]
+	}
+	
+	num.gens<- length(N.vec)-1
+	offset<-0.1
+	plot(c(1,num.gens),c(0.5,max(N.vec))+c(-offset,offset),type="n",axes=FALSE,xlab="",ylab="")
+	mtext(side=1,line=0,"Generations")
+	 text(1,0.5,"Past")
+	 text(num.gens-1,0.5,"Present")
+	 
+	 track.cols<- list()
+	N <-N.vec[1]
+	 if(initial.state=="all.black") my.cols<-rep("black",2*N)  #sample(rainbow(2*N))
+	 if(initial.state=="all.diff") my.cols<-sample(rainbow(2*N))
+	 if(initial.state=="two.alleles")  my.cols<-  rep(c("blue","red"),N)
+	 if(initial.state=="single.mut")  my.cols<-  c("red",rep("blue",2*N-1))
+	 stopifnot((2*N)==length(my.cols))
+	
+	 track.cols[[1]]<-my.cols
+	points(rep(1,N),1:N+offset, pch=19,cex=1.3,col=my.cols[(1:N)*2])
+	 points(rep(1,N),1:N-offset, pch=19,cex=1.3,col=my.cols[(1:N)*2-1])
+	
+	for(i in 1:num.gens){
+			
+		N.new<-N.vec[i+1]
+		N.old<-N.vec[i]
+		points(rep(i,N.old),1:N.old+offset, pch=19,cex=1.3,col=my.cols[(1:N.old)*2])
+		points(rep(i,N.old),1:N.old-offset, pch=19,cex=1.3,col=my.cols[(1:N.old)*2-1])
+
+		 new.cols<-rep("black",2*N.new)
+		
+		if(const.RS){ 
+			repro.success<-rep(1/N.old,N.old)
+		}else{
+			repro.success<-sample(c(rep(0.5/(N.old),N.old-2),c(0.25,0.25)),replace=FALSE)
+			}
+	
+		 for(ind in 1:N.new){
+
+				this.pop.par <- ind.pop.par[ind,i+1]
+				available.pars <- (1:N.old)[which(ind.pop[1:N.old,i] == this.pop.par)]
+				par<-sample(available.pars,2,replace=FALSE,prob=repro.success[which(ind.pop[1:N.old,i] == this.pop.par)])
+		
+				which.allele.1<-sample(c(-1,1),1)
+				if(i != num.gens){ lines(c(i,i+1), c(par[1]+which.allele.1*offset,ind-offset),col=line.col,lwd=line.lwd)}
+				new.cols[2*ind-1]<- my.cols[2*par[1] +ifelse(which.allele.1==1,0,-1)]
+		
+				which.allele.2<-sample(c(-1,1),1)
+				if(i != num.gens){ lines(c(i,i+1), c(par[2]+which.allele.2*offset,ind+offset),col=line.col,lwd=line.lwd)}
+				new.cols[2*ind]<- my.cols[2*par[2] +ifelse(which.allele.2==1,0,-1)]
+		
+				if(mutation){
+					if(runif(1)<mut.rate){ 
+							new.cols[2*ind-1]<- sample(rainbow(4*N),1)
+							if(i != num.gens){ lines(c(i,i+1), c(par[1]+which.allele.1*offset,ind-offset),col=mut.line.col,lwd=mut.line.lwd)}
+		
+						}
+					if(runif(1)<mut.rate){ 
+						new.cols[2*ind]<- sample(rainbow(4*N),1)
+						if(i != num.gens){ lines(c(i,i+1), c(par[2]+which.allele.2*offset,ind+offset),col=mut.line.col,lwd=mut.line.lwd)}
+				} 
+				
+			}
+		}	
+		##redraw points to cover lines		 
+		points(rep(i,N.old),1:N.old+offset, pch=19,cex=1.3,col=my.cols[(1:N.old)*2])
+		points(rep(i,N.old),1:N.old-offset, pch=19,cex=1.3,col=my.cols[(1:N.old)*2-1])
+
+		 my.cols<-new.cols
+		 track.cols[[i+1]]<-my.cols
+		if(!const.RS) sapply(which(repro.success>1/N.old), function(ind){ draw.circle(x=i,y=ind,radius=0.2,nv=100,border=NULL,col=NA,lty=1,lwd=1)})
+	}
+#	recover()
+	if(plot.freqs){
+		plot(c(1,num.gens),c(0,1),type="n",axes=FALSE,xlab="",ylab="")
+		all.my.cols<-unique(unlist(track.cols))
+		
+		if(!mult.pop){ 
+			my.col.freqs<-sapply(track.cols,function(my.gen){sapply(all.my.cols,function(my.col){sum(my.gen==my.col)})})
+
+			sapply(all.my.cols,function(col.name){lines(my.col.freqs[col.name,]/(2*N.vec),col=col.name,lwd=2)});
+			}else{
+			
+			for(pop in 1:max(ind.pop)){
+				my.col.freqs<-sapply(1:num.gens, function(gen){
+	#			recover()
+					my.gen<-track.cols[[gen]]
+					if(all(ind.pop.par[ind.pop[,gen]==pop,gen]==0)) return(rep(NA,length(all.my.cols)))  #if pop doesn't exist in this gen.
+				
+					these.inds<-which(ind.pop[,gen]==pop)
+					my.gen<-c(my.gen[these.inds*2],my.gen[these.inds*2-1])
+					sapply(all.my.cols,function(my.col){
+						sum(my.gen==my.col)
+					})})
+				rownames(my.col.freqs)<-		all.my.cols
+				sapply(all.my.cols[-length(all.my.cols)],function(col.name){lines(my.col.freqs[col.name,]/(2*5),col=col.name,lwd=2,lty=pop)});	
+			}
+			}
+		
+		axis(2)
+	}
+}
+```
+
+#Figure 5.2: Probability of fixation of a neutral allele
+
+#Eventually, neutral alleles will either be lost or fixed due to drift (with no other factors acting on alleles). The probability that a single neutral allele is eventually fixed is 1/2N.
+```{r}
+simulate.pop(N.vec=rep(5,15), const.RS=TRUE,  mutation= FALSE, for.class= TRUE, initial.state="all.diff")
+```
+
+#Now let's look at allele frequencies over time, and you will see that all alleles are eventually either fixed or lost due to genetic drift.
+```{r}
+#Different simulation (adapted from http://statisticalrecipes.blogspot.com/2012/02/simulating-genetic-drift.html)
+
+# Set up parameters
+N = 10 # number of diploid individuals (population size)
+N.chrom = 2*N # number of chromosomes (2 for each diploid individual)
+p = .5; q = 1-p #beginning allele frequencies
+N.gen = 100 # number of generations
+N.sim = 10 # number of simulations
+
+#Simulation
+X = array(0, dim=c(N.gen,N.sim)) #creating just a blank table with the correct number of columns (simulations) and rows (generations)
+X[1,] = rep(N.chrom*p,N.sim) # initialize proportion of p alleles in FIRST generation (multiply number of chromosomes by the allele frequency p)
+for(j in 1:N.sim){
+  for(i in 2:N.gen){
+    X[i,j] = rbinom(1,N.chrom,prob=X[i-1,j]/N.chrom)
+    }  
+  }
+X = data.frame(X/N.chrom)
+
+#using a binomial sampling method (success or failure, or whether you sample allele p or not), sample for each individual in each generation (N.chrom contains information about how many individuals there are). The 'prob=' contains information about the starting allele frequency (the frequency of p in the previous generation)
+
+# Reshape data and plot the simulations; This plots only frequency of p allele, but you can use the equation 1-p to figure out q at any point in the simulation.
+sim_data <- melt(X) #reformats table for plotting
+ggplot(sim_data, aes(x = rep(c(1:100), N.sim), y = value, colour = variable)) + geom_line() + xlab("Generation") + ylab("Allele Frequency") + ylim(0,1) + labs(colour = "Simulations")
+```
+
+#Convince yourself that the following statement is true by modifying initial allele frequencies:
+"the probability that a neutral allele is eventually fixed is simply given by its frequency (p) in the population" -Graham Coop
+
+```{r}
+# Set up parameters
+N = 10 # number of diploid individuals (population size)
+N.chrom = 2*N # number of chromosomes (2 for each diploid individual)
+p = .5; q = 1-p #beginning allele frequencies
+N.gen = 100 # number of generations
+N.sim = 10 # number of simulations
+
+#Simulation
+X = array(0, dim=c(N.gen,N.sim)) #creating just a blank table with the correct number of columns (simulations) and rows (generations)
+X[1,] = rep(N.chrom*p,N.sim) # initialize proportion of p alleles in FIRST generation (multiply number of chromosomes by the allele frequency p)
+for(j in 1:N.sim){
+  for(i in 2:N.gen){
+    X[i,j] = rbinom(1,N.chrom,prob=X[i-1,j]/N.chrom)
+    }  
+  }
+X = data.frame(X/N.chrom)
+
+sim_data <- melt(X) #reformats table for plotting
+ggplot(sim_data, aes(x = rep(c(1:100), N.sim), y = value, colour = variable)) + geom_line() + xlab("Generation") + ylab("Allele Frequency") + ylim(0,1) + labs(colour = "Simulations")
+```
+
+#How many generations would it take (on average) for a single-copy allele to reach fixation in a population? You may have to run this simulation multiple times to get enough simulations that reach fixation for an average, as the likelihood of a single-copy allele reaching fixation is low due to genetic drift.
+```{r}
+# Set up parameters
+N = 10 # number of diploid individuals (population size)
+N.chrom = 2*N # number of chromosomes (2 for each diploid individual)
+p = .05; q = 1-p #beginning allele frequencies (1/20 alleles is freq. of 0.05)
+N.gen = 100 # number of generations
+N.sim = 50 # number of simulations
+
+#Simulation
+X = array(0, dim=c(N.gen,N.sim)) #creating just a blank table with the correct number of columns (simulations) and rows (generations)
+X[1,] = rep(N.chrom*p,N.sim) # initialize proportion of p alleles in FIRST generation (multiply number of chromosomes by the allele frequency p)
+for(j in 1:N.sim){
+  for(i in 2:N.gen){
+    X[i,j] = rbinom(1,N.chrom,prob=X[i-1,j]/N.chrom)
+    }  
+  }
+X = data.frame(X/N.chrom)
+
+sim_data <- melt(X) #reformats table for plotting
+ggplot(sim_data, aes(x = rep(c(1:100), N.sim), y = value, colour = variable)) + geom_line() + xlab("Generation") + ylab("Allele Frequency") + ylim(0,1) + labs(colour = "Simulations")
+```
+#You should see that for the few simulations where p reaches fixation, it takes approximately 4N generations.
+
