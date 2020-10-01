@@ -36,6 +36,11 @@ Chapter05
 Chapter06
 |->   6_Computational_Activity.Rmd   
 ```
+```
+Chapter07
+|->   7_Computational_Activity.Rmd
+|->   hibiscus.txt   
+```
 
 **FILE LIST**
 
@@ -82,3 +87,10 @@ Chapter06
 	**Contents**
 
 	>1. `6_Computational_Activity.Rmd`: Computational activity corresponding to chapter 6 of Coop (2020).
+
+6. `Chapter07`: Folder containing introductory R materials and Chapter 7 ("Phenotypic Variation and the Resemblance Between Relatives") exercises for Population and Quantitative Genetics text (Coop 2020)  
+
+	**Contents**
+
+	>1. `7_Computational_Activity.Rmd`: Computational activity corresponding to chapter 7 of Coop (2020).
+	>2. `hibiscus.txt`: tab-delimited text file containing data on 20 families of hibiscus (fake data). Includes both parent phenotypes and 4 offspring phenotypes for each family.

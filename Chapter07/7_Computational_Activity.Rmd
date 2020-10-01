@@ -1,0 +1,233 @@
+---
+title: "Chapter 7 Computational Activity"
+output: html_notebook
+---
+
+#Chapter 7.0.3: The covariance between relatives
+
+###Preparation:
+1. Set your working directory to where you have stored hibiscus.txt on your computer: 
+```{r}
+
+```
+
+2. We need reshape2 for this exercise, which you should already have installed.
+```{r}
+#install.packages("reshape2")
+library(reshape2)
+```
+
+
+#First, let's recreate Figure 7.12. You do not need to understand this code in depth, but I have commented out important aspects for you.
+
+#To begin, let's visualize a distribution of phenotypes. We know that some of the distribution will be due to genetic effects, and the rest due to environmental contributions to phenotype. We will sample from a normal distribution to plot a hypothetical distribution of phenotypes.
+```{r}
+examplephenotype <- rnorm(1000) #like the song sparrow example, we will pretend this is beak depth data, and we have standardized it to have a mean of zero and standard deviation of 1 (a normal distribution)
+examplephenotype
+```
+
+#We can plot this as a histogram:
+```{r}
+hist(examplephenotype, main = "Song sparrow beak depth", xlab="Beak Depth")
+```
+#In the above plot, the mean phenotype is at zero, and most observations are within 3 standard deviations of the mean. We can imagine that our phenotypic variance of beak depth is the result of both genetic and environmental components, V=Va+ve (equation 7.5)
+
+
+#Keep this visual in mind. Now, we are going to create a function that simulates parent and offspring genotypes and plots them against one another. Imagine that this function is choosing from a hypothetical distribution of mom and dad genotypes and environmental variance.
+```{r}
+#The function we are creating is called par.off.corr (to stand for parent-offspring correlation), sourced from Coop 2020
+par.off.corr<-function(L=20, #L is the number of loci
+environ.var,Num_inds=1000,print.slope=FALSE,sel.cutoff=FALSE){ #we don't need to use the sel.cutoff part of this function yet
+	allele.freq<-0.5   ###each locus is assumed to have the same allele frequencies. This is just to simplify the coding, in reality these results work when each locus has its own frequency (and the coding wouldn't be too much harder). 
+	 
+	##MAKE A MUM
+	## For each mother, at each locus we draw an allele (either 0 or 1) from the population allele frequency.  We do this by random sampling of a binomial distribution, similar to R flipping a coin to get either heads or tails.
+	##We do this twice for each mother, because a genotype is made from two haplotypes (alleles) 
+	mum.hap.1<-replicate(Num_inds, rbinom(L,1,allele.freq)) #first allele of genotype, rbinom sampling of 0 or 1 based on allele frequency set above for each of the 20 loci
+	mum.hap.2<-replicate(Num_inds, rbinom(L,1,allele.freq))
+	##type mum.hap.1[,1] to see the 1st mothers 1st haplotype, or you can run these commands individually and open the matrix in the environment
+	
+	##Each mother's genotype at each locus is either 0,1,2
+	mum.geno<-mum.hap.1+mum.hap.2 #add the haplotypes to get the number of copies of the allele in question (e.g., the p allele)
+	
+	additive.genetic<-colSums(mum.geno) #takes the column sums to get a value for the additive genetic component of each mom's genotype
+	genetic.sd<-sd(additive.genetic) #calculates standard deviation
+	mean.genetic<-mean(additive.genetic) #calculates mean across all moms
+	
+	additive.genetic<-additive.genetic / sd(additive.genetic) #this is the coefficient of variation, mean/sd
+	mum.pheno<- additive.genetic + rnorm(Num_inds,sd=sqrt(environ.var)) #this is where environment gets added in, sampling from a normal distribution with a standard deviation equal to the square root of the environmental variance.
+	mum.pheno<-mum.pheno-mean(mum.pheno) #standardize by mean (so that you get mean 0 like in the figure)
+	
+	
+	
+	##MAKE A DAD
+	dad.hap.1<-replicate(Num_inds, rbinom(L,1,allele.freq) )
+	dad.hap.2<-replicate(Num_inds, rbinom(L,1,allele.freq) )
+	dad.geno<-dad.hap.1+dad.hap.2
+	
+	additive.genetic<-colSums(dad.geno)
+	additive.genetic<-additive.genetic / sd(additive.genetic)
+	dad.pheno<- additive.genetic + rnorm(Num_inds,sd=sqrt(environ.var))
+	dad.pheno<-dad.pheno-mean(dad.pheno)
+	
+	##MAKE AN OFFSPRING
+	child.geno<-dad.hap.1+mum.hap.1 #1 haplotype from mum 1 haplotype from dad
+	
+	additive.genetic<-colSums(child.geno)
+	additive.genetic<-additive.genetic / sd(additive.genetic)
+	child.pheno<- additive.genetic + rnorm(Num_inds,sd=sqrt(environ.var))
+	child.pheno<-child.pheno-mean(child.pheno)
+	
+	##Calculate midpoints, linear model and plots
+	
+	parental.midpoint<-(mum.pheno+dad.pheno)/2 ##average the parents' phenotypes
+	
+	lm(child.pheno~parental.midpoint) ##linear model between child and midpoint (mean) of parent phenotypes
+	
+	##the slope of this line is the narrow sense heritability.
+	
+	# plot parental midpoint against offspring's phenotype.
+	#layout(1) ###done in case this is run after the code with 3 plots
+	if(sel.cutoff){
+		plot(parental.midpoint,child.pheno,xlab="Parental midpoint",ylab="Child's phenotype",cex=1.5,cex.axis=1.5,cex.main=1.5,cex.lab=1.5,main=paste("VE=",environ.var,", VA=1 ","(L =",L,")",sep=""),col=ifelse(parental.midpoint>1,"red","grey"))
+	}else{
+		plot(parental.midpoint,child.pheno,xlab="Parental midpoint",ylab="Child's phenotype",cex=1.5,cex.axis=1.5,cex.main=1.5,cex.lab=1.5,main=paste("VE=",environ.var,", VA=1 ","(L =",L,")",sep=""))
+	}
+	## plot the regression in red
+	abline(h=0,col="grey",lwd=2)
+	abline(v=0,col="grey",lwd=2)
+	 abline(lm(child.pheno~parental.midpoint),col="blue",lwd=2) #the narrow-sense heritability slope line is blue.
+	
+	
+	
+	my.slope<-lm(child.pheno~parental.midpoint)$coeff[2]
+	
+	if(sel.cutoff){
+		sel.child.mean<-mean(child.pheno[parental.midpoint>1])
+		sel.par.mean<-mean(parental.midpoint[parental.midpoint>1]);
+		points(sel.par.mean,0,col="blue",pch=19,cex=1.2)
+		pred.sel.child<-my.slope*sel.par.mean
+		points(0,pred.sel.child,col="blue",pch=19,cex=1.2)
+		lines(c(0,sel.par.mean), rep(pred.sel.child,2),col="blue",lwd=2)
+		lines(rep(sel.par.mean,2), c(0,pred.sel.child),col="blue",lwd=2)
+		arrows(x0=0,x1=0,y0=0,y1=pred.sel.child,col="blue",lwd=2,length=0.1,code=3)
+		arrows(x0=0,x1=sel.par.mean,y0=0,y1=0,col="blue",lwd=2,length=0.1,code=3)
+		text(x=sel.par.mean/2,y=min(child.pheno)*0.06,"S",cex=1.5,col="blue")
+		text(x=min(parental.midpoint)*0.06,y=pred.sel.child/2,"R",cex=1.5,col="blue")
+	}
+	
+	if(print.slope) text(x=min(parental.midpoint)*.8,y=max(child.pheno)*.9,label=paste("slope= ",format(my.slope,digit=3)),col="red",lwd=4,cex=1.5)
+	
+	abline(0,1,col="red",lwd=3,lty=2)
+ #	recover()
+ }
+```
+
+#Run the function to create the figure:
+```{r}
+layout(t(1:3))
+par.off.corr(L=100, environ.var=100,Num_inds=500)
+par.off.corr(L=100, environ.var=1,Num_inds=500)
+par.off.corr(L=100, environ.var=0.001,Num_inds=500)
+```
+Test your knowledge:
+#What does the blue line represent? How can you get narrow sense heritability?
+
+#We can formally calculate the narrow sense heritability using our function!
+```{r}
+par.off.corr(L=100, environ.var=100,Num_inds=500, print.slope = T)
+```
+#What do you notice about the effect of environmental variance on the relationship between parental phenotypes and offspring phenotypes?
+```{r}
+layout(t(1:3))
+par.off.corr(L=100, environ.var=100,Num_inds=500)
+par.off.corr(L=100, environ.var=1,Num_inds=500)
+par.off.corr(L=100, environ.var=0.001,Num_inds=500)
+```
+#What do you notice about the effect of the environment on our calculation of the narrow sense heritability?
+
+##If offspring don't resemble their parents, then there isn't a heritable component to the phenotype. If most of the variance in phenotype is explained by environmental variance, heritability (the additive genetic variance) is low. Think of equation 7.5: V=Va+Ve.
+
+
+#The above show a hypothetical scenario with simulated data, but how could you estimate heritability with real data from a wild population? I have created some data and code to help you do this:
+```{r}
+#Flower color is a trait which seems to be important in determining pollination success. These are flower color data from a population of Hibiscus flowers in Hawaii.
+hibiscus <- read.table("hibiscus.txt", header = TRUE, sep = "\t")
+```
+#Let's take a look at the data by clicking it in the environment to the right.
+
+With the hibiscus data, we have the parental and the offspring phenotypes (flower color), so we should be able to generate a plot similar to those generated by our function above. First, let's take the average of the parental phenotypes (the parental midpoint) and create another column in our dataframe.
+```{r}
+hibiscus$Parent.Avg <- apply(hibiscus[,2:3], 1 , mean) #creates a column with average of the parent phenotypes (columns 2 and 3 of the hibiscus dataframe)
+
+#You should now be able to see the new column, Parent.Avg, in your hibiscus dataframe.
+
+#Let's make a scatterplot of the data.
+plot_hibiscus <- hibiscus[,c(4:8)]
+plot_hibiscus <- melt(plot_hibiscus, id="Parent.Avg") #this reformats the data for easy plotting
+plot(plot_hibiscus$Parent.Avg, plot_hibiscus$value, xlab = "Parent Average Color", ylab = "Offspring Color", col=as.factor(plot_hibiscus$Parent.Avg))
+```
+#How can we figure out h^2 from this plot?
+```{r}
+heritability <- lm(plot_hibiscus$Parent.Avg~plot_hibiscus$value) #perform a regression to determine the slope of the relationship, save as variable
+plot(plot_hibiscus$Parent.Avg, plot_hibiscus$value, xlab = "Parent Average Color", ylab = "Offspring Color")
+abline(heritability$coefficients, col="blue") #value for intercept and slope from the regression, draws the line on the plot
+abline(0,1, col="red", lty=2) #hypothetical 1 to 1 relationship (100% heritability)
+text(x=87,y=97,label=paste("slope=",format(heritability$coefficients[2],digit=3)),col="red",lwd=4,cex=1.5) #set x and y coordinates for where you want to print your slope (heritability)
+```
+Given the results of the linear model, what is the slope? What is h^2?
+
+
+"If the slope is close to zero then the parental phenotypes hold no information about the phenotype of the child, while if the slope is close to one then the parental mid-point is a good guess at the child’s phenotype. As we will see, natural selection will only efficiently drive evolution if children resemble their parents." Coop 2020, p. 110.
+
+#What can you conclude about the hibiscus flower color phenotype?
+
+
+
+#What if we don't have parent-offspring information? Is there anything we can do?
+
+##Let's say that we have a nest of hatchling turtles, but we have no idea who the mom or dad are. We really want to estimate heritability of plastron length (the bottom part of the shell), and we can calculate the total phenotypic variance in hatchling plastron length based on 30 years of data collection from this population. Let's create a hypothetical distribution to use based on some real data of painted turtle hatchling plastron lengths (Judson et al. unpublished data).
+```{r}
+#mean plastron length = 24.97mm
+#standard deviation=1.37mm
+
+#Let's build a dataset from a normal distribution using this information:
+babyturtles <- rnorm(1000, mean=24.97, sd=1.37)
+
+```
+```{r}
+hist(babyturtles, main = "Hatchling Plastron Length", xlab="Plastron Length")
+#remember, since this is random sampling from a normal distribution, your numbers may look slightly different.
+```
+
+##According to Coop 2020 Equation 7.15, we can calculate heritability using any two related individuals if we have the following information:
+1. The phenotypic covariance between the relatives
+2. The total phenotypic variance
+3. The kinship coefficient (F) of the pair of relatives (see Ch. 2)
+
+###We can calculate our total phenotypic variance from the information above
+```{r}
+totalvariance <- var(babyturtles)
+```
+
+###F can be found by calculating the kinship coefficient
+```{r}
+#for full siblings, this is 0.25 (See Fij in table 2.4)
+coeffkin <- 0.25
+```
+
+###Let's assume we calculate the covariance between siblings (which, if we had the data on some siblings, we could do using the cov command in R) as 0.5mm. The additive genetic variance of plastron length can thus be calculated as:
+```{r}
+#Cov(sib1,sib2)=2*F*Va **Equation 7.15**
+#0.5=2*coeffkin*Va
+Va=0.5/(2*coeffkin)
+Va
+```
+###Then heritability is calculated as:
+```{r}
+#heritability (h^2)=Va/V **Equation 7.13**
+Va/totalvariance
+```
+
+
+##What might be a problem you can think of with estimating heritability using full siblings?
