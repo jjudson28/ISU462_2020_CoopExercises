@@ -1,0 +1,227 @@
+---
+title: "Chapter 8 Computational Activity"
+output: html_notebook
+---
+
+#Chapter 8: The response to phenotypic selection
+
+###Preparation:
+1. Set your working directory to where you have stored hibiscus.txt on your computer (the same file as from Chapter 7): 
+```{r}
+
+```
+
+2. We need reshape2 for this exercise, which you should already have installed.
+```{r}
+#install.packages("reshape2")
+library(reshape2)
+```
+
+#Let's recreate Fig. 8.1 (Coop) using code from the textbook:
+```{r}
+#create a function that will perform a simulation of parental and offspring genotypes and phenotypes that will be plotted as a distribution as in Fig. 8.1. This simulation is similar to the one from Chapter 7
+one.gen.sel<-function(L=1000,environ.var,sel,plot.geno=FALSE,add.arrows=FALSE){
+  
+##Simulate genotypes and phenotypes:
+allele.freq<-0.5   ###each locus is assumed to have the same allele frequencies. This is just to simplify the coding, in reality these results work when each locus has its own frequency (and the coding wouldn't be too much harder). 
+ 
+Num_inds=10000
+
+##MAKE A MUM
+## For each mother, at each locus we draw an allele (either 0 or 1) from the population allele frequency. 
+##We do this twice for each mother two represent the two haplotypes in the mother 
+mum.hap.1<-replicate(Num_inds, rbinom(L,1,allele.freq) )
+mum.hap.2<-replicate(Num_inds, rbinom(L,1,allele.freq) )
+
+##Each mothers genotype at each locus is either 0,1,2
+mum.geno<-mum.hap.1+mum.hap.2
+
+additive.genetic<-colSums(mum.geno)
+mean.genetic<-mean(additive.genetic)
+genetic.var<-sd(additive.genetic)
+
+additive.genetic<-additive.genetic / sd(additive.genetic)
+mum.pheno<- additive.genetic + rnorm(Num_inds,sd=sqrt(environ.var))
+mum.pheno<-mum.pheno-mean(mum.pheno)
+
+##MAKE A DAD
+dad.hap.1<-replicate(Num_inds, rbinom(L,1,allele.freq) )
+dad.hap.2<-replicate(Num_inds, rbinom(L,1,allele.freq) )
+dad.geno<-dad.hap.1+dad.hap.2
+
+additive.genetic<-colSums(dad.geno)
+additive.genetic<-additive.genetic / sd(additive.genetic)
+dad.pheno<- additive.genetic + rnorm(Num_inds,sd=sqrt(environ.var))
+dad.pheno<-dad.pheno-mean(dad.pheno)
+
+### Make a child
+child.geno<-dad.hap.1+mum.hap.1 ##1/2 from mum 1/2 from dad
+
+additive.genetic<-colSums(child.geno)
+additive.genetic<-additive.genetic / sd(additive.genetic)
+child.pheno<- additive.genetic + rnorm(Num_inds,sd=sqrt(environ.var))
+child.pheno<-child.pheno-mean(child.pheno)
+
+
+###This next part is the most important to understand!!
+ ##Selection of top sel% of individuals (you can set the selection threshold). Imagine you are a breeder of cows. You want to select the cows with biggest body size to reproduce, so you choose the top x% of large-sized individuals to breed.
+ 
+top.sel.per.mums<- mum.pheno>quantile(mum.pheno,p=1-sel) 
+top.sel.per.dads<- dad.pheno>quantile(dad.pheno,p=1-sel)
+ #the quantile command returns the top sel% of phenotypic observations
+ 
+child.geno<-dad.hap.1[,top.sel.per.dads]+mum.hap.1[,top.sel.per.mums] ##1/2 from mum 1/2 from dad
+
+additive.genetic<-(colSums(child.geno)-mean.genetic)
+additive.genetic<-additive.genetic/genetic.var
+child.pheno<- additive.genetic + rnorm(length(child.geno),sd=sqrt(environ.var))
+
+layout(1:3)
+my.lim<-quantile(c(mum.pheno,dad.pheno),p=c(0.01,0.99))
+my.lim[2]<-quantile(child.pheno,p=c(0.99))
+
+hist(c(mum.pheno,dad.pheno),breaks=100,xlim=my.lim,xlab="Phenotype",main=paste("Phenotype distribution before selection"),cex.axis=1.5,cex.lab=1.5,cex.main=1.5); #, Mean=0, VA=1, VE=",environ.var,", Taking top ",round(100*sel),"%",sep="")
+abline(v=0,col="blue",lwd=3)
+
+par.mean<-mean(c(mum.pheno[top.sel.per.mums],dad.pheno[top.sel.per.dads]))
+hist(c(mum.pheno[top.sel.per.mums],dad.pheno[top.sel.per.dads]),breaks=100,xlim=my.lim,xlab="Phenotype",main=paste("Phenotype distribution after selection, parental mean=",format(par.mean,dig=3)),cex.axis=1.5,cex.lab=1.5,cex.main=1.5); 
+abline(v= par.mean,col="red",lwd=3)
+abline(v=0,col="blue",lwd=3)
+
+
+if(add.arrows){
+	arrows(x0=0,x1=par.mean,y0=50,y1=50,col="blue",lwd=2,length=0.1,code=3)
+	text(x=par.mean/2, y=70,"S",col="blue",cex=1.5)
+}
+
+hist(child.pheno,xlim=my.lim,breaks=100,xlab="Phenotype",main=paste("Phenotype distribution in the children; Mean in children = ",format(mean(child.pheno),dig=3)),cex.axis=1.5,cex.lab=1.5,cex.main=1.5); 
+abline(v=0,col="blue",lwd=3)
+abline(v= mean(child.pheno),col="red",lwd=3)
+
+if(add.arrows){
+	arrows(x0=0,x1=mean(child.pheno),y0=2600,y1=2600,col="blue",lwd=2,length=0.1,code=3)
+	text(x=mean(child.pheno)/2, y=2950,"R",col="blue",cex=1.5)
+}
+
+##Mean phenotype after selection
+cat("Selected parental mean",par.mean,"\n")
+##Mean child phenotype
+cat("Mean in children = ",mean(child.pheno),"\n")
+
+if(plot.geno){
+#	quartz()
+	layout(1:2)
+	sel.dad.genosum<-colSums(dad.geno[,top.sel.per.dads])
+	rand.dad.genosum<-colSums(dad.geno[,sample(top.sel.per.dads)])
+	hist(rand.dad.genosum,breaks=20,  col = rgb ( 1 , 0 , 0 , 0.4 ),xlim=c(min(rand.dad.genosum)-5,max(sel.dad.genosum)+5),ylim=c(0,160),xlab="Num. up alleles", main="Parental generation",cex.lab=1.5)
+	hist(sel.dad.genosum,breaks=20,  col =rgb ( 0 , 0 , 1 , 0.4 ),add=TRUE)
+	cat("Number up alleles in selected pars ",mean(colSums(dad.geno[,top.sel.per.dads])))
+	legend ( "topleft" , legend = c ( "All individuals" , "Selected parents" ) , pch = 15 , col = c ( rgb ( 1 , 0 , 0 , 0.4 )  , rgb ( 0 , 0 , 1 , 0.4 ) ) , bty = "n" , cex = 1.5 )
+	###hist of kids
+	hist(colSums(child.geno),breaks=20,  col =rgb ( 0 , 1 , 0 , 0.4 ),xlim=c(min(rand.dad.genosum)-5,max(sel.dad.genosum)+5),ylim=c(0,160),xlab="Num. up alleles", main="Next generation",cex.lab=1.5)
+	cat("Number up alleles in kids ",mean(colSums(child.geno)))
+
+	legend ( "topleft" , legend = c ( "Children" ) , pch = 15 , col = rgb ( 0 , 1 , 0 , 0.4 ), bty = "n" , cex = 1.5 )
+}
+}
+```
+
+#Let's run our function with different settings! First, let's assume there is some environmental variance in the phenotype, and that we want the cows with the top 10% of body size to breed and produce offspring. (sel=0.1, environ.var=1)
+```{r}
+one.gen.sel(L=100,environ.var=1,sel=0.1,add.arrow=TRUE)
+#reminder, S=Selection Differential, R=Response to selection
+
+#Selection differential = "change in mean phenotype within a generation"; in other words, the difference between the mean phenotype of the selected parent cows and the mean phenotype of the total population of potential parent cows.
+
+#R=difference between mean phenotype of offspring cows and mean phenotype of the total parental population. 
+```
+
+#If we look back at equation 8.4, we find that R=h^2S, where h^2 is the narrow sense heritability (Va/Vp). We often term equation 8.4 as the Breeder's Equation (perhaps for obvious reasons), and I will use this term to refer to this equation for the rest of the activity.
+
+#One thing that should be apparent is that this response to selection will be dependent on how heritable a phenotype is, but we can test that with this simulation. Let's set heritability to be very low (by setting environmental variance in phenotype to be high)
+```{r}
+one.gen.sel(L=100,environ.var=100,sel=0.1,add.arrow=TRUE)
+#we change environ.var to 100, but still select the top 10% of phenotype
+```
+#Just as expected, when there is no heritability of the phenotype (the additive genetic component of phenotypic variance is small/zero), it doesn't matter which parents we choose to breed; the phenotypic distribution of offspring remains the same as the parents! Pretty cool, right? 
+
+#What if there is negligibly small environmental variance in phenotype, and all variance in phenotype is due to additive genetic variance?
+```{r}
+one.gen.sel(L=100,environ.var=0.001,sel=0.1,add.arrow=TRUE)
+#we change environ.var to 100, but still select the top 10% of phenotype
+```
+#We see that the offspring mean phenotype matches the selected parental mean phenotype exactly (or pretty close, since these are simulations).
+
+#Response to selection using our hibiscus dataset (code by me)
+##Set-up:
+```{r}
+#Flower color is a trait which seems to be important in determining pollination success. These are flower color data from a population of Hibiscus flowers in Hawaii.
+#set working directory here if you haven't already
+hibiscus <- read.table("hibiscus.txt", header = TRUE, sep = "\t")
+#create the midparent average column:
+hibiscus$Parent.Avg <- apply(hibiscus[,2:3], 1 , mean) #creates a column with average of the parent phenotypes (columns 2 and 3 of the hibiscus dataframe)
+```
+#Let's take a look at the data by clicking it in the environment to the right.
+
+
+#From chapter 7, we know that with parental and offspring phenotypes, we can estimate heritability. With that, we should be able to calculate R!
+```{r}
+plot_hibiscus <- hibiscus[,c(4:8)]
+plot_hibiscus <- melt(plot_hibiscus, id="Parent.Avg") #this reformats the data for easy plotting
+heritability <- lm(plot_hibiscus$value~plot_hibiscus$Parent.Avg)
+plot(plot_hibiscus$Parent.Avg, plot_hibiscus$value, xlab = "Parent Average Color", ylab = "Offspring Color", col=as.factor(plot_hibiscus$Parent.Avg))
+abline(heritability$coefficients, col="blue") #value for intercept and slope from the regression, draws the line on the plot
+abline(0,1, col="red", lty=2) #hypothetical 1 to 1 relationship (100% heritability)
+text(x=87,y=97,label=paste("slope=",format(heritability$coefficients[2],digit=3)),col="red",lwd=4,cex=1.5) #set x and y coordinates for where you want to print your slope (heritability)
+```
+#Based on our plot, our estimate of heritability (h^2) is 0.781. Now, let's select a subset of parental colors to breed a more colorful generation of offspring.
+
+
+```{r}
+#First, let's get our selected parent mean (the red line in the center plot of the simulation above). Let's say we want parents that produce flowers with a color value greater than or equal to 95 to breed. 
+
+#For the moms (Parent.1)
+hibiscusparents <- as.data.frame(hibiscus[hibiscus$Parent.1>=95,2])
+#For the dads (Parent.2)
+hibiscusparents$dads <- hibiscus[hibiscus$Parent.2>=96,3] #changed threshold so that we have same number of moms and dads.
+colnames(hibiscusparents) <- c("moms","dads")
+
+#We will breed just these individuals. Let's take a mean of their phenotypes.
+new_parent_mean <- mean(as.matrix(hibiscusparents))
+
+#Now, we can get S, the selection differential, by using the mean above and subtracting the original phenotype mean of the population:
+S <- new_parent_mean-mean(hibiscus$Parent.Avg)
+h2 <- 0.948
+
+#solve for response to selection:
+S*h2
+```
+
+#What does this value mean? Let's look at the simulation figures. What would be the new mean value for color?
+```{r}
+mean(hibiscus$Parent.Avg) #original population mean
+mean(hibiscus$Parent.Avg) + (S*h2) #new mean of color for future generation
+```
+
+#The plot below demonstrates S
+```{r}
+selectionhist <- hist(c(hibiscus$Parent.1,hibiscus$Parent.2), xlab = "Parent Color", main="Selection Differential", breaks = seq(from = 80, to = 102, by = 1))
+ccat = cut(selectionhist$breaks, c(-Inf, 95, 100))
+#color our selected parents
+plot(selectionhist, col=c("white","green")[ccat], xlab = "Parent Color", main="Selection Differential")
+abline(v=mean(hibiscus$Parent.Avg), col = "blue", lwd=2) #original parent population phenotype mean 
+abline(v=new_parent_mean, col = "red", lwd=2) #selected parent phenotype mean 
+arrows(mean(hibiscus$Parent.Avg), 1, new_parent_mean,1, code = 3, lwd=2)
+```
+#And this plot demonstrates R
+```{r}
+selectionhist <- hist(c(hibiscus$Parent.1,hibiscus$Parent.2), xlab = "Parent Color", main="Response to Selection", breaks = seq(from = 80, to = 102, by = 1))
+ccat = cut(selectionhist$breaks, c(-Inf, 95, 100))
+#color our selected parents
+plot(selectionhist, col=c("white","green")[ccat], xlab = "Parent Color", main="Response to Selection")
+abline(v=mean(hibiscus$Parent.Avg), col = "blue", lwd=2) #original parent population phenotype mean 
+abline(v=new_parent_mean, col = "red", lwd=2) #selected parent phenotype mean 
+abline(v=(mean(hibiscus$Parent.Avg) + (S*h2)), col = "purple", lwd=2, lty=2) #expected offspring phenotype mean
+arrows(mean(hibiscus$Parent.Avg), 1, (mean(hibiscus$Parent.Avg) + (S*h2)),1, code = 3, lwd=2, col = "purple")
+```
+

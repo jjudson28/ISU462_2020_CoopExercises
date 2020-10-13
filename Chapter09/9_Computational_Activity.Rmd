@@ -1,0 +1,76 @@
+---
+title: "Chapter 9 Computational Activity"
+output: html_notebook
+---
+
+#Chapter 9: The response of multiple traits to selection
+
+###Preparation:
+1. Set your working directory: 
+```{r}
+
+```
+
+2. We need some packages for this exercise.
+```{r}
+install.packages("devtools")
+library(devtools)
+install.packages("mgcv")
+library(mgcv)
+install_version("gsg", version = "2.0", repos = "http://cran.us.r-project.org")
+library(gsg)
+install.packages("mvtnorm")
+library(mvtnorm)
+```
+
+#When thinking about the response of multiple traits to selection, it is useful to think about the resulting fitness (number of offspring) produced for each phenotype measured. For example, figure 9.1 demonstrates the relationship between either male antler size or female leg length and the number of offspring (fitness). The shape of this relationship between phenotype and fitness can tell us something about how we expect the phenotype to evolve over time.
+
+##First, let's simulate a dataset where we have measured a phenotype and the number of offspring produced.
+```{r}
+#simulate a dataset with 200 individuals, mean of 0, standard deviation of 2
+phenotype<-rnorm(200,0,2) #create our phenotype
+fitness<-rpois(200,exp(1-1*phenotype^2)) #create our number of offspring (fitness)
+fitnessdata<-as.data.frame(list(fitness=fitness,phenotype=phenotype)) #create a dataframe
+```
+
+##Now that we have our data, we can characterize the fitness function, which is the relationship between the phenotype and the fitness of measured individuals in our dataset
+```{r}
+fitfunction<-gam(fitness~s(phenotype),family='poisson',data=fitnessdata) #s is a smoothed term in gam formula
+```
+
+##Since we have a relationship between the phenotype and fitness for a specific trait, we can characterize a "fitness landscape", which is plotting that relationship as a way to view how selection will act on the phenotype.
+```{r}
+fitlandscape<-fitness.landscape(mod=fitfunction,phenotype="phenotype",PI.method='n')
+
+#plotting
+plot(fitlandscape$points[,1],fitlandscape$Wbar,type='l', ylim=c(0,12), xlab = "Phenotype", ylab="Number Offspring (Fitness)")
+lines(fitnessdata$phenotype,fitnessdata$fitness,type = "p")
+```
+
+###It can be difficult to see the shape of the line in this plot, but you should see the distribution of offspring is pretty normal with respect to phenotype. *remember this is a simulation, so your results may look slightly different, but the distribution should be similar.* Let's just plot the fitness landscape:
+```{r}
+plot(fitlandscape$points[,1],fitlandscape$Wbar,type='l', ylim=c(0,2), xlab = "Phenotype", ylab="Number Offspring (Fitness)")
+```
+#In general, you should see a lower fitness at the extremes of the phenotype, and increased fitness around the mean phenotype. What kind of selection would this represent? What do you expect to happen to the phenotype over time?
+
+#Let's try a different scenario.
+```{r}
+# simulated data (adapted from Coop 2020)
+traits<-rmvnorm(50,sigma=matrix(c(1,0.6,0.6,1),nrow=2,byrow=TRUE)) #random sampling from a positive relationship (positive correlation between trait and number offspring)
+num.kids<-ceiling(traits[,2]) #rounds up to nearest whole number
+num.kids<-num.kids-min(num.kids) #standardizes by minimum number of offspring = 0
+plot(traits[,1],num.kids,xlab="",ylab="")
+
+direction <- as.data.frame(traits[,1])
+direction$numoffspring <- num.kids
+colnames(direction) <- c("phenotype", "number_offspring")
+
+#plot fitness function
+ffdirection<-gam(number_offspring~s(phenotype),data=direction)
+fldirection<-fitness.landscape(mod=ffdirection,phenotype="phenotype",PI.method='n')
+plot(fldirection$points[,1],fldirection$Wbar,type='l', xlab = "Phenotype", ylab="Number Offspring (Fitness)", xlim = c(min(direction$phenotype), max(direction$phenotype)), ylim = c(min(direction$number_offspring), max(direction$number_offspring)))
+lines(direction$phenotype,direction$number_offspring,type = "p")
+```
+#What kind of selection will likely occur in this population, given this one phenotype's fitness landscape?
+
+#What if another trait correlated to the trait we simulated above has an opposing fitness landscape (see figure 9.1)? What might we expect to happen?

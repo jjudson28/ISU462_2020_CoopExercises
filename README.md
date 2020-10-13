@@ -41,6 +41,15 @@ Chapter07
 |->   7_Computational_Activity.Rmd
 |->   hibiscus.txt   
 ```
+```
+Chapter08
+|->   8_Computational_Activity.Rmd
+|->   hibiscus.txt   
+```
+```
+Chapter09
+|->   9_Computational_Activity.Rmd 
+```
 
 **FILE LIST**
 
@@ -56,14 +65,14 @@ Chapter07
 	>5. `exampletextfile.txt`: example tab-delimited text file with header, for use with `Basics_of_R.Rmd`
 	>6. `species.txt`: example tab-delimited text file with header, for use with `Basics_of_R.Rmd` "try it yourself" section.
 	
-2. `Chapter03`: Folder containing introductory R materials and Chapter 3 ("Population Structure and Correlations Among Loci") exercises for Population and Quantitative Genetics text (Coop 2020)  
+2. `Chapter03`: Folder containing Chapter 3 ("Population Structure and Correlations Among Loci") exercises for Population and Quantitative Genetics text (Coop 2020)  
 
 	**Contents**
 
 	>1. `3.0.1_Computational_Activity.Rmd`: Computational activity corresponding to section 3.0.1 of Coop (2020)
 	>2. `3.0.4_Computational_Activity.Rmd`: Computational activity corresponding to section 3.0.4 of Coop (2020)  
 	
-3. `Chapter04`: Folder containing introductory R materials and Chapter 4 ("Genetic Drift and Neutral Diversity") exercises for Population and Quantitative Genetics text (Coop 2020)  
+3. `Chapter04`: Folder containing Chapter 4 ("Genetic Drift and Neutral Diversity") exercises for Population and Quantitative Genetics text (Coop 2020)  
 
 	**Contents**
 
@@ -72,7 +81,7 @@ Chapter07
 	>3. `4.1.2_Computational_Activity.Rmd`: Computational activity corresponding to section 4.1.2 of Coop (2020) 
 	>4. `4.3_Computational_Activity.Rmd`: Computational activity corresponding to section 4.3 of Coop (2020). This is the final activity for the chapter.
 
-4. `Chapter05`: Folder containing introductory R materials and Chapter 5 ("The Population Genetics of Divergence and Molecular Substitution") exercises for Population and Quantitative Genetics text (Coop 2020)  
+4. `Chapter05`: Folder containing Chapter 5 ("The Population Genetics of Divergence and Molecular Substitution") exercises for Population and Quantitative Genetics text (Coop 2020)  
 
 	**Contents**
 
@@ -82,15 +91,28 @@ Chapter07
 	>4. `stanley_harrison_1999_Source_of_dndscytb_figure.pdf`: Source of above table, cited below.   
 	* Stanley, S. E., & Harrison, R. G. (1999). Cytochrome b evolution in birds and mammals: an evaluation of the avian constraint hypothesis. Molecular Biology and Evolution, 16(11), 1575-1585.
 
-5. `Chapter06`: Folder containing introductory R materials and Chapter 6 ("Neutral Diversity and Population Structure") exercises for Population and Quantitative Genetics text (Coop 2020)  
+5. `Chapter06`: Folder containing Chapter 6 ("Neutral Diversity and Population Structure") exercise for Population and Quantitative Genetics text (Coop 2020)  
 
 	**Contents**
 
 	>1. `6_Computational_Activity.Rmd`: Computational activity corresponding to chapter 6 of Coop (2020).
 
-6. `Chapter07`: Folder containing introductory R materials and Chapter 7 ("Phenotypic Variation and the Resemblance Between Relatives") exercises for Population and Quantitative Genetics text (Coop 2020)  
+6. `Chapter07`: Folder containing Chapter 7 ("Phenotypic Variation and the Resemblance Between Relatives") exercise for Population and Quantitative Genetics text (Coop 2020)  
 
 	**Contents**
 
 	>1. `7_Computational_Activity.Rmd`: Computational activity corresponding to chapter 7 of Coop (2020).
 	>2. `hibiscus.txt`: tab-delimited text file containing data on 20 families of hibiscus (fake data). Includes both parent phenotypes and 4 offspring phenotypes for each family.
+	
+7. `Chapter08`: Folder containing Chapter 8 ("The Response to Phenotypic Selection") exercise for Population and Quantitative Genetics text (Coop 2020)  
+
+	**Contents**
+
+	>1. `8_Computational_Activity.Rmd`: Computational activity corresponding to chapter 8 of Coop (2020).
+	>2. `hibiscus.txt`: tab-delimited text file containing data on 20 families of hibiscus (fake data). Includes both parent phenotypes and 4 offspring phenotypes for each family.
+	
+8. `Chapter09`: Folder containing Chapter 9 ("The Response of Multiple Traits to Selection") exercise for Population and Quantitative Genetics text (Coop 2020)  
+
+	**Contents**
+
+	>1. `9_Computational_Activity.Rmd`: Computational activity corresponding to chapter 9 of Coop (2020).
