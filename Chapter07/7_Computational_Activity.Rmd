@@ -13,7 +13,7 @@ output: html_notebook
 
 2. We need reshape2 for this exercise, which you should already have installed.
 ```{r}
-#install.packages("reshape2")
+install.packages("reshape2")
 library(reshape2)
 ```
 
@@ -169,8 +169,8 @@ plot(plot_hibiscus$Parent.Avg, plot_hibiscus$value, xlab = "Parent Average Color
 ```
 #How can we figure out h^2 from this plot?
 ```{r}
-heritability <- lm(plot_hibiscus$Parent.Avg~plot_hibiscus$value) #perform a regression to determine the slope of the relationship, save as variable
-plot(plot_hibiscus$Parent.Avg, plot_hibiscus$value, xlab = "Parent Average Color", ylab = "Offspring Color")
+heritability <- lm(plot_hibiscus$value~plot_hibiscus$Parent.Avg) #perform a regression to determine the slope of the relationship, save as variable. The correct order of the formula is Y~X
+plot(plot_hibiscus$Parent.Avg, plot_hibiscus$value, xlab = "Parent Average Color", ylab = "Offspring Color") #the correct order for this formula is X, Y
 abline(heritability$coefficients, col="blue") #value for intercept and slope from the regression, draws the line on the plot
 abline(0,1, col="red", lty=2) #hypothetical 1 to 1 relationship (100% heritability)
 text(x=87,y=97,label=paste("slope=",format(heritability$coefficients[2],digit=3)),col="red",lwd=4,cex=1.5) #set x and y coordinates for where you want to print your slope (heritability)
