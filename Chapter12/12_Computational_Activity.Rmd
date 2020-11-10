@@ -1,0 +1,102 @@
+---
+title: "Chapter 12 Computational Activity"
+output: html_notebook
+---
+
+#Chapter 12: The Impact of Genetic Drift on Selected Alleles
+
+
+#We will use one package for this exercise, learnPopGen:
+```{r}
+install.packages("learnPopGen")
+library(learnPopGen)
+options(scipen = 10)
+```
+
+#The function we will be using is called "drift.selection". If you type the name of a function and execute it as a command, you can get available source code for the function:
+```{r}
+drift.selection
+```
+#This function essentially combines the simulation of genetic drift we used early in the semester, where alleles are sampled binomially according to their frequency in the population, with the simulation we have used for the last two chapters, where we add selection coefficients to influence allele frequency changes over time.
+
+#The function requires a few parameters to run:
+
+1. p0 = starting frequency for the a allele
+2. Ne = effective population size
+3. w = fitnesses of the three genotypes
+4. nrep = number of replicate simulations
+5. ngen = time in generations for the simulation
+```{r}
+#example:
+drift.selection(p0=0.5, Ne=100, w=c(1,1,1), ngen = 300, nrep = 10)
+```
+#In the above simulation, we have set the relative fitnesses for all three genotypes to be equal to each other. Thus, selection is not favoring any specific allele, and the changes in allele frequencies we see are due to drift alone. Since drift is a function of effective population, the probability of fixation of a single mutation is 1/2N, and the probability of fixation of an allele segregating at a higher frequency in a population is simply its frequency in the population.
+
+#We can even simulate the situation in which a new mutation arises in the population and see how frequently it is fixed.
+```{r}
+#let's calculate what the frequency of p would be if it arises in single copy in a population of 100 reproducing individuals
+singlecopy <- 1/(2*100)
+drift.selection(p0=singlecopy, Ne=100, w=c(1,1,1), ngen = 300, nrep = 1)
+```
+#and the probability of fixation would be
+```{r}
+singlecopy
+```
+
+#That is a pretty low probability of fixation! Which makes sense given what we know about genetic drift. In larger populations, remember that the chances of fixation are even lower.
+```{r}
+#example:
+1/(2*1000)
+```
+
+
+
+#12.1 Stochastic loss of strongly selected alleles
+
+#What if that new mutation shows up in the population, and it has a strong selective advantage (s = 0.01, which is pretty strong in nature), such that individuals with the a allele are more fit if they have a copy of this allele (the new mutation would be dominant to the alternate allele, h=0)
+```{r}
+#we can parameterize the simulation like the simulation we used for the past two chapters:
+s = 0.01
+h = 0
+fitness_aa = 1
+fitness_ab = 1-s*h
+fitness_bb = 1-s
+drift.selection(p0=singlecopy, Ne=100, w=c(fitness_aa,fitness_ab,fitness_bb), ngen = 300, nrep = 1)
+```
+#Your results are likely pretty anticlimactic. Despite relatively strong selection, the mutation cannot escape drift and is lost quickly.
+
+#We can calculate the expected frequency of fixation of a new mutation in a diploid population using equation pF = 2hs (equation 12.8), where pF is the probability of fixation of a new mutation, h is the dominance coefficient**, and s is the selection coefficient.
+
+##IMPORTANT NOTE HERE: the dominance coefficient, h, here is different in parameterization than the above simulation. Here, "h is the dominance of our *positively selected allele*, with h = 1 corresponding to the full selective advantage expressed in an individual with only a single copy" (Coop 2020)
+```{r}
+#If you put zero for h here, that means that there is no selective advantage expressed with a single copy of the allele. Thus, we would expect that none of these alleles would reach fixation.
+s = 0.01
+h = 0
+2*h*s
+```
+```{r}
+#If you put 1 for h here, that means that the full selective advantage is expressed with a single copy of the allele, and heterozygotes would experience the full benefit of the a allele mutation.
+s = 0.01
+h = 1
+2*h*s
+```
+
+#If we compare the probability of fixation of a new mutation with a selective advantage to that expected under genetic drift alone, we can see that we have increased the probability of fixation:
+```{r}
+sprintf("genetic drift alone")
+1/(2*100)
+sprintf("heterozygote has full selective advantage")
+2*h*s
+sprintf("heterozygote has half selective advantage (need two copies of mutation to have full advantage)")
+2*0.5*s
+```
+#It is thus twice as likely for a new beneficial mutation to fix due to selection if the heterozygote has full advantage of the new mutation, since the allele will initially start at very low frequency in the population and will only be present in heterozygotes initially.
+
+
+#So how do mutations reach fixation in a population under normal selective pressures? It seems pretty unlikely given the above situations. However, we also know that mutations don't just occur once in the population. Instead, they are constantly occurring, and the rate they occur is conditional upon the size of the population. This might take a bit to run.
+```{r}
+#let's treat every simulation as a new mutation, subject to the same selective pressures.
+drift.selection(p0=singlecopy, Ne=100, w=c(fitness_aa,fitness_ab,fitness_bb), ngen = 300, nrep = 100)
+```
+
+#An important conclusion from this chapter is that "in adapting to a novel selection pressure via new mutations, the population size, the mutational target size, and the selective advantage of new mutations all matter" (Coop 2020)

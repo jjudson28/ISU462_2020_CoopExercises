@@ -1,0 +1,1133 @@
+##fileformat=VCFv4.1
+##samtoolsVersion=0.1.19-44428cd
+##reference=file:///rad_assembly.fa
+##contig=<ID=pseudoscaff_000001,length=40396>
+##contig=<ID=pseudoscaff_000002,length=40212>
+##contig=<ID=pseudoscaff_000003,length=40212>
+##contig=<ID=pseudoscaff_000004,length=40212>
+##contig=<ID=pseudoscaff_000005,length=40212>
+##contig=<ID=pseudoscaff_000006,length=40212>
+##contig=<ID=pseudoscaff_000007,length=40212>
+##contig=<ID=pseudoscaff_000008,length=40212>
+##contig=<ID=pseudoscaff_000009,length=40212>
+##contig=<ID=pseudoscaff_000010,length=40212>
+##contig=<ID=pseudoscaff_000011,length=40212>
+##contig=<ID=pseudoscaff_000012,length=40212>
+##contig=<ID=pseudoscaff_000013,length=40212>
+##contig=<ID=pseudoscaff_000014,length=40212>
+##contig=<ID=pseudoscaff_000015,length=40212>
+##contig=<ID=pseudoscaff_000016,length=40212>
+##contig=<ID=pseudoscaff_000017,length=40212>
+##contig=<ID=pseudoscaff_000018,length=40212>
+##contig=<ID=pseudoscaff_000019,length=40212>
+##contig=<ID=pseudoscaff_000020,length=40212>
+##contig=<ID=pseudoscaff_000021,length=40212>
+##contig=<ID=pseudoscaff_000022,length=40212>
+##contig=<ID=pseudoscaff_000023,length=40212>
+##contig=<ID=pseudoscaff_000024,length=40212>
+##contig=<ID=pseudoscaff_000025,length=40212>
+##contig=<ID=pseudoscaff_000026,length=40212>
+##contig=<ID=pseudoscaff_000027,length=40212>
+##contig=<ID=pseudoscaff_000028,length=40212>
+##contig=<ID=pseudoscaff_000029,length=40212>
+##contig=<ID=pseudoscaff_000030,length=40212>
+##contig=<ID=pseudoscaff_000031,length=40212>
+##contig=<ID=pseudoscaff_000032,length=40212>
+##contig=<ID=pseudoscaff_000033,length=40212>
+##contig=<ID=pseudoscaff_000034,length=40212>
+##contig=<ID=pseudoscaff_000035,length=40212>
+##contig=<ID=pseudoscaff_000036,length=40212>
+##contig=<ID=pseudoscaff_000037,length=40212>
+##contig=<ID=pseudoscaff_000038,length=40212>
+##contig=<ID=pseudoscaff_000039,length=40212>
+##contig=<ID=pseudoscaff_000040,length=40212>
+##contig=<ID=pseudoscaff_000041,length=40212>
+##contig=<ID=pseudoscaff_000042,length=40212>
+##contig=<ID=pseudoscaff_000043,length=40212>
+##contig=<ID=pseudoscaff_000044,length=40212>
+##contig=<ID=pseudoscaff_000045,length=40212>
+##contig=<ID=pseudoscaff_000046,length=40212>
+##contig=<ID=pseudoscaff_000047,length=40212>
+##contig=<ID=pseudoscaff_000048,length=40212>
+##contig=<ID=pseudoscaff_000049,length=40212>
+##contig=<ID=pseudoscaff_000050,length=40212>
+##contig=<ID=pseudoscaff_000051,length=40212>
+##contig=<ID=pseudoscaff_000052,length=40212>
+##contig=<ID=pseudoscaff_000053,length=40212>
+##contig=<ID=pseudoscaff_000054,length=40212>
+##contig=<ID=pseudoscaff_000055,length=40212>
+##contig=<ID=pseudoscaff_000056,length=40212>
+##contig=<ID=pseudoscaff_000057,length=40212>
+##contig=<ID=pseudoscaff_000058,length=40212>
+##contig=<ID=pseudoscaff_000059,length=40212>
+##contig=<ID=pseudoscaff_000060,length=40212>
+##contig=<ID=pseudoscaff_000061,length=40212>
+##contig=<ID=pseudoscaff_000062,length=40212>
+##contig=<ID=pseudoscaff_000063,length=40212>
+##contig=<ID=pseudoscaff_000064,length=40212>
+##contig=<ID=pseudoscaff_000065,length=40212>
+##contig=<ID=pseudoscaff_000066,length=40212>
+##contig=<ID=pseudoscaff_000067,length=40212>
+##contig=<ID=pseudoscaff_000068,length=40212>
+##contig=<ID=pseudoscaff_000069,length=40212>
+##contig=<ID=pseudoscaff_000070,length=40212>
+##contig=<ID=pseudoscaff_000071,length=40212>
+##contig=<ID=pseudoscaff_000072,length=40212>
+##contig=<ID=pseudoscaff_000073,length=40212>
+##contig=<ID=pseudoscaff_000074,length=40212>
+##contig=<ID=pseudoscaff_000075,length=40212>
+##contig=<ID=pseudoscaff_000076,length=40212>
+##contig=<ID=pseudoscaff_000077,length=40212>
+##contig=<ID=pseudoscaff_000078,length=40212>
+##contig=<ID=pseudoscaff_000079,length=40212>
+##contig=<ID=pseudoscaff_000080,length=40212>
+##contig=<ID=pseudoscaff_000081,length=40212>
+##contig=<ID=pseudoscaff_000082,length=40212>
+##contig=<ID=pseudoscaff_000083,length=40212>
+##contig=<ID=pseudoscaff_000084,length=40212>
+##contig=<ID=pseudoscaff_000085,length=40212>
+##contig=<ID=pseudoscaff_000086,length=40212>
+##contig=<ID=pseudoscaff_000087,length=40212>
+##contig=<ID=pseudoscaff_000088,length=40212>
+##contig=<ID=pseudoscaff_000089,length=40212>
+##contig=<ID=pseudoscaff_000090,length=40212>
+##contig=<ID=pseudoscaff_000091,length=40212>
+##contig=<ID=pseudoscaff_000092,length=40212>
+##contig=<ID=pseudoscaff_000093,length=40212>
+##contig=<ID=pseudoscaff_000094,length=40212>
+##contig=<ID=pseudoscaff_000095,length=40212>
+##contig=<ID=pseudoscaff_000096,length=40212>
+##contig=<ID=pseudoscaff_000097,length=40212>
+##contig=<ID=pseudoscaff_000098,length=40212>
+##contig=<ID=pseudoscaff_000099,length=40212>
+##contig=<ID=pseudoscaff_000100,length=40212>
+##contig=<ID=pseudoscaff_000101,length=40212>
+##contig=<ID=pseudoscaff_000102,length=40212>
+##contig=<ID=pseudoscaff_000103,length=40212>
+##contig=<ID=pseudoscaff_000104,length=40212>
+##contig=<ID=pseudoscaff_000105,length=40212>
+##contig=<ID=pseudoscaff_000106,length=40212>
+##contig=<ID=pseudoscaff_000107,length=40212>
+##contig=<ID=pseudoscaff_000108,length=40212>
+##contig=<ID=pseudoscaff_000109,length=40212>
+##contig=<ID=pseudoscaff_000110,length=40212>
+##contig=<ID=pseudoscaff_000111,length=40212>
+##contig=<ID=pseudoscaff_000112,length=40212>
+##contig=<ID=pseudoscaff_000113,length=40212>
+##contig=<ID=pseudoscaff_000114,length=40212>
+##contig=<ID=pseudoscaff_000115,length=40212>
+##contig=<ID=pseudoscaff_000116,length=40212>
+##contig=<ID=pseudoscaff_000117,length=40212>
+##contig=<ID=pseudoscaff_000118,length=40212>
+##contig=<ID=pseudoscaff_000119,length=40212>
+##contig=<ID=pseudoscaff_000120,length=40212>
+##contig=<ID=pseudoscaff_000121,length=40212>
+##contig=<ID=pseudoscaff_000122,length=40212>
+##contig=<ID=pseudoscaff_000123,length=40212>
+##contig=<ID=pseudoscaff_000124,length=40212>
+##contig=<ID=pseudoscaff_000125,length=40212>
+##contig=<ID=pseudoscaff_000126,length=40212>
+##contig=<ID=pseudoscaff_000127,length=40212>
+##contig=<ID=pseudoscaff_000128,length=40212>
+##contig=<ID=pseudoscaff_000129,length=40212>
+##contig=<ID=pseudoscaff_000130,length=40212>
+##contig=<ID=pseudoscaff_000131,length=40212>
+##contig=<ID=pseudoscaff_000132,length=40212>
+##contig=<ID=pseudoscaff_000133,length=40212>
+##contig=<ID=pseudoscaff_000134,length=40212>
+##contig=<ID=pseudoscaff_000135,length=40212>
+##contig=<ID=pseudoscaff_000136,length=40212>
+##contig=<ID=pseudoscaff_000137,length=40212>
+##contig=<ID=pseudoscaff_000138,length=40212>
+##contig=<ID=pseudoscaff_000139,length=40212>
+##contig=<ID=pseudoscaff_000140,length=40212>
+##contig=<ID=pseudoscaff_000141,length=40212>
+##contig=<ID=pseudoscaff_000142,length=40212>
+##contig=<ID=pseudoscaff_000143,length=40212>
+##contig=<ID=pseudoscaff_000144,length=40212>
+##contig=<ID=pseudoscaff_000145,length=40212>
+##contig=<ID=pseudoscaff_000146,length=40212>
+##contig=<ID=pseudoscaff_000147,length=40212>
+##contig=<ID=pseudoscaff_000148,length=40212>
+##contig=<ID=pseudoscaff_000149,length=40212>
+##contig=<ID=pseudoscaff_000150,length=40212>
+##contig=<ID=pseudoscaff_000151,length=40212>
+##contig=<ID=pseudoscaff_000152,length=40212>
+##contig=<ID=pseudoscaff_000153,length=40212>
+##contig=<ID=pseudoscaff_000154,length=40212>
+##contig=<ID=pseudoscaff_000155,length=40212>
+##contig=<ID=pseudoscaff_000156,length=40212>
+##contig=<ID=pseudoscaff_000157,length=40212>
+##contig=<ID=pseudoscaff_000158,length=40212>
+##contig=<ID=pseudoscaff_000159,length=40212>
+##contig=<ID=pseudoscaff_000160,length=40212>
+##contig=<ID=pseudoscaff_000161,length=40212>
+##contig=<ID=pseudoscaff_000162,length=40212>
+##contig=<ID=pseudoscaff_000163,length=40212>
+##contig=<ID=pseudoscaff_000164,length=40212>
+##contig=<ID=pseudoscaff_000165,length=40212>
+##contig=<ID=pseudoscaff_000166,length=40212>
+##contig=<ID=pseudoscaff_000167,length=40212>
+##contig=<ID=pseudoscaff_000168,length=40212>
+##contig=<ID=pseudoscaff_000169,length=40212>
+##contig=<ID=pseudoscaff_000170,length=40212>
+##contig=<ID=pseudoscaff_000171,length=40212>
+##contig=<ID=pseudoscaff_000172,length=40212>
+##contig=<ID=pseudoscaff_000173,length=40212>
+##contig=<ID=pseudoscaff_000174,length=40212>
+##contig=<ID=pseudoscaff_000175,length=40212>
+##contig=<ID=pseudoscaff_000176,length=40212>
+##contig=<ID=pseudoscaff_000177,length=40212>
+##contig=<ID=pseudoscaff_000178,length=40212>
+##contig=<ID=pseudoscaff_000179,length=40212>
+##contig=<ID=pseudoscaff_000180,length=40212>
+##contig=<ID=pseudoscaff_000181,length=40212>
+##contig=<ID=pseudoscaff_000182,length=40212>
+##contig=<ID=pseudoscaff_000183,length=40212>
+##contig=<ID=pseudoscaff_000184,length=40212>
+##contig=<ID=pseudoscaff_000185,length=40212>
+##contig=<ID=pseudoscaff_000186,length=40212>
+##contig=<ID=pseudoscaff_000187,length=40212>
+##contig=<ID=pseudoscaff_000188,length=40212>
+##contig=<ID=pseudoscaff_000189,length=40212>
+##contig=<ID=pseudoscaff_000190,length=40212>
+##contig=<ID=pseudoscaff_000191,length=40212>
+##contig=<ID=pseudoscaff_000192,length=40212>
+##contig=<ID=pseudoscaff_000193,length=40212>
+##contig=<ID=pseudoscaff_000194,length=40212>
+##contig=<ID=pseudoscaff_000195,length=40212>
+##contig=<ID=pseudoscaff_000196,length=40212>
+##contig=<ID=pseudoscaff_000197,length=40212>
+##contig=<ID=pseudoscaff_000198,length=40212>
+##contig=<ID=pseudoscaff_000199,length=40212>
+##contig=<ID=pseudoscaff_000200,length=40212>
+##contig=<ID=pseudoscaff_000201,length=40212>
+##contig=<ID=pseudoscaff_000202,length=40212>
+##contig=<ID=pseudoscaff_000203,length=40212>
+##contig=<ID=pseudoscaff_000204,length=40212>
+##contig=<ID=pseudoscaff_000205,length=40212>
+##contig=<ID=pseudoscaff_000206,length=40212>
+##contig=<ID=pseudoscaff_000207,length=40212>
+##contig=<ID=pseudoscaff_000208,length=40212>
+##contig=<ID=pseudoscaff_000209,length=40212>
+##contig=<ID=pseudoscaff_000210,length=40212>
+##contig=<ID=pseudoscaff_000211,length=40212>
+##contig=<ID=pseudoscaff_000212,length=40212>
+##contig=<ID=pseudoscaff_000213,length=40212>
+##contig=<ID=pseudoscaff_000214,length=40212>
+##contig=<ID=pseudoscaff_000215,length=40212>
+##contig=<ID=pseudoscaff_000216,length=40212>
+##contig=<ID=pseudoscaff_000217,length=40212>
+##contig=<ID=pseudoscaff_000218,length=40212>
+##contig=<ID=pseudoscaff_000219,length=40212>
+##contig=<ID=pseudoscaff_000220,length=40212>
+##contig=<ID=pseudoscaff_000221,length=40212>
+##contig=<ID=pseudoscaff_000222,length=40212>
+##contig=<ID=pseudoscaff_000223,length=40212>
+##contig=<ID=pseudoscaff_000224,length=40212>
+##contig=<ID=pseudoscaff_000225,length=40212>
+##contig=<ID=pseudoscaff_000226,length=40212>
+##contig=<ID=pseudoscaff_000227,length=40212>
+##contig=<ID=pseudoscaff_000228,length=40212>
+##contig=<ID=pseudoscaff_000229,length=40212>
+##contig=<ID=pseudoscaff_000230,length=40212>
+##contig=<ID=pseudoscaff_000231,length=40212>
+##contig=<ID=pseudoscaff_000232,length=40212>
+##contig=<ID=pseudoscaff_000233,length=40212>
+##contig=<ID=pseudoscaff_000234,length=40212>
+##contig=<ID=pseudoscaff_000235,length=40212>
+##contig=<ID=pseudoscaff_000236,length=40212>
+##contig=<ID=pseudoscaff_000237,length=40212>
+##contig=<ID=pseudoscaff_000238,length=40212>
+##contig=<ID=pseudoscaff_000239,length=40212>
+##contig=<ID=pseudoscaff_000240,length=40212>
+##contig=<ID=pseudoscaff_000241,length=40212>
+##contig=<ID=pseudoscaff_000242,length=40212>
+##contig=<ID=pseudoscaff_000243,length=40212>
+##contig=<ID=pseudoscaff_000244,length=40212>
+##contig=<ID=pseudoscaff_000245,length=40212>
+##contig=<ID=pseudoscaff_000246,length=40212>
+##contig=<ID=pseudoscaff_000247,length=40212>
+##contig=<ID=pseudoscaff_000248,length=40212>
+##contig=<ID=pseudoscaff_000249,length=40212>
+##contig=<ID=pseudoscaff_000250,length=40212>
+##contig=<ID=pseudoscaff_000251,length=40212>
+##contig=<ID=pseudoscaff_000252,length=40212>
+##contig=<ID=pseudoscaff_000253,length=40212>
+##contig=<ID=pseudoscaff_000254,length=40212>
+##contig=<ID=pseudoscaff_000255,length=40212>
+##contig=<ID=pseudoscaff_000256,length=40212>
+##contig=<ID=pseudoscaff_000257,length=40212>
+##contig=<ID=pseudoscaff_000258,length=40212>
+##contig=<ID=pseudoscaff_000259,length=40212>
+##contig=<ID=pseudoscaff_000260,length=40212>
+##contig=<ID=pseudoscaff_000261,length=40212>
+##contig=<ID=pseudoscaff_000262,length=40212>
+##contig=<ID=pseudoscaff_000263,length=40212>
+##contig=<ID=pseudoscaff_000264,length=40212>
+##contig=<ID=pseudoscaff_000265,length=40212>
+##contig=<ID=pseudoscaff_000266,length=40212>
+##contig=<ID=pseudoscaff_000267,length=40212>
+##contig=<ID=pseudoscaff_000268,length=40212>
+##contig=<ID=pseudoscaff_000269,length=40212>
+##contig=<ID=pseudoscaff_000270,length=40212>
+##contig=<ID=pseudoscaff_000271,length=40212>
+##contig=<ID=pseudoscaff_000272,length=40212>
+##contig=<ID=pseudoscaff_000273,length=40212>
+##contig=<ID=pseudoscaff_000274,length=40212>
+##contig=<ID=pseudoscaff_000275,length=40212>
+##contig=<ID=pseudoscaff_000276,length=40212>
+##contig=<ID=pseudoscaff_000277,length=40212>
+##contig=<ID=pseudoscaff_000278,length=40212>
+##contig=<ID=pseudoscaff_000279,length=40212>
+##contig=<ID=pseudoscaff_000280,length=40212>
+##contig=<ID=pseudoscaff_000281,length=40212>
+##contig=<ID=pseudoscaff_000282,length=40212>
+##contig=<ID=pseudoscaff_000283,length=40212>
+##contig=<ID=pseudoscaff_000284,length=40212>
+##contig=<ID=pseudoscaff_000285,length=40212>
+##contig=<ID=pseudoscaff_000286,length=40212>
+##contig=<ID=pseudoscaff_000287,length=40212>
+##contig=<ID=pseudoscaff_000288,length=40212>
+##contig=<ID=pseudoscaff_000289,length=40212>
+##contig=<ID=pseudoscaff_000290,length=40212>
+##contig=<ID=pseudoscaff_000291,length=40212>
+##contig=<ID=pseudoscaff_000292,length=40212>
+##contig=<ID=pseudoscaff_000293,length=40212>
+##contig=<ID=pseudoscaff_000294,length=40212>
+##contig=<ID=pseudoscaff_000295,length=40212>
+##contig=<ID=pseudoscaff_000296,length=40212>
+##contig=<ID=pseudoscaff_000297,length=40212>
+##contig=<ID=pseudoscaff_000298,length=40212>
+##contig=<ID=pseudoscaff_000299,length=40212>
+##contig=<ID=pseudoscaff_000300,length=40212>
+##contig=<ID=pseudoscaff_000301,length=40212>
+##contig=<ID=pseudoscaff_000302,length=40212>
+##contig=<ID=pseudoscaff_000303,length=40212>
+##contig=<ID=pseudoscaff_000304,length=40212>
+##contig=<ID=pseudoscaff_000305,length=40212>
+##contig=<ID=pseudoscaff_000306,length=40212>
+##contig=<ID=pseudoscaff_000307,length=40212>
+##contig=<ID=pseudoscaff_000308,length=40212>
+##contig=<ID=pseudoscaff_000309,length=40212>
+##contig=<ID=pseudoscaff_000310,length=40212>
+##contig=<ID=pseudoscaff_000311,length=40212>
+##contig=<ID=pseudoscaff_000312,length=40212>
+##contig=<ID=pseudoscaff_000313,length=40212>
+##contig=<ID=pseudoscaff_000314,length=40212>
+##contig=<ID=pseudoscaff_000315,length=40212>
+##contig=<ID=pseudoscaff_000316,length=40212>
+##contig=<ID=pseudoscaff_000317,length=40212>
+##contig=<ID=pseudoscaff_000318,length=40212>
+##contig=<ID=pseudoscaff_000319,length=40212>
+##contig=<ID=pseudoscaff_000320,length=40212>
+##contig=<ID=pseudoscaff_000321,length=40212>
+##contig=<ID=pseudoscaff_000322,length=40212>
+##contig=<ID=pseudoscaff_000323,length=40212>
+##contig=<ID=pseudoscaff_000324,length=40212>
+##contig=<ID=pseudoscaff_000325,length=40212>
+##contig=<ID=pseudoscaff_000326,length=40212>
+##contig=<ID=pseudoscaff_000327,length=40212>
+##contig=<ID=pseudoscaff_000328,length=40212>
+##contig=<ID=pseudoscaff_000329,length=40212>
+##contig=<ID=pseudoscaff_000330,length=40212>
+##contig=<ID=pseudoscaff_000331,length=40212>
+##contig=<ID=pseudoscaff_000332,length=40212>
+##contig=<ID=pseudoscaff_000333,length=40212>
+##contig=<ID=pseudoscaff_000334,length=40212>
+##contig=<ID=pseudoscaff_000335,length=40212>
+##contig=<ID=pseudoscaff_000336,length=40212>
+##contig=<ID=pseudoscaff_000337,length=40212>
+##contig=<ID=pseudoscaff_000338,length=40212>
+##contig=<ID=pseudoscaff_000339,length=40212>
+##contig=<ID=pseudoscaff_000340,length=40212>
+##contig=<ID=pseudoscaff_000341,length=40212>
+##contig=<ID=pseudoscaff_000342,length=40212>
+##contig=<ID=pseudoscaff_000343,length=40212>
+##contig=<ID=pseudoscaff_000344,length=40212>
+##contig=<ID=pseudoscaff_000345,length=40212>
+##contig=<ID=pseudoscaff_000346,length=40212>
+##contig=<ID=pseudoscaff_000347,length=40212>
+##contig=<ID=pseudoscaff_000348,length=40212>
+##contig=<ID=pseudoscaff_000349,length=40212>
+##contig=<ID=pseudoscaff_000350,length=40212>
+##contig=<ID=pseudoscaff_000351,length=40212>
+##contig=<ID=pseudoscaff_000352,length=40212>
+##contig=<ID=pseudoscaff_000353,length=40212>
+##contig=<ID=pseudoscaff_000354,length=40212>
+##contig=<ID=pseudoscaff_000355,length=40212>
+##contig=<ID=pseudoscaff_000356,length=40212>
+##contig=<ID=pseudoscaff_000357,length=40212>
+##contig=<ID=pseudoscaff_000358,length=40212>
+##contig=<ID=pseudoscaff_000359,length=40212>
+##contig=<ID=pseudoscaff_000360,length=40212>
+##contig=<ID=pseudoscaff_000361,length=40212>
+##contig=<ID=pseudoscaff_000362,length=40212>
+##contig=<ID=pseudoscaff_000363,length=40212>
+##contig=<ID=pseudoscaff_000364,length=40212>
+##contig=<ID=pseudoscaff_000365,length=40212>
+##contig=<ID=pseudoscaff_000366,length=40212>
+##contig=<ID=pseudoscaff_000367,length=40212>
+##contig=<ID=pseudoscaff_000368,length=40212>
+##contig=<ID=pseudoscaff_000369,length=40212>
+##contig=<ID=pseudoscaff_000370,length=40212>
+##contig=<ID=pseudoscaff_000371,length=40212>
+##contig=<ID=pseudoscaff_000372,length=40212>
+##contig=<ID=pseudoscaff_000373,length=40212>
+##contig=<ID=pseudoscaff_000374,length=40212>
+##contig=<ID=pseudoscaff_000375,length=40212>
+##contig=<ID=pseudoscaff_000376,length=40212>
+##contig=<ID=pseudoscaff_000377,length=40212>
+##contig=<ID=pseudoscaff_000378,length=40212>
+##contig=<ID=pseudoscaff_000379,length=40212>
+##contig=<ID=pseudoscaff_000380,length=40212>
+##contig=<ID=pseudoscaff_000381,length=40212>
+##contig=<ID=pseudoscaff_000382,length=40212>
+##contig=<ID=pseudoscaff_000383,length=40212>
+##contig=<ID=pseudoscaff_000384,length=40212>
+##contig=<ID=pseudoscaff_000385,length=40212>
+##contig=<ID=pseudoscaff_000386,length=40212>
+##contig=<ID=pseudoscaff_000387,length=40212>
+##contig=<ID=pseudoscaff_000388,length=40212>
+##contig=<ID=pseudoscaff_000389,length=40212>
+##contig=<ID=pseudoscaff_000390,length=40212>
+##contig=<ID=pseudoscaff_000391,length=40212>
+##contig=<ID=pseudoscaff_000392,length=40212>
+##contig=<ID=pseudoscaff_000393,length=40212>
+##contig=<ID=pseudoscaff_000394,length=40212>
+##contig=<ID=pseudoscaff_000395,length=40212>
+##contig=<ID=pseudoscaff_000396,length=40212>
+##contig=<ID=pseudoscaff_000397,length=40212>
+##contig=<ID=pseudoscaff_000398,length=40212>
+##contig=<ID=pseudoscaff_000399,length=40212>
+##contig=<ID=pseudoscaff_000400,length=40212>
+##contig=<ID=pseudoscaff_000401,length=40212>
+##contig=<ID=pseudoscaff_000402,length=40212>
+##contig=<ID=pseudoscaff_000403,length=40212>
+##contig=<ID=pseudoscaff_000404,length=40212>
+##contig=<ID=pseudoscaff_000405,length=40212>
+##contig=<ID=pseudoscaff_000406,length=40212>
+##contig=<ID=pseudoscaff_000407,length=40212>
+##contig=<ID=pseudoscaff_000408,length=40212>
+##contig=<ID=pseudoscaff_000409,length=40212>
+##contig=<ID=pseudoscaff_000410,length=40212>
+##contig=<ID=pseudoscaff_000411,length=40212>
+##contig=<ID=pseudoscaff_000412,length=40212>
+##contig=<ID=pseudoscaff_000413,length=40212>
+##contig=<ID=pseudoscaff_000414,length=40212>
+##contig=<ID=pseudoscaff_000415,length=40212>
+##contig=<ID=pseudoscaff_000416,length=40212>
+##contig=<ID=pseudoscaff_000417,length=40212>
+##contig=<ID=pseudoscaff_000418,length=40212>
+##contig=<ID=pseudoscaff_000419,length=40212>
+##contig=<ID=pseudoscaff_000420,length=40212>
+##contig=<ID=pseudoscaff_000421,length=40212>
+##contig=<ID=pseudoscaff_000422,length=40212>
+##contig=<ID=pseudoscaff_000423,length=40212>
+##contig=<ID=pseudoscaff_000424,length=40212>
+##contig=<ID=pseudoscaff_000425,length=40212>
+##contig=<ID=pseudoscaff_000426,length=40212>
+##contig=<ID=pseudoscaff_000427,length=40212>
+##contig=<ID=pseudoscaff_000428,length=40212>
+##contig=<ID=pseudoscaff_000429,length=40212>
+##contig=<ID=pseudoscaff_000430,length=40212>
+##contig=<ID=pseudoscaff_000431,length=40212>
+##contig=<ID=pseudoscaff_000432,length=40212>
+##contig=<ID=pseudoscaff_000433,length=40212>
+##contig=<ID=pseudoscaff_000434,length=40212>
+##contig=<ID=pseudoscaff_000435,length=40212>
+##contig=<ID=pseudoscaff_000436,length=40212>
+##contig=<ID=pseudoscaff_000437,length=40212>
+##contig=<ID=pseudoscaff_000438,length=40212>
+##contig=<ID=pseudoscaff_000439,length=40212>
+##contig=<ID=pseudoscaff_000440,length=40212>
+##contig=<ID=pseudoscaff_000441,length=40212>
+##contig=<ID=pseudoscaff_000442,length=40212>
+##contig=<ID=pseudoscaff_000443,length=40212>
+##contig=<ID=pseudoscaff_000444,length=40212>
+##contig=<ID=pseudoscaff_000445,length=40212>
+##contig=<ID=pseudoscaff_000446,length=40212>
+##contig=<ID=pseudoscaff_000447,length=40212>
+##contig=<ID=pseudoscaff_000448,length=40212>
+##contig=<ID=pseudoscaff_000449,length=40212>
+##contig=<ID=pseudoscaff_000450,length=40212>
+##contig=<ID=pseudoscaff_000451,length=40212>
+##contig=<ID=pseudoscaff_000452,length=40212>
+##contig=<ID=pseudoscaff_000453,length=40212>
+##contig=<ID=pseudoscaff_000454,length=40212>
+##contig=<ID=pseudoscaff_000455,length=40212>
+##contig=<ID=pseudoscaff_000456,length=40212>
+##contig=<ID=pseudoscaff_000457,length=40212>
+##contig=<ID=pseudoscaff_000458,length=40212>
+##contig=<ID=pseudoscaff_000459,length=40212>
+##contig=<ID=pseudoscaff_000460,length=40212>
+##contig=<ID=pseudoscaff_000461,length=40212>
+##contig=<ID=pseudoscaff_000462,length=40212>
+##contig=<ID=pseudoscaff_000463,length=40212>
+##contig=<ID=pseudoscaff_000464,length=40212>
+##contig=<ID=pseudoscaff_000465,length=40212>
+##contig=<ID=pseudoscaff_000466,length=40212>
+##contig=<ID=pseudoscaff_000467,length=40212>
+##contig=<ID=pseudoscaff_000468,length=40212>
+##contig=<ID=pseudoscaff_000469,length=40212>
+##contig=<ID=pseudoscaff_000470,length=40212>
+##contig=<ID=pseudoscaff_000471,length=40212>
+##contig=<ID=pseudoscaff_000472,length=40212>
+##contig=<ID=pseudoscaff_000473,length=40212>
+##contig=<ID=pseudoscaff_000474,length=40212>
+##contig=<ID=pseudoscaff_000475,length=40212>
+##contig=<ID=pseudoscaff_000476,length=40212>
+##contig=<ID=pseudoscaff_000477,length=40212>
+##contig=<ID=pseudoscaff_000478,length=40212>
+##contig=<ID=pseudoscaff_000479,length=40212>
+##contig=<ID=pseudoscaff_000480,length=40212>
+##contig=<ID=pseudoscaff_000481,length=40212>
+##contig=<ID=pseudoscaff_000482,length=40212>
+##contig=<ID=pseudoscaff_000483,length=40212>
+##contig=<ID=pseudoscaff_000484,length=40212>
+##contig=<ID=pseudoscaff_000485,length=40212>
+##contig=<ID=pseudoscaff_000486,length=40212>
+##contig=<ID=pseudoscaff_000487,length=40212>
+##contig=<ID=pseudoscaff_000488,length=40212>
+##contig=<ID=pseudoscaff_000489,length=40212>
+##contig=<ID=pseudoscaff_000490,length=40212>
+##contig=<ID=pseudoscaff_000491,length=40212>
+##contig=<ID=pseudoscaff_000492,length=40212>
+##contig=<ID=pseudoscaff_000493,length=40212>
+##contig=<ID=pseudoscaff_000494,length=40212>
+##contig=<ID=pseudoscaff_000495,length=40212>
+##contig=<ID=pseudoscaff_000496,length=40212>
+##contig=<ID=pseudoscaff_000497,length=40212>
+##contig=<ID=pseudoscaff_000498,length=40212>
+##contig=<ID=pseudoscaff_000499,length=40212>
+##contig=<ID=pseudoscaff_000500,length=40212>
+##contig=<ID=pseudoscaff_000501,length=40212>
+##contig=<ID=pseudoscaff_000502,length=40212>
+##contig=<ID=pseudoscaff_000503,length=40212>
+##contig=<ID=pseudoscaff_000504,length=40212>
+##contig=<ID=pseudoscaff_000505,length=40212>
+##contig=<ID=pseudoscaff_000506,length=40212>
+##contig=<ID=pseudoscaff_000507,length=40212>
+##contig=<ID=pseudoscaff_000508,length=40212>
+##contig=<ID=pseudoscaff_000509,length=40212>
+##contig=<ID=pseudoscaff_000510,length=40212>
+##contig=<ID=pseudoscaff_000511,length=40212>
+##contig=<ID=pseudoscaff_000512,length=40212>
+##contig=<ID=pseudoscaff_000513,length=40212>
+##contig=<ID=pseudoscaff_000514,length=40212>
+##contig=<ID=pseudoscaff_000515,length=40212>
+##contig=<ID=pseudoscaff_000516,length=40212>
+##contig=<ID=pseudoscaff_000517,length=40212>
+##contig=<ID=pseudoscaff_000518,length=40212>
+##contig=<ID=pseudoscaff_000519,length=40212>
+##contig=<ID=pseudoscaff_000520,length=40212>
+##contig=<ID=pseudoscaff_000521,length=40212>
+##contig=<ID=pseudoscaff_000522,length=40212>
+##contig=<ID=pseudoscaff_000523,length=40212>
+##contig=<ID=pseudoscaff_000524,length=40212>
+##contig=<ID=pseudoscaff_000525,length=40212>
+##contig=<ID=pseudoscaff_000526,length=40212>
+##contig=<ID=pseudoscaff_000527,length=40212>
+##contig=<ID=pseudoscaff_000528,length=40212>
+##contig=<ID=pseudoscaff_000529,length=40212>
+##contig=<ID=pseudoscaff_000530,length=40212>
+##contig=<ID=pseudoscaff_000531,length=40212>
+##contig=<ID=pseudoscaff_000532,length=40212>
+##contig=<ID=pseudoscaff_000533,length=40212>
+##contig=<ID=pseudoscaff_000534,length=40212>
+##contig=<ID=pseudoscaff_000535,length=40212>
+##contig=<ID=pseudoscaff_000536,length=40212>
+##contig=<ID=pseudoscaff_000537,length=40212>
+##contig=<ID=pseudoscaff_000538,length=40212>
+##contig=<ID=pseudoscaff_000539,length=40212>
+##contig=<ID=pseudoscaff_000540,length=40212>
+##contig=<ID=pseudoscaff_000541,length=40212>
+##contig=<ID=pseudoscaff_000542,length=40212>
+##contig=<ID=pseudoscaff_000543,length=40212>
+##contig=<ID=pseudoscaff_000544,length=40212>
+##contig=<ID=pseudoscaff_000545,length=40212>
+##contig=<ID=pseudoscaff_000546,length=40212>
+##contig=<ID=pseudoscaff_000547,length=40212>
+##contig=<ID=pseudoscaff_000548,length=40212>
+##contig=<ID=pseudoscaff_000549,length=40212>
+##contig=<ID=pseudoscaff_000550,length=40212>
+##contig=<ID=pseudoscaff_000551,length=40212>
+##contig=<ID=pseudoscaff_000552,length=40212>
+##contig=<ID=pseudoscaff_000553,length=40212>
+##contig=<ID=pseudoscaff_000554,length=40212>
+##contig=<ID=pseudoscaff_000555,length=40212>
+##contig=<ID=pseudoscaff_000556,length=40212>
+##contig=<ID=pseudoscaff_000557,length=40212>
+##contig=<ID=pseudoscaff_000558,length=40212>
+##contig=<ID=pseudoscaff_000559,length=40212>
+##contig=<ID=pseudoscaff_000560,length=40212>
+##contig=<ID=pseudoscaff_000561,length=40212>
+##contig=<ID=pseudoscaff_000562,length=40212>
+##contig=<ID=pseudoscaff_000563,length=40212>
+##contig=<ID=pseudoscaff_000564,length=40212>
+##contig=<ID=pseudoscaff_000565,length=40212>
+##contig=<ID=pseudoscaff_000566,length=40212>
+##contig=<ID=pseudoscaff_000567,length=40212>
+##contig=<ID=pseudoscaff_000568,length=40212>
+##contig=<ID=pseudoscaff_000569,length=40212>
+##contig=<ID=pseudoscaff_000570,length=40212>
+##contig=<ID=pseudoscaff_000571,length=40212>
+##contig=<ID=pseudoscaff_000572,length=40212>
+##contig=<ID=pseudoscaff_000573,length=40212>
+##contig=<ID=pseudoscaff_000574,length=40212>
+##contig=<ID=pseudoscaff_000575,length=40212>
+##contig=<ID=pseudoscaff_000576,length=40212>
+##contig=<ID=pseudoscaff_000577,length=40212>
+##contig=<ID=pseudoscaff_000578,length=40212>
+##contig=<ID=pseudoscaff_000579,length=40212>
+##contig=<ID=pseudoscaff_000580,length=40212>
+##contig=<ID=pseudoscaff_000581,length=40212>
+##contig=<ID=pseudoscaff_000582,length=40212>
+##contig=<ID=pseudoscaff_000583,length=40212>
+##contig=<ID=pseudoscaff_000584,length=40212>
+##contig=<ID=pseudoscaff_000585,length=40212>
+##contig=<ID=pseudoscaff_000586,length=40212>
+##contig=<ID=pseudoscaff_000587,length=40212>
+##contig=<ID=pseudoscaff_000588,length=40212>
+##contig=<ID=pseudoscaff_000589,length=40212>
+##contig=<ID=pseudoscaff_000590,length=40212>
+##contig=<ID=pseudoscaff_000591,length=40212>
+##contig=<ID=pseudoscaff_000592,length=40212>
+##contig=<ID=pseudoscaff_000593,length=40212>
+##contig=<ID=pseudoscaff_000594,length=40212>
+##contig=<ID=pseudoscaff_000595,length=40212>
+##contig=<ID=pseudoscaff_000596,length=40212>
+##contig=<ID=pseudoscaff_000597,length=40212>
+##contig=<ID=pseudoscaff_000598,length=40212>
+##contig=<ID=pseudoscaff_000599,length=40212>
+##contig=<ID=pseudoscaff_000600,length=40212>
+##contig=<ID=pseudoscaff_000601,length=40212>
+##contig=<ID=pseudoscaff_000602,length=40212>
+##contig=<ID=pseudoscaff_000603,length=40212>
+##contig=<ID=pseudoscaff_000604,length=40212>
+##contig=<ID=pseudoscaff_000605,length=40212>
+##contig=<ID=pseudoscaff_000606,length=40212>
+##contig=<ID=pseudoscaff_000607,length=40212>
+##contig=<ID=pseudoscaff_000608,length=40212>
+##contig=<ID=pseudoscaff_000609,length=40212>
+##contig=<ID=pseudoscaff_000610,length=40212>
+##contig=<ID=pseudoscaff_000611,length=40212>
+##contig=<ID=pseudoscaff_000612,length=40212>
+##contig=<ID=pseudoscaff_000613,length=40212>
+##contig=<ID=pseudoscaff_000614,length=40212>
+##contig=<ID=pseudoscaff_000615,length=40212>
+##contig=<ID=pseudoscaff_000616,length=40212>
+##contig=<ID=pseudoscaff_000617,length=40212>
+##contig=<ID=pseudoscaff_000618,length=40212>
+##contig=<ID=pseudoscaff_000619,length=40212>
+##contig=<ID=pseudoscaff_000620,length=40212>
+##contig=<ID=pseudoscaff_000621,length=40212>
+##contig=<ID=pseudoscaff_000622,length=40212>
+##contig=<ID=pseudoscaff_000623,length=40212>
+##contig=<ID=pseudoscaff_000624,length=40212>
+##contig=<ID=pseudoscaff_000625,length=40212>
+##contig=<ID=pseudoscaff_000626,length=40212>
+##contig=<ID=pseudoscaff_000627,length=40212>
+##contig=<ID=pseudoscaff_000628,length=40212>
+##contig=<ID=pseudoscaff_000629,length=40212>
+##contig=<ID=pseudoscaff_000630,length=40212>
+##contig=<ID=pseudoscaff_000631,length=40212>
+##contig=<ID=pseudoscaff_000632,length=40212>
+##contig=<ID=pseudoscaff_000633,length=40212>
+##contig=<ID=pseudoscaff_000634,length=40212>
+##contig=<ID=pseudoscaff_000635,length=40212>
+##contig=<ID=pseudoscaff_000636,length=40212>
+##contig=<ID=pseudoscaff_000637,length=40212>
+##contig=<ID=pseudoscaff_000638,length=40212>
+##contig=<ID=pseudoscaff_000639,length=40212>
+##contig=<ID=pseudoscaff_000640,length=40212>
+##contig=<ID=pseudoscaff_000641,length=40212>
+##contig=<ID=pseudoscaff_000642,length=40212>
+##contig=<ID=pseudoscaff_000643,length=40212>
+##contig=<ID=pseudoscaff_000644,length=40212>
+##contig=<ID=pseudoscaff_000645,length=40212>
+##contig=<ID=pseudoscaff_000646,length=40212>
+##contig=<ID=pseudoscaff_000647,length=40212>
+##contig=<ID=pseudoscaff_000648,length=40212>
+##contig=<ID=pseudoscaff_000649,length=40212>
+##contig=<ID=pseudoscaff_000650,length=40212>
+##contig=<ID=pseudoscaff_000651,length=40212>
+##contig=<ID=pseudoscaff_000652,length=40212>
+##contig=<ID=pseudoscaff_000653,length=40212>
+##contig=<ID=pseudoscaff_000654,length=40212>
+##contig=<ID=pseudoscaff_000655,length=40212>
+##contig=<ID=pseudoscaff_000656,length=40212>
+##contig=<ID=pseudoscaff_000657,length=40212>
+##contig=<ID=pseudoscaff_000658,length=40212>
+##contig=<ID=pseudoscaff_000659,length=40212>
+##contig=<ID=pseudoscaff_000660,length=40212>
+##contig=<ID=pseudoscaff_000661,length=40212>
+##contig=<ID=pseudoscaff_000662,length=40212>
+##contig=<ID=pseudoscaff_000663,length=40212>
+##contig=<ID=pseudoscaff_000664,length=40212>
+##contig=<ID=pseudoscaff_000665,length=40212>
+##contig=<ID=pseudoscaff_000666,length=40212>
+##contig=<ID=pseudoscaff_000667,length=40212>
+##contig=<ID=pseudoscaff_000668,length=40212>
+##contig=<ID=pseudoscaff_000669,length=40212>
+##contig=<ID=pseudoscaff_000670,length=40212>
+##contig=<ID=pseudoscaff_000671,length=40212>
+##contig=<ID=pseudoscaff_000672,length=40212>
+##contig=<ID=pseudoscaff_000673,length=40212>
+##contig=<ID=pseudoscaff_000674,length=40212>
+##contig=<ID=pseudoscaff_000675,length=40212>
+##contig=<ID=pseudoscaff_000676,length=40212>
+##contig=<ID=pseudoscaff_000677,length=40212>
+##contig=<ID=pseudoscaff_000678,length=40212>
+##contig=<ID=pseudoscaff_000679,length=40212>
+##contig=<ID=pseudoscaff_000680,length=40212>
+##contig=<ID=pseudoscaff_000681,length=40212>
+##contig=<ID=pseudoscaff_000682,length=40212>
+##contig=<ID=pseudoscaff_000683,length=40212>
+##contig=<ID=pseudoscaff_000684,length=40212>
+##contig=<ID=pseudoscaff_000685,length=40212>
+##contig=<ID=pseudoscaff_000686,length=40212>
+##contig=<ID=pseudoscaff_000687,length=40212>
+##contig=<ID=pseudoscaff_000688,length=40212>
+##contig=<ID=pseudoscaff_000689,length=40212>
+##contig=<ID=pseudoscaff_000690,length=40212>
+##contig=<ID=pseudoscaff_000691,length=40212>
+##contig=<ID=pseudoscaff_000692,length=40212>
+##contig=<ID=pseudoscaff_000693,length=40212>
+##contig=<ID=pseudoscaff_000694,length=40212>
+##contig=<ID=pseudoscaff_000695,length=40212>
+##contig=<ID=pseudoscaff_000696,length=40212>
+##contig=<ID=pseudoscaff_000697,length=40212>
+##contig=<ID=pseudoscaff_000698,length=40212>
+##contig=<ID=pseudoscaff_000699,length=40212>
+##contig=<ID=pseudoscaff_000700,length=40212>
+##contig=<ID=pseudoscaff_000701,length=40212>
+##contig=<ID=pseudoscaff_000702,length=40212>
+##contig=<ID=pseudoscaff_000703,length=40212>
+##contig=<ID=pseudoscaff_000704,length=40212>
+##contig=<ID=pseudoscaff_000705,length=40212>
+##contig=<ID=pseudoscaff_000706,length=40212>
+##contig=<ID=pseudoscaff_000707,length=40212>
+##contig=<ID=pseudoscaff_000708,length=40212>
+##contig=<ID=pseudoscaff_000709,length=40212>
+##contig=<ID=pseudoscaff_000710,length=40212>
+##contig=<ID=pseudoscaff_000711,length=40212>
+##contig=<ID=pseudoscaff_000712,length=40212>
+##contig=<ID=pseudoscaff_000713,length=40212>
+##contig=<ID=pseudoscaff_000714,length=40212>
+##contig=<ID=pseudoscaff_000715,length=40212>
+##contig=<ID=pseudoscaff_000716,length=40212>
+##contig=<ID=pseudoscaff_000717,length=40212>
+##contig=<ID=pseudoscaff_000718,length=40212>
+##contig=<ID=pseudoscaff_000719,length=40212>
+##contig=<ID=pseudoscaff_000720,length=40212>
+##contig=<ID=pseudoscaff_000721,length=40212>
+##contig=<ID=pseudoscaff_000722,length=40212>
+##contig=<ID=pseudoscaff_000723,length=40212>
+##contig=<ID=pseudoscaff_000724,length=40212>
+##contig=<ID=pseudoscaff_000725,length=40212>
+##contig=<ID=pseudoscaff_000726,length=40212>
+##contig=<ID=pseudoscaff_000727,length=40212>
+##contig=<ID=pseudoscaff_000728,length=40212>
+##contig=<ID=pseudoscaff_000729,length=40212>
+##contig=<ID=pseudoscaff_000730,length=40212>
+##contig=<ID=pseudoscaff_000731,length=40212>
+##contig=<ID=pseudoscaff_000732,length=40212>
+##contig=<ID=pseudoscaff_000733,length=40212>
+##contig=<ID=pseudoscaff_000734,length=40212>
+##contig=<ID=pseudoscaff_000735,length=40212>
+##contig=<ID=pseudoscaff_000736,length=40212>
+##contig=<ID=pseudoscaff_000737,length=40212>
+##contig=<ID=pseudoscaff_000738,length=40212>
+##contig=<ID=pseudoscaff_000739,length=40212>
+##contig=<ID=pseudoscaff_000740,length=40212>
+##contig=<ID=pseudoscaff_000741,length=40212>
+##contig=<ID=pseudoscaff_000742,length=40212>
+##contig=<ID=pseudoscaff_000743,length=40212>
+##contig=<ID=pseudoscaff_000744,length=40212>
+##contig=<ID=pseudoscaff_000745,length=40212>
+##contig=<ID=pseudoscaff_000746,length=40212>
+##contig=<ID=pseudoscaff_000747,length=40212>
+##contig=<ID=pseudoscaff_000748,length=40212>
+##contig=<ID=pseudoscaff_000749,length=40212>
+##contig=<ID=pseudoscaff_000750,length=40212>
+##contig=<ID=pseudoscaff_000751,length=40212>
+##contig=<ID=pseudoscaff_000752,length=40212>
+##contig=<ID=pseudoscaff_000753,length=40212>
+##contig=<ID=pseudoscaff_000754,length=40212>
+##contig=<ID=pseudoscaff_000755,length=40212>
+##contig=<ID=pseudoscaff_000756,length=40212>
+##contig=<ID=pseudoscaff_000757,length=40212>
+##contig=<ID=pseudoscaff_000758,length=40212>
+##contig=<ID=pseudoscaff_000759,length=40212>
+##contig=<ID=pseudoscaff_000760,length=40212>
+##contig=<ID=pseudoscaff_000761,length=40212>
+##contig=<ID=pseudoscaff_000762,length=40212>
+##contig=<ID=pseudoscaff_000763,length=40212>
+##contig=<ID=pseudoscaff_000764,length=40212>
+##contig=<ID=pseudoscaff_000765,length=40212>
+##contig=<ID=pseudoscaff_000766,length=40212>
+##contig=<ID=pseudoscaff_000767,length=40212>
+##contig=<ID=pseudoscaff_000768,length=40212>
+##contig=<ID=pseudoscaff_000769,length=40212>
+##contig=<ID=pseudoscaff_000770,length=40212>
+##contig=<ID=pseudoscaff_000771,length=40212>
+##contig=<ID=pseudoscaff_000772,length=40212>
+##contig=<ID=pseudoscaff_000773,length=40212>
+##contig=<ID=pseudoscaff_000774,length=40212>
+##contig=<ID=pseudoscaff_000775,length=40212>
+##contig=<ID=pseudoscaff_000776,length=40212>
+##contig=<ID=pseudoscaff_000777,length=40212>
+##contig=<ID=pseudoscaff_000778,length=40212>
+##contig=<ID=pseudoscaff_000779,length=40212>
+##contig=<ID=pseudoscaff_000780,length=40212>
+##contig=<ID=pseudoscaff_000781,length=40212>
+##contig=<ID=pseudoscaff_000782,length=40212>
+##contig=<ID=pseudoscaff_000783,length=40212>
+##contig=<ID=pseudoscaff_000784,length=40212>
+##contig=<ID=pseudoscaff_000785,length=40212>
+##contig=<ID=pseudoscaff_000786,length=40212>
+##contig=<ID=pseudoscaff_000787,length=40212>
+##contig=<ID=pseudoscaff_000788,length=40212>
+##contig=<ID=pseudoscaff_000789,length=40212>
+##contig=<ID=pseudoscaff_000790,length=40212>
+##contig=<ID=pseudoscaff_000791,length=40212>
+##contig=<ID=pseudoscaff_000792,length=40212>
+##contig=<ID=pseudoscaff_000793,length=40212>
+##contig=<ID=pseudoscaff_000794,length=40212>
+##contig=<ID=pseudoscaff_000795,length=40212>
+##contig=<ID=pseudoscaff_000796,length=40212>
+##contig=<ID=pseudoscaff_000797,length=40212>
+##contig=<ID=pseudoscaff_000798,length=40212>
+##contig=<ID=pseudoscaff_000799,length=40212>
+##contig=<ID=pseudoscaff_000800,length=40212>
+##contig=<ID=pseudoscaff_000801,length=40212>
+##contig=<ID=pseudoscaff_000802,length=40212>
+##contig=<ID=pseudoscaff_000803,length=40212>
+##contig=<ID=pseudoscaff_000804,length=40212>
+##contig=<ID=pseudoscaff_000805,length=40212>
+##contig=<ID=pseudoscaff_000806,length=40212>
+##contig=<ID=pseudoscaff_000807,length=40212>
+##contig=<ID=pseudoscaff_000808,length=40212>
+##contig=<ID=pseudoscaff_000809,length=40212>
+##contig=<ID=pseudoscaff_000810,length=40212>
+##contig=<ID=pseudoscaff_000811,length=40212>
+##contig=<ID=pseudoscaff_000812,length=40212>
+##contig=<ID=pseudoscaff_000813,length=40212>
+##contig=<ID=pseudoscaff_000814,length=40212>
+##contig=<ID=pseudoscaff_000815,length=40212>
+##contig=<ID=pseudoscaff_000816,length=40212>
+##contig=<ID=pseudoscaff_000817,length=40212>
+##contig=<ID=pseudoscaff_000818,length=40212>
+##contig=<ID=pseudoscaff_000819,length=40212>
+##contig=<ID=pseudoscaff_000820,length=40212>
+##contig=<ID=pseudoscaff_000821,length=40212>
+##contig=<ID=pseudoscaff_000822,length=40212>
+##contig=<ID=pseudoscaff_000823,length=40212>
+##contig=<ID=pseudoscaff_000824,length=40212>
+##contig=<ID=pseudoscaff_000825,length=40212>
+##contig=<ID=pseudoscaff_000826,length=40212>
+##contig=<ID=pseudoscaff_000827,length=40212>
+##contig=<ID=pseudoscaff_000828,length=40212>
+##contig=<ID=pseudoscaff_000829,length=40212>
+##contig=<ID=pseudoscaff_000830,length=40212>
+##contig=<ID=pseudoscaff_000831,length=40212>
+##contig=<ID=pseudoscaff_000832,length=40212>
+##contig=<ID=pseudoscaff_000833,length=40212>
+##contig=<ID=pseudoscaff_000834,length=40212>
+##contig=<ID=pseudoscaff_000835,length=40212>
+##contig=<ID=pseudoscaff_000836,length=40212>
+##contig=<ID=pseudoscaff_000837,length=40212>
+##contig=<ID=pseudoscaff_000838,length=40212>
+##contig=<ID=pseudoscaff_000839,length=40212>
+##contig=<ID=pseudoscaff_000840,length=40212>
+##contig=<ID=pseudoscaff_000841,length=40212>
+##contig=<ID=pseudoscaff_000842,length=40212>
+##contig=<ID=pseudoscaff_000843,length=40212>
+##contig=<ID=pseudoscaff_000844,length=40212>
+##contig=<ID=pseudoscaff_000845,length=40212>
+##contig=<ID=pseudoscaff_000846,length=40212>
+##contig=<ID=pseudoscaff_000847,length=40212>
+##contig=<ID=pseudoscaff_000848,length=40212>
+##contig=<ID=pseudoscaff_000849,length=40212>
+##contig=<ID=pseudoscaff_000850,length=40212>
+##contig=<ID=pseudoscaff_000851,length=40212>
+##contig=<ID=pseudoscaff_000852,length=40212>
+##contig=<ID=pseudoscaff_000853,length=40212>
+##contig=<ID=pseudoscaff_000854,length=40212>
+##contig=<ID=pseudoscaff_000855,length=40212>
+##contig=<ID=pseudoscaff_000856,length=40212>
+##contig=<ID=pseudoscaff_000857,length=40212>
+##contig=<ID=pseudoscaff_000858,length=40212>
+##contig=<ID=pseudoscaff_000859,length=40212>
+##contig=<ID=pseudoscaff_000860,length=40212>
+##contig=<ID=pseudoscaff_000861,length=40212>
+##contig=<ID=pseudoscaff_000862,length=40212>
+##contig=<ID=pseudoscaff_000863,length=40212>
+##contig=<ID=pseudoscaff_000864,length=40212>
+##contig=<ID=pseudoscaff_000865,length=40212>
+##contig=<ID=pseudoscaff_000866,length=40212>
+##contig=<ID=pseudoscaff_000867,length=40212>
+##contig=<ID=pseudoscaff_000868,length=40212>
+##contig=<ID=pseudoscaff_000869,length=40212>
+##contig=<ID=pseudoscaff_000870,length=40212>
+##contig=<ID=pseudoscaff_000871,length=40212>
+##contig=<ID=pseudoscaff_000872,length=40212>
+##contig=<ID=pseudoscaff_000873,length=40212>
+##contig=<ID=pseudoscaff_000874,length=40212>
+##contig=<ID=pseudoscaff_000875,length=40212>
+##contig=<ID=pseudoscaff_000876,length=40212>
+##contig=<ID=pseudoscaff_000877,length=40212>
+##contig=<ID=pseudoscaff_000878,length=40212>
+##contig=<ID=pseudoscaff_000879,length=40212>
+##contig=<ID=pseudoscaff_000880,length=40212>
+##contig=<ID=pseudoscaff_000881,length=40212>
+##contig=<ID=pseudoscaff_000882,length=40212>
+##contig=<ID=pseudoscaff_000883,length=40212>
+##contig=<ID=pseudoscaff_000884,length=40212>
+##contig=<ID=pseudoscaff_000885,length=40212>
+##contig=<ID=pseudoscaff_000886,length=40212>
+##contig=<ID=pseudoscaff_000887,length=40212>
+##contig=<ID=pseudoscaff_000888,length=40212>
+##contig=<ID=pseudoscaff_000889,length=40212>
+##contig=<ID=pseudoscaff_000890,length=40212>
+##contig=<ID=pseudoscaff_000891,length=40212>
+##contig=<ID=pseudoscaff_000892,length=40212>
+##contig=<ID=pseudoscaff_000893,length=40212>
+##contig=<ID=pseudoscaff_000894,length=40212>
+##contig=<ID=pseudoscaff_000895,length=40212>
+##contig=<ID=pseudoscaff_000896,length=40212>
+##contig=<ID=pseudoscaff_000897,length=40212>
+##contig=<ID=pseudoscaff_000898,length=40212>
+##contig=<ID=pseudoscaff_000899,length=40212>
+##contig=<ID=pseudoscaff_000900,length=40212>
+##contig=<ID=pseudoscaff_000901,length=40212>
+##contig=<ID=pseudoscaff_000902,length=40212>
+##contig=<ID=pseudoscaff_000903,length=40212>
+##contig=<ID=pseudoscaff_000904,length=40212>
+##contig=<ID=pseudoscaff_000905,length=40212>
+##contig=<ID=pseudoscaff_000906,length=40212>
+##contig=<ID=pseudoscaff_000907,length=40212>
+##contig=<ID=pseudoscaff_000908,length=40212>
+##contig=<ID=pseudoscaff_000909,length=40212>
+##contig=<ID=pseudoscaff_000910,length=40212>
+##contig=<ID=pseudoscaff_000911,length=40212>
+##contig=<ID=pseudoscaff_000912,length=40212>
+##contig=<ID=pseudoscaff_000913,length=40212>
+##contig=<ID=pseudoscaff_000914,length=40212>
+##contig=<ID=pseudoscaff_000915,length=40212>
+##contig=<ID=pseudoscaff_000916,length=40212>
+##contig=<ID=pseudoscaff_000917,length=40212>
+##contig=<ID=pseudoscaff_000918,length=40212>
+##contig=<ID=pseudoscaff_000919,length=40212>
+##contig=<ID=pseudoscaff_000920,length=40212>
+##contig=<ID=pseudoscaff_000921,length=40212>
+##contig=<ID=pseudoscaff_000922,length=40212>
+##contig=<ID=pseudoscaff_000923,length=40212>
+##contig=<ID=pseudoscaff_000924,length=40212>
+##contig=<ID=pseudoscaff_000925,length=40212>
+##contig=<ID=pseudoscaff_000926,length=40212>
+##contig=<ID=pseudoscaff_000927,length=40212>
+##contig=<ID=pseudoscaff_000928,length=40212>
+##contig=<ID=pseudoscaff_000929,length=40212>
+##contig=<ID=pseudoscaff_000930,length=40212>
+##contig=<ID=pseudoscaff_000931,length=40212>
+##contig=<ID=pseudoscaff_000932,length=40212>
+##contig=<ID=pseudoscaff_000933,length=40212>
+##contig=<ID=pseudoscaff_000934,length=40212>
+##contig=<ID=pseudoscaff_000935,length=40212>
+##contig=<ID=pseudoscaff_000936,length=40212>
+##contig=<ID=pseudoscaff_000937,length=40212>
+##contig=<ID=pseudoscaff_000938,length=40212>
+##contig=<ID=pseudoscaff_000939,length=40212>
+##contig=<ID=pseudoscaff_000940,length=40212>
+##contig=<ID=pseudoscaff_000941,length=40212>
+##contig=<ID=pseudoscaff_000942,length=40212>
+##contig=<ID=pseudoscaff_000943,length=40212>
+##contig=<ID=pseudoscaff_000944,length=40212>
+##contig=<ID=pseudoscaff_000945,length=40212>
+##contig=<ID=pseudoscaff_000946,length=40212>
+##contig=<ID=pseudoscaff_000947,length=40212>
+##contig=<ID=pseudoscaff_000948,length=40212>
+##contig=<ID=pseudoscaff_000949,length=40212>
+##contig=<ID=pseudoscaff_000950,length=40212>
+##contig=<ID=pseudoscaff_000951,length=40212>
+##contig=<ID=pseudoscaff_000952,length=40212>
+##contig=<ID=pseudoscaff_000953,length=40212>
+##contig=<ID=pseudoscaff_000954,length=40212>
+##contig=<ID=pseudoscaff_000955,length=40212>
+##contig=<ID=pseudoscaff_000956,length=40212>
+##contig=<ID=pseudoscaff_000957,length=40212>
+##contig=<ID=pseudoscaff_000958,length=40212>
+##contig=<ID=pseudoscaff_000959,length=40212>
+##contig=<ID=pseudoscaff_000960,length=40212>
+##contig=<ID=pseudoscaff_000961,length=40212>
+##contig=<ID=pseudoscaff_000962,length=40212>
+##contig=<ID=pseudoscaff_000963,length=40212>
+##contig=<ID=pseudoscaff_000964,length=40212>
+##contig=<ID=pseudoscaff_000965,length=40212>
+##contig=<ID=pseudoscaff_000966,length=40212>
+##contig=<ID=pseudoscaff_000967,length=40212>
+##contig=<ID=pseudoscaff_000968,length=40212>
+##contig=<ID=pseudoscaff_000969,length=40212>
+##contig=<ID=pseudoscaff_000970,length=40212>
+##contig=<ID=pseudoscaff_000971,length=40212>
+##contig=<ID=pseudoscaff_000972,length=40212>
+##contig=<ID=pseudoscaff_000973,length=40212>
+##contig=<ID=pseudoscaff_000974,length=40212>
+##contig=<ID=pseudoscaff_000975,length=40212>
+##contig=<ID=pseudoscaff_000976,length=40212>
+##contig=<ID=pseudoscaff_000977,length=40212>
+##contig=<ID=pseudoscaff_000978,length=40212>
+##contig=<ID=pseudoscaff_000979,length=40212>
+##contig=<ID=pseudoscaff_000980,length=40212>
+##contig=<ID=pseudoscaff_000981,length=40212>
+##contig=<ID=pseudoscaff_000982,length=40212>
+##contig=<ID=pseudoscaff_000983,length=40212>
+##contig=<ID=pseudoscaff_000984,length=40212>
+##contig=<ID=pseudoscaff_000985,length=40212>
+##contig=<ID=pseudoscaff_000986,length=40212>
+##contig=<ID=pseudoscaff_000987,length=40212>
+##contig=<ID=pseudoscaff_000988,length=40212>
+##contig=<ID=pseudoscaff_000989,length=40212>
+##contig=<ID=pseudoscaff_000990,length=40212>
+##contig=<ID=pseudoscaff_000991,length=40212>
+##contig=<ID=pseudoscaff_000992,length=40212>
+##contig=<ID=pseudoscaff_000993,length=40212>
+##contig=<ID=pseudoscaff_000994,length=9668>
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Raw read depth">
+##INFO=<ID=DP4,Number=4,Type=Integer,Description="# high-quality ref-forward bases, ref-reverse, alt-forward and alt-reverse bases">
+##INFO=<ID=MQ,Number=1,Type=Integer,Description="Root-mean-square mapping quality of covering reads">
+##INFO=<ID=FQ,Number=1,Type=Float,Description="Phred probability of all samples being the same">
+##INFO=<ID=AF1,Number=1,Type=Float,Description="Max-likelihood estimate of the first ALT allele frequency (assuming HWE)">
+##INFO=<ID=AC1,Number=1,Type=Float,Description="Max-likelihood estimate of the first ALT allele count (no HWE assumption)">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##INFO=<ID=IS,Number=2,Type=Float,Description="Maximum number of reads supporting an indel and fraction of indel reads">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes for each ALT allele, in the same order as listed">
+##INFO=<ID=G3,Number=3,Type=Float,Description="ML estimate of genotype frequencies">
+##INFO=<ID=HWE,Number=1,Type=Float,Description="Chi^2 based HWE test P-value based on G3">
+##INFO=<ID=CLR,Number=1,Type=Integer,Description="Log ratio of genotype likelihoods with and without the constraint">
+##INFO=<ID=UGT,Number=1,Type=String,Description="The most probable unconstrained genotype configuration in the trio">
+##INFO=<ID=CGT,Number=1,Type=String,Description="The most probable constrained genotype configuration in the trio">
+##INFO=<ID=PV4,Number=4,Type=Float,Description="P-values for strand bias, baseQ bias, mapQ bias and tail distance bias">
+##INFO=<ID=INDEL,Number=0,Type=Flag,Description="Indicates that the variant is an INDEL.">
+##INFO=<ID=PC2,Number=2,Type=Integer,Description="Phred probability of the nonRef allele frequency in group1 samples being larger (,smaller) than in group2.">
+##INFO=<ID=PCHI2,Number=1,Type=Float,Description="Posterior weighted chi^2 P-value for testing the association between group1 and group2 samples.">
+##INFO=<ID=QCHI2,Number=1,Type=Integer,Description="Phred scaled PCHI2.">
+##INFO=<ID=PR,Number=1,Type=Integer,Description="# permutations yielding a smaller PCHI2.">
+##INFO=<ID=QBD,Number=1,Type=Float,Description="Quality by Depth: QUAL/#reads">
+##INFO=<ID=RPB,Number=1,Type=Float,Description="Read Position Bias">
+##INFO=<ID=MDV,Number=1,Type=Integer,Description="Maximum number of high-quality nonRef reads in samples">
+##INFO=<ID=VDB,Number=1,Type=Float,Description="Variant Distance Bias (v2) for filtering splice-site artefacts in RNA-seq data. Note: this version may be broken.">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=GL,Number=3,Type=Float,Description="Likelihoods for RR,RA,AA genotypes (R=ref,A=alt)">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="# high-quality bases">
+##FORMAT=<ID=DV,Number=1,Type=Integer,Description="# high-quality non-reference bases">
+##FORMAT=<ID=SP,Number=1,Type=Integer,Description="Phred-scaled strand bias P-value">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="List of Phred-scaled genotype likelihoods">
+##INFO=<ID=PR,Number=1,Type=Integer,Description="# permutations yielding a smaller PCHI2.">
+##INFO=<ID=PR,Number=1,Type=Integer,Description="# permutations yielding a smaller PCHI2.">
+##INFO=<ID=PR,Number=1,Type=Integer,Description="# permutations yielding a smaller PCHI2.">
+##INFO=<ID=PR,Number=1,Type=Integer,Description="# permutations yielding a smaller PCHI2.">
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	kei_10	kei_11	kei_12	kei_13	kei_14	kei_182	kei_183	kei_184	kei_185	kei_186	kei_45	kei_46	kei_47	kei_48	kei_49	kei_210	kei_211	kei_212	kei_213	kei_214
+
+pseudoscaff_000013	490	.	A	C	999	.	DP=5594;VDB=0.000000e+00;RPB=5.263641e+01;AF1=0.456;G3=0.0762,0.9238,5.06e-09;HWE=2.12e-41;AC1=202;DP4=4268,0,1311,0;MQ=44;FQ=999;PV4=1,2.7e-08,1,0.18;AF1=0.456;G3=0.0762,0.9238,5.06e-09;HWE=2.12e-41;AC1=202;FQ=999;AF1=0.456;G3=0.0762,0.9238,5.06e-09;HWE=2.12e-41;AC1=202;FQ=999;AF1=0.3778;G3=0.1985,0.8015,8.462e-73;HWE=0.0011;AC1=15;FQ=999	GT:PL:DP:SP:GQ	0/1:2,0,141:49:0:6	0/0:0,46,195:29:0:44	0/1:15,0,127:7:0:17	0/1:77,0,139:9:0:79	0/1:41,0,148:9:0:43	0/1:26,0,148:45:0:28	0/1:81,0,161:56:0:83	0/1:86,0,179:31:0:88	0/1:130,0,179:57:0:99	0/1:170,0,191:51:0:99	0/0:0,19,149:51:0:17	0/1:69,0,182:21:0:71	0/1:51,0,177:25:0:53	0/0:0,10,169:29:0:8	0/1:44,0,126:7:0:46	0/1:85,0,87:6:0:86	0/0:0,6,70:2:0:5	0/1:20,0,138:7:0:22	0/0:0,9,101:3:0:8	0/1:41,0,159:10:0:43
+pseudoscaff_000013	491	.	A	T	108	.	DP=5594;VDB=1.932523e-08;RPB=6.888293e+00;AF1=0.01408;AC1=6;DP4=5555,0,20,0;MQ=44;FQ=125;PV4=1,4.4e-08,1,1;AF1=0.01408;AC1=6;FQ=125;AF1=0.01408;AC1=6;FQ=125;AF1=0.07512;AC1=3;FQ=109	GT:PL:DP:SP:GQ	0/0:0,148,233:49:0:99	0/0:0,87,222:29:0:99	0/0:0,21,160:7:0:36	0/0:0,27,188:9:0:42	0/0:0,27,184:9:0:42	0/0:0,135,231:45:0:99	0/0:0,169,239:56:0:99	0/0:0,93,223:31:0:99	0/0:0,172,239:57:0:99	0/0:0,157,234:52:0:99	0/0:0,154,235:51:0:99	0/0:0,63,221:21:0:78	0/0:0,78,219:26:0:93	0/0:0,90,224:30:0:99	0/0:0,21,167:7:0:36	0/0:0,18,158:6:0:33	0/1:34,0,35:2:0:19	0/0:0,21,169:7:0:36	0/1:65,0,31:3:0:48	0/1:75,0,149:10:0:60
+pseudoscaff_000013	878	.	C	T	7.23	.	DP=1443;VDB=2.147648e-03;RPB=4.201921e+00;AF1=0.005592;AC1=2;DP4=1420,0,6,0;MQ=32;FQ=20.1;PV4=1,1,0.16,1;AF1=0.005592;AC1=2;FQ=20.1;AF1=0.005592;AC1=2;FQ=20.1;AF1=0.02685;AC1=1;FQ=7.33	GT:PL:DP:SP:GQ	0/0:0,15,128:5:0:35	0/0:0,12,79:4:0:32	0/0:0,0,0:0:0:20	0/0:0,15,116:5:0:35	0/0:0,21,123:7:0:41	0/0:0,15,124:5:0:35	0/0:0,21,133:7:0:41	0/0:0,48,176:16:0:68	0/0:0,18,129:6:0:38	0/0:0,27,132:9:0:47	0/0:0,24,158:8:0:44	0/0:0,15,128:5:0:35	0/0:0,15,71:5:0:35	0/0:0,18,137:6:0:38	0/1:49,0,56:4:0:29	0/0:0,33,165:11:0:53	0/0:0,12,111:4:0:32	0/0:0,15,71:5:0:35	0/0:0,30,158:10:0:50	0/0:0,33,177:11:0:53
+pseudoscaff_000013	1281	.	G	A	999	.	DP=849;VDB=1.315539e-20;RPB=9.881783e+00;AF1=0.03408;AC1=15;DP4=787,0,34,0;MQ=44;FQ=999;PV4=1,1.4e-07,1,0.066;AF1=0.03408;AC1=15;FQ=999;AF1=0.03408;AC1=15;FQ=999;AF1=0.1143;AC1=4;FQ=999	GT:PL:DP:SP:GQ	0/0:0,9,87:3:0:21	0/0:0,6,64:2:0:18	0/0:0,12,102:4:0:24	0/0:0,9,87:3:0:21	0/0:0,18,132:6:0:30	0/0:0,9,73:3:0:21	0/0:0,6,62:2:0:18	0/0:0,9,86:3:0:21	0/0:0,9,86:3:0:21	0/0:0,3,35:1:0:15	0/0:0,6,64:2:0:18	0/0:0,6,64:2:0:18	0/0:0,12,97:4:0:24	0/0:0,9,81:3:0:21	0/0:0,12,105:4:0:24	0/1:104,0,14:7:0:32	0/1:71,0,50:5:0:59	0/0:0,33,165:11:0:45	0/1:59,0,49:5:0:47	0/1:21,0,75:4:0:10
+pseudoscaff_000013	2538	.	C	T	24.8	.	DP=994;VDB=5.203036e-27;RPB=1.131305e+01;AF1=0.04385;AC1=19;DP4=917,0,45,0;MQ=23;FQ=999;PV4=1,1,0.00025,1;AF1=0.04385;AC1=19;FQ=999;AF1=0.04385;AC1=19;FQ=999;AF1=0.138;AC1=5;FQ=25.4	GT:PL:DP:SP:GQ	0/0:0,12,76:4:0:22	0/0:0,3,18:1:0:14	0/0:0,15,60:5:0:25	0/0:0,15,113:5:0:25	0/0:0,18,66:6:0:28	0/1:26,3,0:3:0:10	0/1:18,3,0:1:0:5	0/1:34,0,25:8:0:24	0/1:12,0,19:2:0:4	0/1:18,3,0:1:0:5	0/0:0,9,82:3:0:19	0/0:0,9,43:3:0:19	0/0:0,24,81:8:0:34	0/0:0,6,60:2:0:17	0/0:0,6,32:2:0:17	0/0:0,9,43:3:0:19	0/0:0,15,60:5:0:25	0/0:0,24,74:8:0:34	0/0:0,21,58:7:0:31	0/0:0,24,143:8:0:34
+pseudoscaff_000013	2553	.	G	C	3.39	.	DP=992;VDB=0.000000e+00;RPB=1.622824e+01;AF1=0.08551;G3=0.8646,0.09098,0.04446;HWE=0.000152;AC1=38;DP4=851,0,98,0;MQ=23;FQ=999;PV4=1,1,0.22,1;AF1=0.08551;G3=0.8646,0.09098,0.04446;HWE=0.000152;AC1=38;FQ=999;AF1=0.08551;G3=0.8646,0.09098,0.04446;HWE=0.000152;AC1=38;FQ=999;AF1=0.02947;AC1=1;FQ=3.46	GT:PL:DP:SP:GQ	0/1:43,0,21:4:0:32	0/0:0,3,18:1:0:11	0/0:0,15,60:5:0:22	0/0:0,15,112:5:0:22	0/0:0,18,66:6:0:25	0/0:0,9,33:3:0:16	0/0:0,3,18:1:0:11	0/0:0,24,69:8:0:31	0/0:0,6,40:2:0:13	0/0:0,3,18:1:0:11	0/0:0,9,82:3:0:16	0/0:0,9,43:3:0:16	0/0:0,27,76:9:0:34	0/0:0,6,60:2:0:13	0/0:0,6,32:2:0:13	0/0:0,6,33:2:0:13	0/0:0,15,60:5:0:22	0/0:0,24,74:8:0:31	0/0:0,24,62:8:0:31	0/0:0,24,142:8:0:31
+pseudoscaff_000013	3053	.	A	T	69.9	.	DP=1349;VDB=5.605194e-45;RPB=1.490365e+01;AF1=0.08361;AC1=37;DP4=1267,0,79,0;MQ=44;FQ=999;PV4=1,5.1e-05,1,1;AF1=0.08361;AC1=37;FQ=999;AF1=0.08361;AC1=37;FQ=999;AF1=0.05482;AC1=2;FQ=70.2	GT:PL:DP:SP:GQ	0/1:60,0,87:5:0:53	0/0:0,24,178:8:0:31	0/0:0,21,169:7:0:28	0/0:0,24,180:8:0:31	0/0:0,15,143:5:0:22	0/0:0,18,158:6:0:25	0/0:0,36,201:12:0:43	0/0:0,18,157:6:0:25	0/0:0,24,180:8:0:31	0/0:0,27,188:9:0:34	0/1:71,6,0:2:0:8	0/0:0,6,75:2:0:14	0/0:0,30,193:10:0:37	0/0:0,21,167:7:0:28	0/0:0,6,75:2:0:14	0/0:0,15,139:5:0:22	0/0:0,9,89:3:0:16	0/0:0,33,199:11:0:40	0/0:0,15,142:5:0:22	0/0:0,33,197:12:0:40
+pseudoscaff_000013	3061	.	A	G	999	.	DP=1349;VDB=0.000000e+00;RPB=-9.899504e+00;AF1=0.805;G3=0.08314,0.2357,0.6811;HWE=0.00278;AC1=356;DP4=211,0,1129,0;MQ=44;FQ=999;PV4=1,0.093,0.049,1;AF1=0.805;G3=0.08314,0.2357,0.6811;HWE=0.00278;AC1=356;FQ=999;AF1=0.805;G3=0.08314,0.2357,0.6811;HWE=0.00278;AC1=356;FQ=999;AF1=0.7463;AC1=30;FQ=999	GT:PL:DP:SP:GQ	0/1:89,0,61:5:0:58	1/1:178,24,0:8:0:27	1/1:169,21,0:7:0:24	1/1:170,21,0:7:0:24	0/1:87,0,61:5:0:58	0/1:52,0,110:6:0:61	1/1:202,36,0:12:0:39	1/1:152,18,0:6:0:21	1/1:180,24,0:8:0:27	1/1:187,27,0:9:0:30	0/1:0,6,72:2:0:5	1/1:75,6,0:2:0:10	1/1:185,30,0:10:0:33	1/1:164,21,0:7:0:24	1/1:74,6,0:2:0:10	0/0:0,15,130:5:0:7	0/1:0,9,94:3:0:3	1/1:198,33,0:11:0:36	0/1:57,0,89:5:0:66	0/1:92,0,158:12:0:99
+pseudoscaff_000013	3083	.	A	G	999	.	DP=1348;VDB=0.000000e+00;RPB=-1.903904e+01;AF1=0.861;G3=0.05988,0.168,0.7721;HWE=0.000703;AC1=381;DP4=147,0,1183,0;MQ=44;FQ=999;PV4=1,0.1,1.2e-09,1;AF1=0.861;G3=0.05988,0.168,0.7721;HWE=0.000703;AC1=381;FQ=999;AF1=0.861;G3=0.05988,0.168,0.7721;HWE=0.000703;AC1=381;FQ=999;AF1=0.9179;AC1=37;FQ=119	GT:PL:DP:SP:GQ	0/1:78,0,57:5:0:52	1/1:176,24,0:8:0:29	1/1:155,18,0:6:0:23	1/1:172,24,0:8:0:29	0/1:79,0,60:5:0:55	1/1:145,18,0:6:0:23	1/1:183,33,0:11:0:38	1/1:150,18,0:6:0:23	1/1:175,24,0:8:0:29	1/1:181,27,0:9:0:32	0/1:0,6,72:2:0:6	1/1:73,6,0:2:0:11	1/1:188,30,0:10:0:35	1/1:157,18,0:6:0:23	1/1:73,6,0:2:0:11	1/1:137,15,0:5:0:20	1/1:89,9,0:3:0:14	1/1:198,33,0:11:0:38	1/1:127,15,0:5:0:20	1/1:201,36,0:12:0:41
+pseudoscaff_000013	3982	.	A	T	999	.	DP=1737;VDB=9.471183e-23;RPB=9.934812e+00;AF1=0.0173;AC1=7;DP4=1690,0,38,0;MQ=44;FQ=999;PV4=1,1,1,0.42;AF1=0.0173;AC1=7;FQ=999;AF1=0.0173;AC1=7;FQ=999;AF1=0.05123;AC1=2;FQ=999	GT:PL:DP:SP:GQ	0/0:0,21,166:7:0:36	0/0:0,12,123:4:0:27	0/0:0,27,169:9:0:42	0/0:0,21,163:7:0:36	0/0:0,30,191:10:0:45	0/0:0,21,169:7:0:36	0/0:0,30,189:10:0:45	0/0:0,15,142:5:0:30	0/1:125,0,50:7:0:71	0/1:141,0,74:10:0:95	0/0:0,24,179:8:0:39	0/0:0,12,125:4:0:27	0/0:0,33,196:11:0:48	0/0:0,24,178:8:0:39	0/0:0,6,74:2:0:21	0/0:0,27,179:9:0:42	0/0:0,18,153:6:0:33	0/0:0,33,193:11:0:48	0/0:0,54,216:18:0:69	0/0:0,48,214:16:0:63
+pseudoscaff_000013	4022	.	A	T	125	.	DP=1732;VDB=5.995605e-08;RPB=7.272985e+00;AF1=0.00596;G3=0.9903,0.004926,0.004742;HWE=0.0073;AC1=3;DP4=1697,0,18,0;MQ=44;FQ=999;PV4=1,1,1,1;AF1=0.00596;G3=0.9903,0.004926,0.004742;HWE=0.0073;AC1=3;FQ=999;AF1=0.00596;G3=0.9903,0.004926,0.004742;HWE=0.0073;AC1=3;FQ=999;AF1=0.02562;AC1=1;FQ=125	GT:PL:DP:SP:GQ	0/0:0,21,155:7:0:40	0/0:0,12,122:4:0:31	0/0:0,27,187:9:0:46	0/0:0,21,161:7:0:40	0/0:0,30,191:10:0:49	0/0:0,21,162:7:0:40	0/0:0,30,190:10:0:49	0/0:0,15,144:5:0:34	0/0:0,21,170:7:0:40	0/0:0,30,187:10:0:49	0/0:0,24,178:8:0:43	0/0:0,12,125:4:0:31	0/0:0,33,198:11:0:52	0/0:0,24,181:8:0:43	0/0:0,6,75:2:0:25	0/0:0,24,174:8:0:43	0/0:0,18,156:6:0:37	0/0:0,33,197:11:0:52	0/0:0,54,218:18:0:73	0/1:168,0,124:16:0:99
+pseudoscaff_000013	4908	.	G	A	999	.	DP=896;VDB=3.467220e-21;RPB=9.920443e+00;AF1=0.04071;AC1=18;DP4=856,0,35,0;MQ=44;FQ=999;PV4=1,0.36,1,1;AF1=0.04071;AC1=18;FQ=999;AF1=0.04071;AC1=18;FQ=999;AF1=0.1027;AC1=4;FQ=999	GT:PL:DP:SP:GQ	0/0:0,30,192:10:0:41	0/1:34,0,26:2:0:23	0/1:54,0,114:7:0:43	0/1:141,15,0:5:0:4	0/0:0,24,176:8:0:35	0/0:0,12,120:4:0:23	0/0:0,9,99:3:0:20	0/0:0,15,143:5:0:26	0/0:0,3,41:1:0:14	0/0:0,15,135:5:0:26	0/0:0,12,119:4:0:23	0/0:0,6,73:2:0:17	0/0:0,12,124:4:0:23	0/0:0,3,40:1:0:14	0/0:0,6,73:2:0:17	0/0:0,15,143:5:0:26	0/0:0,15,128:5:0:26	0/0:0,15,140:5:0:26	0/0:0,9,90:3:0:20	0/0:0,12,120:4:0:23
+pseudoscaff_000013	5110	.	A	T	14.5	.	DP=1116;VDB=1.420479e-16;RPB=8.376291e+00;AF1=0.02614;AC1=11;DP4=1082,0,27,0;MQ=44;FQ=999;PV4=1,0.44,1,1;AF1=0.02614;AC1=11;FQ=999;AF1=0.02614;AC1=11;FQ=999;AF1=0.0269;AC1=1;FQ=14.6	GT:PL:DP:SP:GQ	0/0:0,27,178:9:0:40	0/0:0,30,193:10:0:43	0/0:0,21,169:7:0:34	0/0:0,36,199:12:0:49	0/0:0,6,75:2:0:19	0/0:0,15,143:5:0:28	0/0:0,36,205:12:0:49	0/0:0,27,187:9:0:40	0/0:0,21,170:7:0:34	0/0:0,30,190:10:0:43	0/0:0,21,168:7:0:34	0/0:0,9,102:3:0:22	0/1:57,0,84:5:0:44	0/0:0,12,116:4:0:25	0/0:0,6,73:2:0:19	0/0:0,24,181:8:0:37	0/0:0,9,102:3:0:22	0/0:0,18,152:6:0:31	0/0:0,3,41:1:0:16	0/0:0,45,212:15:0:58
+pseudoscaff_000013	5127	.	G	A	999	.	DP=1101;VDB=0.000000e+00;RPB=2.000294e+01;AF1=0.1565;G3=0.7519,0.1729,0.0752;HWE=0.000125;AC1=69;DP4=908,0,177,0;MQ=44;FQ=999;PV4=1,1,0.21,1;AF1=0.1565;G3=0.7519,0.1729,0.0752;HWE=0.000125;AC1=69;FQ=999;AF1=0.1565;G3=0.7519,0.1729,0.0752;HWE=0.000125;AC1=69;FQ=999;AF1=0.1662;AC1=6;FQ=999	GT:PL:DP:SP:GQ	0/1:66,0,104:9:0:62	0/0:0,30,184:10:0:34	0/0:0,21,161:7:0:25	0/0:0,36,177:12:0:40	0/1:75,6,0:2:0:6	0/0:0,15,122:5:0:19	0/0:0,36,204:12:0:40	0/0:0,27,166:9:0:31	0/1:84,0,99:7:0:80	0/1:146,0,29:10:0:39	0/0:0,21,154:7:0:25	0/1:32,0,65:3:0:28	0/0:0,15,135:5:0:19	0/1:53,0,59:4:0:49	0/0:0,6,70:2:0:11	0/0:0,24,179:8:0:28	0/0:0,9,97:3:0:14	0/0:0,12,118:4:0:16	0/0:0,3,41:1:0:8	0/0:0,45,200:15:0:49
+pseudoscaff_000013	5261	.	T	A	17.6	.	DP=1010;VDB=4.191340e-05;RPB=5.618266e+00;AF1=0.01311;AC1=5;DP4=998,0,11,0;MQ=44;FQ=999;PV4=1,1,0.31,0.46;AF1=0.01311;AC1=5;FQ=999;AF1=0.01311;AC1=5;FQ=999;AF1=0.02816;AC1=1;FQ=17.7	GT:PL:DP:SP:GQ	0/0:0,9,100:3:0:25	0/0:0,18,156:6:0:34	0/0:0,9,99:3:0:25	0/0:0,9,102:3:0:25	0/0:0,21,167:7:0:37	0/0:0,15,143:5:0:31	0/0:0,12,125:4:0:28	0/0:0,9,102:3:0:25	0/0:0,6,74:2:0:22	0/0:0,15,135:5:0:31	0/0:0,18,158:6:0:34	0/0:0,6,72:2:0:22	0/0:0,12,125:4:0:28	0/0:0,6,75:2:0:22	0/0:0,12,81:4:0:28	0/0:0,3,40:1:0:19	0/0:0,9,102:3:0:25	0/1:60,0,83:5:0:44	0/0:0,27,184:9:0:43	0/0:0,15,142:5:0:31
+pseudoscaff_000013	5273	.	G	A	999	.	DP=1010;VDB=0.000000e+00;RPB=2.255475e+01;AF1=0.2545;G3=0.6322,0.209,0.1587;HWE=8.61e-08;AC1=112;DP4=760,0,248,0;MQ=44;FQ=999;PV4=1,1,0.38,0.28;AF1=0.2545;G3=0.6322,0.209,0.1587;HWE=8.61e-08;AC1=112;FQ=999;AF1=0.2545;G3=0.6322,0.209,0.1587;HWE=8.61e-08;AC1=112;FQ=999;AF1=0.6596;AC1=27;FQ=999	GT:PL:DP:SP:GQ	1/1:99,9,0:3:0:4	0/0:0,18,151:6:0:20	1/1:90,9,0:3:0:4	1/1:96,9,0:3:0:4	0/1:124,0,41:7:0:49	0/1:110,0,24:5:0:32	1/1:114,12,0:4:0:6	0/1:29,0,64:3:0:27	0/1:71,6,0:2:0:4	1/1:125,15,0:5:0:8	0/1:56,0,102:6:0:54	0/1:70,6,0:2:0:4	0/0:0,12,119:4:0:14	0/0:0,6,72:2:0:8	0/1:27,0,43:4:0:25	0/0:0,3,41:1:0:6	1/1:95,9,0:3:0:4	1/1:124,15,0:5:0:8	0/1:47,0,130:9:0:45	1/1:139,15,0:5:0:8
+pseudoscaff_000013	5468	.	C	T	56.2	.	DP=1370;VDB=6.988258e-06;RPB=6.128125e+00;AF1=0.007456;AC1=3;DP4=1332,0,13,0;MQ=44;FQ=160;PV4=1,0.00018,1,1;AF1=0.007456;AC1=3;FQ=160;AF1=0.007456;AC1=3;FQ=160;AF1=0.02636;AC1=1;FQ=56.4	GT:PL:DP:SP:GQ	0/0:0,9,87:3:0:27	0/0:0,12,125:4:0:30	0/0:0,27,180:9:0:45	0/0:0,21,162:7:0:39	0/0:0,24,180:8:0:42	0/1:99,0,71:8:0:81	0/0:0,12,118:4:0:30	0/0:0,15,130:5:0:33	0/0:0,12,123:4:0:30	0/0:0,12,123:4:0:30	0/0:0,9,97:3:0:27	0/0:0,12,119:4:0:30	0/0:0,15,139:5:0:33	0/0:0,12,117:4:0:30	0/0:0,15,143:5:0:33	0/0:0,6,73:2:0:24	0/0:0,21,164:7:0:39	0/0:0,48,204:16:0:66	0/0:0,27,187:9:0:45	0/0:0,21,159:7:0:39
+pseudoscaff_000013	5472	.	C	T	99	.	DP=1369;VDB=0.000000e+00;RPB=3.030608e+01;AF1=0.311;G3=0.5908,0.2061,0.2031;HWE=2.5e-11;AC1=137;DP4=853,0,495,0;MQ=44;FQ=999;PV4=1,1,0.12,1;AF1=0.311;G3=0.5908,0.2061,0.2031;HWE=2.5e-11;AC1=137;FQ=999;AF1=0.311;G3=0.5908,0.2061,0.2031;HWE=2.5e-11;AC1=137;FQ=999;AF1=0.07829;AC1=3;FQ=99.4	GT:PL:DP:SP:GQ	0/0:0,9,86:3:0:10	0/1:27,0,87:4:0:27	0/0:0,24,160:8:0:24	0/0:0,21,149:7:0:21	0/0:0,21,162:7:0:21	0/0:0,24,154:8:0:24	0/0:0,12,116:4:0:13	0/1:53,0,78:5:0:53	0/0:0,12,118:4:0:13	0/0:0,12,115:4:0:13	0/0:0,9,89:3:0:10	0/0:0,12,111:4:0:13	0/1:84,0,49:5:0:55	0/0:0,15,126:5:0:16	0/0:0,15,133:5:0:16	0/0:0,6,69:2:0:7	0/0:0,18,146:6:0:19	0/0:0,48,192:16:0:48	0/0:0,27,181:9:0:27	0/0:0,27,157:9:0:27
+pseudoscaff_000013	5833	.	T	A	999	.	DP=1202;VDB=0.000000e+00;RPB=2.737342e+01;AF1=0.3493;AC1=154;DP4=787,0,410,0;MQ=44;FQ=999;PV4=1,0.043,2.6e-07,1;AF1=0.3493;AC1=154;FQ=999;AF1=0.3493;AC1=154;FQ=999;AF1=0.3964;AC1=16;FQ=999	GT:PL:DP:SP:GQ	0/0:0,15,140:5:0:15	0/1:57,0,110:6:0:57	0/1:25,0,111:5:0:25	0/0:0,21,170:7:0:21	0/1:61,0,31:3:0:37	0/1:136,0,52:8:0:58	0/0:0,24,173:8:0:24	1/1:167,21,0:7:0:15	0/1:63,0,32:3:0:38	0/0:0,24,180:8:0:24	0/1:81,0,107:7:0:81	0/1:86,0,61:5:0:67	0/0:0,18,157:6:0:18	0/0:0,9,102:3:0:9	1/1:75,6,0:2:0:3	0/1:25,0,109:5:0:25	0/0:0,9,102:3:0:9	0/1:105,0,57:6:0:63	0/1:100,0,53:6:0:59	1/1:155,18,0:6:0:13
+pseudoscaff_000013	5871	.	C	T	999	.	DP=1194;VDB=0.000000e+00;RPB=2.343431e+01;AF1=0.2285;G3=0.6267,0.2881,0.08513;HWE=0.0233;AC1=101;DP4=885,0,291,0;MQ=44;FQ=999;PV4=1,1,6e-84,1;AF1=0.2285;G3=0.6267,0.2881,0.08513;HWE=0.0233;AC1=101;FQ=999;AF1=0.2285;G3=0.6267,0.2881,0.08513;HWE=0.0233;AC1=101;FQ=999;AF1=0.1091;AC1=4;FQ=999	GT:PL:DP:SP:GQ	0/0:0,15,119:5:0:17	0/0:0,18,151:6:0:20	0/0:0,15,123:5:0:17	0/0:0,21,146:7:0:23	0/0:0,9,87:3:0:12	0/0:0,24,153:8:0:26	0/0:0,24,170:8:0:26	0/1:109,0,47:7:0:55	0/0:0,9,94:3:0:12	0/0:0,24,170:8:0:26	0/1:69,0,96:7:0:67	0/1:84,0,57:5:0:65	0/0:0,18,145:6:0:20	0/0:0,9,92:3:0:12	0/1:71,6,0:2:0:4	0/0:0,15,135:5:0:17	0/0:0,9,97:3:0:12	0/0:0,18,138:6:0:20	0/0:0,18,146:6:0:20	0/0:0,18,141:6:0:20
+pseudoscaff_000013	6052	.	A	T	999	.	DP=1693;VDB=0.000000e+00;RPB=2.598547e+01;AF1=0.1354;G3=0.812,0.1095,0.07856;HWE=9.16e-10;AC1=60;DP4=1398,0,275,0;MQ=22;FQ=999;PV4=1,1,3.3e-29,0.22;AF1=0.1354;G3=0.812,0.1095,0.07856;HWE=9.16e-10;AC1=60;FQ=999;AF1=0.1354;G3=0.812,0.1095,0.07856;HWE=9.16e-10;AC1=60;FQ=999;AF1=0.3111;AC1=12;FQ=999	GT:PL:DP:SP:GQ	0/0:0,21,132:7:0:26	0/0:0,12,50:4:0:17	0/0:0,18,62:6:0:23	0/0:0,24,135:8:0:29	0/0:0,42,83:14:0:47	0/0:0,18,123:6:0:23	0/1:11,0,41:7:0:7	0/0:0,24,69:8:0:29	0/0:0,12,97:4:0:17	0/1:37,0,29:9:0:31	0/0:0,6,42:2:0:11	1/1:77,24,0:8:0:13	0/1:24,0,34:6:0:19	0/1:44,0,126:19:0:39	0/0:0,6,32:2:0:11	0/1:22,0,8:3:0:15	0/1:20,0,20:4:0:15	0/1:49,0,17:13:0:28	0/1:49,0,22:15:0:33	1/1:79,42,0:14:0:31
+pseudoscaff_000013	6215	.	A	T	42	.	DP=939;VDB=2.627560e-03;RPB=2.778839e+00;AF1=0.005765;AC1=2;DP4=923,0,6,0;MQ=44;FQ=47.5;PV4=1,2.6e-08,0.038,1;AF1=0.005765;AC1=2;FQ=47.5;AF1=0.005765;AC1=2;FQ=47.5;AF1=0.03144;AC1=1;FQ=42.1	GT:PL:DP:SP:GQ	0/0:0,12,119:4:0:31	0/0:0,12,125:4:0:31	0/0:0,3,41:1:0:22	0/0:0,6,75:2:0:25	0/0:0,3,40:1:0:22	0/0:0,6,72:2:0:25	0/0:0,6,74:2:0:25	0/1:84,0,108:7:0:65	0/0:0,9,102:3:0:28	0/0:0,15,141:5:0:34	0/0:0,9,102:3:0:28	0/0:0,12,118:4:0:31	0/0:0,12,123:4:0:31	0/0:0,24,176:8:0:43	0/0:0,3,41:1:0:22	0/0:0,3,41:1:0:22	0/0:0,3,41:1:0:22	0/0:0,9,102:3:0:28	0/0:0,9,102:3:0:28	0/0:0,18,152:6:0:37
+pseudoscaff_000013	6220	.	T	C	999	.	DP=939;VDB=0.000000e+00;RPB=1.155683e+01;AF1=0.9385;G3=0.02645,0.07962,0.8939;HWE=0.00786;AC1=415;DP4=52,0,876,0;MQ=44;FQ=999;PV4=1,0.34,0.097,0.4;AF1=0.9385;G3=0.02645,0.07962,0.8939;HWE=0.00786;AC1=415;FQ=999;AF1=0.9385;G3=0.02645,0.07962,0.8939;HWE=0.00786;AC1=415;FQ=999;AF1=0.9379;AC1=38;FQ=35.4	GT:PL:DP:SP:GQ	1/1:122,12,0:4:0:21	1/1:125,12,0:4:0:21	1/1:41,3,0:1:0:12	1/1:75,6,0:2:0:15	1/1:41,3,0:1:0:12	1/1:75,6,0:2:0:15	1/1:75,6,0:2:0:15	1/1:169,21,0:7:0:30	0/1:66,0,32:3:0:23	1/1:142,15,0:5:0:24	1/1:101,9,0:3:0:18	1/1:120,12,0:4:0:21	0/1:63,0,57:4:0:48	1/1:177,24,0:8:0:33	1/1:41,3,0:1:0:12	1/1:41,3,0:1:0:12	1/1:41,3,0:1:0:12	1/1:102,9,0:3:0:18	1/1:100,9,0:3:0:18	1/1:151,18,0:6:0:27
+pseudoscaff_000013	6226	.	A	C	142	.	DP=938;VDB=0.000000e+00;RPB=2.452367e+01;AF1=0.2977;G3=0.589,0.2281,0.1828;HWE=1.82e-07;AC1=131;DP4=614,0,316,0;MQ=44;FQ=999;PV4=1,1,1.6e-07,1;AF1=0.2977;G3=0.589,0.2281,0.1828;HWE=1.82e-07;AC1=131;FQ=999;AF1=0.2977;G3=0.589,0.2281,0.1828;HWE=1.82e-07;AC1=131;FQ=999;AF1=0.06252;AC1=2;FQ=142	GT:PL:DP:SP:GQ	0/0:0,12,119:4:0:13	0/0:0,12,125:4:0:13	0/0:0,3,40:1:0:5	0/0:0,6,75:2:0:8	0/0:0,3,40:1:0:5	0/0:0,6,74:2:0:8	0/0:0,6,74:2:0:8	0/0:0,21,170:7:0:22	0/1:66,0,32:3:0:39	0/0:0,15,139:5:0:16	0/0:0,9,102:3:0:10	0/0:0,12,117:4:0:13	0/0:0,12,120:4:0:13	0/1:130,0,52:8:0:59	0/0:0,3,41:1:0:5	0/0:0,3,41:1:0:5	0/0:0,3,41:1:0:5	0/0:0,9,102:3:0:10	0/0:0,9,101:3:0:10	0/0:0,18,153:6:0:19
+pseudoscaff_000013	6238	.	T	G	117	.	DP=937;VDB=4.191340e-05;RPB=5.656411e+00;AF1=0.02315;AC1=10;DP4=911,0,11,0;MQ=44;FQ=999;PV4=1,1,1,0.1;AF1=0.02315;AC1=10;FQ=999;AF1=0.02315;AC1=10;FQ=999;AF1=0.1537;AC1=6;FQ=117	GT:PL:DP:SP:GQ	0/0:0,12,109:4:0:25	0/0:0,12,118:4:0:25	0/0:0,3,39:1:0:16	0/1:31,0,31:2:0:18	0/1:39,3,0:1:0:16	0/0:0,6,64:2:0:19	0/0:0,6,72:2:0:19	0/0:0,21,153:7:0:34	0/0:0,9,99:3:0:22	0/0:0,15,133:5:0:28	0/1:28,0,59:3:0:15	0/0:0,12,119:4:0:25	0/1:60,0,63:4:0:47	0/0:0,24,166:8:0:37	0/1:40,3,0:1:0:16	0/0:0,3,40:1:0:16	0/0:0,3,39:1:0:16	0/0:0,9,97:3:0:22	0/0:0,9,98:3:0:22	0/0:0,18,145:6:0:31
+pseudoscaff_000013	6252	.	G	C	91.7	.	DP=932;VDB=0.000000e+00;RPB=2.360215e+01;AF1=0.2584;G3=0.5843,0.3121,0.1036;HWE=0.0386;AC1=114;DP4=646,0,261,0;MQ=44;FQ=999;PV4=1,1,0.014,1;AF1=0.2584;G3=0.5843,0.3121,0.1036;HWE=0.0386;AC1=114;FQ=999;AF1=0.2584;G3=0.5843,0.3121,0.1036;HWE=0.0386;AC1=114;FQ=999;AF1=0.1022;AC1=4;FQ=92.2	GT:PL:DP:SP:GQ	0/0:0,12,105:4:0:14	0/1:46,0,52:4:0:44	0/0:0,3,34:1:0:6	0/0:0,6,62:2:0:8	0/0:0,3,35:1:0:6	0/0:0,6,60:2:0:8	0/0:0,6,64:2:0:8	0/0:0,21,145:7:0:23	0/0:0,9,87:3:0:11	0/0:0,15,117:5:0:17	0/0:0,9,86:3:0:11	0/0:0,12,104:4:0:14	0/0:0,12,106:4:0:14	0/0:0,21,143:7:0:23	0/0:0,3,35:1:0:6	0/0:0,3,35:1:0:6	0/0:0,3,35:1:0:6	0/1:26,0,55:3:0:24	1/1:90,9,0:3:0:4	0/0:0,18,131:6:0:20
+pseudoscaff_000013	8385	.	C	T	60.2	.	DP=1458;VDB=3.020417e-26;RPB=1.126191e+01;AF1=0.02752;AC1=12;DP4=1411,0,44,0;MQ=27;FQ=999;PV4=1,0.17,0.036,0.4;AF1=0.02752;AC1=12;FQ=999;AF1=0.02752;AC1=12;FQ=999;AF1=0.08629;AC1=3;FQ=60.6	GT:PL:DP:SP:GQ	0/1:37,0,16:3:0:24	0/0:0,27,105:9:0:39	0/0:0,18,94:6:0:30	0/0:0,18,94:6:0:30	0/0:0,0,0:0:0:13	0/0:0,0,0:0:0:13	0/0:0,30,113:10:0:42	0/1:46,0,46:6:0:34	0/1:41,0,68:8:0:29	0/0:0,21,101:7:0:33	0/0:0,15,86:5:0:27	0/0:0,15,86:5:0:27	0/0:0,18,90:6:0:30	0/0:0,9,62:3:0:22	0/0:0,6,45:2:0:19	0/0:0,24,105:8:0:36	0/0:0,21,101:7:0:33	0/0:0,21,100:7:0:33	0/0:0,36,117:12:0:48	0/0:0,12,73:4:0:24
+pseudoscaff_000013	8422	.	T	C	999	.	DP=1456;VDB=0.000000e+00;RPB=2.207092e+01;AF1=0.8562;G3=0.07949,0.1399,0.7807;HWE=5.37e-07;AC1=379;DP4=201,0,1242,0;MQ=27;FQ=999;PV4=1,1,0,1;AF1=0.8562;G3=0.07949,0.1399,0.7807;HWE=5.37e-07;AC1=379;FQ=999;AF1=0.8562;G3=0.07949,0.1399,0.7807;HWE=5.37e-07;AC1=379;FQ=999;AF1=1;AC1=40;FQ=-38.2	GT:PL:DP:SP:GQ	1/1:62,9,0:3:0:14	1/1:105,24,0:8:0:29	1/1:94,18,0:6:0:23	1/1:94,18,0:6:0:23	1/1:0,0,0:0:0:6	1/1:0,0,0:0:0:6	1/1:113,30,0:10:0:35	1/1:94,18,0:6:0:23	1/1:107,24,0:8:0:29	1/1:101,21,0:7:0:26	1/1:86,15,0:5:0:20	1/1:86,15,0:5:0:20	1/1:91,18,0:6:0:23	1/1:62,9,0:3:0:14	1/1:45,6,0:2:0:11	1/1:105,24,0:8:0:29	1/1:94,18,0:6:0:23	1/1:100,21,0:7:0:26	1/1:118,36,0:12:0:41	1/1:73,12,0:4:0:17
+pseudoscaff_000013	8808	.	T	G	999	.	DP=919;VDB=0.000000e+00;RPB=2.341832e+01;AF1=0.2421;G3=0.6906,0.1392,0.1703;HWE=8.73e-13;AC1=107;DP4=613,0,269,0;MQ=44;FQ=999;PV4=1,1,0.0032,1;AF1=0.2421;G3=0.6906,0.1392,0.1703;HWE=8.73e-13;AC1=107;FQ=999;AF1=0.2421;G3=0.6906,0.1392,0.1703;HWE=8.73e-13;AC1=107;FQ=999;AF1=0.2997;G3=0.6372,0.1199,0.2429;HWE=0.00477;AC1=12;FQ=999	GT:PL:DP:SP:GQ	0/0:0,3,34:1:0:6	0/0:0,12,110:4:0:14	0/0:0,9,81:3:0:11	0/0:0,27,152:9:0:29	0/0:0,15,124:5:0:17	0/0:0,12,99:4:0:14	0/0:0,9,91:3:0:11	0/0:0,12,105:4:0:14	0/0:0,12,104:4:0:14	0/0:0,9,88:3:0:11	1/1:130,18,0:6:0:10	1/1:102,12,0:4:0:5	1/1:90,9,0:3:0:4	1/1:106,12,0:4:0:5	1/1:123,15,0:5:0:8	0/0:0,21,141:7:0:23	0/0:0,6,66:2:0:9	0/1:96,0,85:9:0:90	0/1:135,0,92:13:0:99	0/0:0,24,144:8:0:26
+pseudoscaff_000013	8813	.	T	C	999	.	DP=918;VDB=0.000000e+00;RPB=2.350764e+01;AF1=0.2419;G3=0.6912,0.1394,0.1693;HWE=1.04e-12;AC1=107;DP4=610,0,270,0;MQ=44;FQ=999;PV4=1,0.00011,0.001,1;AF1=0.2419;G3=0.6912,0.1394,0.1693;HWE=1.04e-12;AC1=107;FQ=999;AF1=0.2419;G3=0.6912,0.1394,0.1693;HWE=1.04e-12;AC1=107;FQ=999;AF1=0.2991;G3=0.6358,0.1222,0.242;HWE=0.00578;AC1=12;FQ=999	GT:PL:DP:SP:GQ	0/0:0,3,35:1:0:6	0/0:0,12,106:4:0:14	0/0:0,9,82:3:0:11	0/0:0,27,156:9:0:29	0/0:0,15,119:5:0:17	0/0:0,12,105:4:0:14	0/0:0,6,66:2:0:9	0/0:0,12,106:4:0:14	0/0:0,12,105:4:0:14	0/0:0,9,83:3:0:11	1/1:131,18,0:6:0:10	1/1:95,12,0:4:0:5	1/1:84,9,0:3:0:4	1/1:105,12,0:4:0:5	1/1:106,12,0:4:0:5	0/0:0,21,141:7:0:23	0/0:0,6,64:2:0:9	0/1:97,0,85:9:0:91	0/1:120,0,99:12:0:99	0/0:0,27,155:9:0:29
+pseudoscaff_000013	8818	.	G	A	999	.	DP=917;VDB=0.000000e+00;RPB=1.938401e+01;AF1=0.1833;G3=0.7432,0.118,0.1387;HWE=1.66e-10;AC1=81;DP4=719,0,155,0;MQ=44;FQ=999;PV4=1,0.01,0.29,0.25;AF1=0.1833;G3=0.7432,0.118,0.1387;HWE=1.66e-10;AC1=81;FQ=999;AF1=0.1833;G3=0.7432,0.118,0.1387;HWE=1.66e-10;AC1=81;FQ=999;AF1=0.2609;G3=0.694,0.06081,0.2452;HWE=0.000996;AC1=10;FQ=999	GT:PL:DP:SP:GQ	0/0:0,3,35:1:0:7	0/0:0,12,106:4:0:16	0/0:0,6,62:2:0:10	1/1:154,24,0:8:0:15	0/0:0,15,121:5:0:19	1/1:106,12,0:4:0:4	0/1:63,6,0:2:0:5	1/1:106,12,0:4:0:4	1/1:107,12,0:4:0:4	0/1:47,0,26:3:0:35	0/0:0,18,134:6:0:22	0/0:0,12,100:4:0:16	0/0:0,9,87:3:0:13	0/0:0,12,106:4:0:16	0/0:0,15,121:5:0:19	0/0:0,21,141:7:0:25	0/0:0,6,64:2:0:10	0/0:0,27,159:9:0:30	0/0:0,36,172:12:0:39	0/0:0,27,157:9:0:30
+pseudoscaff_000013	10060	.	G	C	56.6	.	DP=1208;VDB=2.275413e-23;RPB=1.073450e+01;AF1=0.0432;AC1=19;DP4=1149,0,45,0;MQ=40;FQ=999;PV4=1,1,0.0051,1;AF1=0.0432;AC1=19;FQ=999;AF1=0.0432;AC1=19;FQ=999;AF1=0.02878;AC1=1;FQ=56.7	GT:PL:DP:SP:GQ	0/0:0,21,159:7:0:31	0/0:0,12,121:4:0:22	0/0:0,24,167:8:0:34	0/0:0,15,121:5:0:25	0/0:0,15,138:5:0:25	0/0:0,12,114:4:0:22	0/0:0,6,69:2:0:17	0/0:0,21,167:7:0:31	0/0:0,6,71:2:0:17	0/0:0,12,119:4:0:22	0/0:0,18,154:6:0:28	0/0:0,15,130:5:0:25	0/1:99,0,103:8:0:89	0/0:0,9,95:3:0:19	0/0:0,3,40:1:0:14	0/0:0,12,116:4:0:22	0/0:0,12,121:4:0:22	0/0:0,18,151:6:0:28	0/0:0,0,0:0:0:11	0/0:0,18,153:6:0:28
+pseudoscaff_000013	10069	.	C	G	11	.	DP=1204;VDB=3.856020e-04;RPB=4.764647e+00;AF1=0.005264;AC1=2;DP4=1185,0,8,0;MQ=40;FQ=87.5;PV4=1,0.13,1,1;AF1=0.005264;AC1=2;FQ=87.5;AF1=0.005264;AC1=2;FQ=87.5;AF1=0.02882;AC1=1;FQ=11.1	GT:PL:DP:SP:GQ	0/1:53,0,89:6:0:33	0/0:0,12,121:4:0:32	0/0:0,24,175:8:0:44	0/0:0,12,118:4:0:32	0/0:0,15,133:5:0:35	0/0:0,12,111:4:0:32	0/0:0,6,71:2:0:26	0/0:0,21,167:7:0:41	0/0:0,6,73:2:0:26	0/0:0,12,122:4:0:32	0/0:0,18,153:6:0:38	0/0:0,15,136:5:0:35	0/0:0,24,167:8:0:44	0/0:0,9,93:3:0:29	0/0:0,3,40:1:0:23	0/0:0,12,108:4:0:32	0/0:0,12,116:4:0:32	0/0:0,21,157:7:0:41	0/0:0,0,0:0:0:20	0/0:0,18,152:6:0:38
+pseudoscaff_000013	10072	.	A	T	67.2	.	DP=1204;VDB=2.944874e-25;RPB=1.098288e+01;AF1=0.03001;AC1=13;DP4=1153,0,42,0;MQ=40;FQ=999;PV4=1,1.3e-06,0.22,1;AF1=0.03001;AC1=13;FQ=999;AF1=0.03001;AC1=13;FQ=999;AF1=0.05646;AC1=2;FQ=67.5	GT:PL:DP:SP:GQ	0/0:0,21,162:7:0:33	0/0:0,12,122:4:0:24	0/0:0,24,177:8:0:36	0/0:0,15,124:5:0:27	0/0:0,15,139:5:0:27	0/0:0,12,112:4:0:24	0/1:33,0,34:2:0:21	0/0:0,21,168:7:0:33	0/0:0,6,72:2:0:18	0/1:89,0,28:4:0:46	0/0:0,18,152:6:0:30	0/0:0,15,136:5:0:27	0/0:0,24,173:8:0:36	0/0:0,9,95:3:0:21	0/0:0,3,40:1:0:15	0/0:0,12,121:4:0:24	0/0:0,12,121:4:0:24	0/0:0,21,155:7:0:33	0/0:0,0,0:0:0:12	0/0:0,18,153:6:0:30
+pseudoscaff_000013	13028	.	C	G	999	.	DP=1680;VDB=0.000000e+00;RPB=3.380031e+01;AF1=0.5499;G3=0.2527,0.3923,0.355;HWE=0.00646;AC1=243;DP4=798,0,851,1;MQ=44;FQ=999;PV4=1,0.00043,0.016,0.088;AF1=0.5499;G3=0.2527,0.3923,0.355;HWE=0.00646;AC1=243;FQ=999;AF1=0.5499;G3=0.2527,0.3923,0.355;HWE=0.00646;AC1=243;FQ=999;AF1=0.4729;AC1=19;FQ=999	GT:PL:DP:SP:GQ	1/1:74,6,0:2:0:5	0/0:0,6,75:2:0:4	0/1:79,0,138:9:0:83	0/0:0,36,189:12:0:32	0/1:150,0,165:19:0:99	0/1:26,0,59:3:0:30	0/1:120,0,103:9:0:99	0/1:38,0,128:8:0:42	0/1:108,0,84:7:0:86	0/1:82,0,106:7:0:86	0/0:0,6,71:2:0:4	0/0:0,9,102:3:0:6	0/1:107,0,83:7:0:85	0/0:0,30,193:10:0:26	0/1:0,3,41:1:0:3	0/1:83,0,106:7:0:87	1/1:183,27,0:9:0:25	0/1:156,0,116:15:0:99	1/1:212,63,0:21:0:61	1/1:192,33,0:11:0:31
+pseudoscaff_000013	13569	.	A	G	16.3	.	DP=2064;VDB=9.876324e-09;RPB=7.804599e+00;AF1=0.01769;AC1=8;DP4=2033,0,21,0;MQ=44;FQ=999;PV4=1,0.06,0.00089,1;AF1=0.01769;AC1=8;FQ=999;AF1=0.01769;AC1=8;FQ=999;AF1=0.07426;AC1=3;FQ=16.6	GT:PL:DP:SP:GQ	0/0:0,30,194:10:0:44	0/0:0,33,200:11:0:47	0/0:0,21,171:7:0:35	0/0:0,30,192:10:0:44	0/0:0,30,194:10:0:44	0/0:0,15,140:5:0:29	0/0:0,33,198:11:0:47	0/0:0,9,90:3:0:23	0/0:0,36,198:12:0:50	0/0:0,30,193:10:0:44	0/0:0,24,177:8:0:38	0/0:0,18,158:6:0:32	0/0:0,27,180:9:0:41	0/0:0,12,121:4:0:26	0/0:0,9,102:3:0:23	0/1:20,0,140:7:0:7	0/1:23,0,110:5:0:9	0/0:0,36,203:12:0:50	0/0:0,60,220:20:0:74	0/1:38,0,168:12:0:24
+pseudoscaff_000013	13576	.	T	C	999	.	DP=2063;VDB=0.000000e+00;RPB=3.759310e+01;AF1=0.4839;G3=0.01261,0.9874,1.762e-12;HWE=5.73e-54;AC1=214;DP4=1257,0,793,0;MQ=44;FQ=999;PV4=1,0.016,1,1;AF1=0.4839;G3=0.01261,0.9874,1.762e-12;HWE=5.73e-54;AC1=214;FQ=999;AF1=0.4839;G3=0.01261,0.9874,1.762e-12;HWE=5.73e-54;AC1=214;FQ=999;AF1=0.4775;G3=3.209e-05,1,2.579e-107;HWE=1.41e-06;AC1=19;FQ=999	GT:PL:DP:SP:GQ	0/1:73,0,138:10:0:76	0/1:98,0,148:11:0:99	0/1:83,0,108:7:0:86	0/1:96,0,136:10:0:99	0/1:120,0,118:10:0:99	0/1:86,0,61:5:0:64	0/1:43,0,164:11:0:46	0/1:64,0,30:3:0:33	0/1:130,0,125:12:0:99	0/1:45,0,151:10:0:48	0/1:49,0,135:8:0:52	0/1:87,0,86:6:0:86	0/1:119,0,103:9:0:99	0/0:0,12,121:4:0:10	0/1:65,0,32:3:0:35	0/1:83,0,107:7:0:86	0/1:23,0,110:5:0:26	0/1:91,0,155:12:0:94	0/1:46,0,180:20:0:49	0/1:151,0,95:12:0:98
+pseudoscaff_000013	13579	.	T	C	999	.	DP=2063;VDB=0.000000e+00;RPB=2.573921e+01;AF1=0.1246;G3=0.75,0.25,6.338e-09;HWE=0.00627;AC1=55;DP4=1784,0,269,0;MQ=44;FQ=999;PV4=1,1,0.28,1;AF1=0.1246;G3=0.75,0.25,6.338e-09;HWE=0.00627;AC1=55;FQ=999;AF1=0.1246;G3=0.75,0.25,6.338e-09;HWE=0.00627;AC1=55;FQ=999;AF1=0.1964;AC1=8;FQ=999	GT:PL:DP:SP:GQ	0/1:114,0,111:10:0:99	0/1:72,0,159:11:0:67	0/1:106,0,84:7:0:94	0/0:0,30,192:10:0:35	0/0:0,30,194:10:0:35	0/0:0,15,136:5:0:20	0/1:8,0,167:11:0:4	0/0:0,9,102:3:0:15	0/0:0,36,198:12:0:41	0/0:0,30,182:10:0:35	0/1:82,0,122:8:0:77	0/0:0,18,158:6:0:23	0/1:103,0,122:9:0:98	0/1:89,0,29:4:0:40	0/1:32,0,65:3:0:27	0/0:0,21,170:7:0:26	0/0:0,15,142:5:0:20	0/0:0,36,204:12:0:41	0/0:0,60,220:20:0:65	0/0:0,36,204:12:0:41
+pseudoscaff_000013	13941	.	T	C	128	.	DP=768;VDB=5.312422e-16;RPB=8.557240e+00;AF1=0.03778;AC1=16;DP4=740,0,26,0;MQ=44;FQ=999;PV4=1,0.26,0.4,1;AF1=0.03778;AC1=16;FQ=999;AF1=0.03778;AC1=16;FQ=999;AF1=0.1157;AC1=4;FQ=129	GT:PL:DP:SP:GQ	0/1:31,0,66:3:0:20	0/0:0,3,40:1:0:14	0/0:0,6,74:2:0:17	0/0:0,3,39:1:0:14	0/0:0,9,101:3:0:20	0/1:89,0,58:5:0:73	0/0:0,3,41:1:0:14	0/1:74,6,0:2:0:11	0/0:0,18,158:6:0:29	0/0:0,9,101:3:0:20	0/0:0,3,38:1:0:14	0/0:0,15,137:5:0:26	0/0:0,3,36:1:0:14	0/0:0,3,24:1:0:14	0/0:0,0,0:0:0:11	0/0:0,3,40:1:0:14	0/0:0,3,35:1:0:14	0/0:0,6,74:2:0:17	0/0:0,18,158:6:0:29	0/0:0,6,74:2:0:17
+pseudoscaff_000013	13981	.	C	G	6.36	.	DP=767;VDB=4.075627e-31;RPB=1.200307e+01;AF1=0.05891;AC1=26;DP4=693,0,52,0;MQ=44;FQ=999;PV4=1,1.3e-09,1,0.19;AF1=0.05891;AC1=26;FQ=999;AF1=0.05891;AC1=26;FQ=999;AF1=0.09453;AC1=4;FQ=6.68	GT:PL:DP:SP:GQ	0/0:0,9,87:3:0:18	0/0:0,3,35:1:0:12	0/0:0,6,64:2:0:15	0/0:0,3,35:1:0:12	0/0:0,9,86:3:0:18	0/0:0,15,121:5:0:24	0/0:0,3,35:1:0:12	0/0:0,6,64:2:0:15	0/0:0,18,135:6:0:27	0/0:0,9,87:3:0:18	0/0:0,3,35:1:0:12	0/0:9,0,93:5:0:3	0/0:0,3,35:1:0:12	0/0:0,3,33:1:0:12	0/0:0,0,0:0:0:9	0/1:35,3,0:1:0:12	0/0:0,3,30:1:0:12	0/1:22,0,29:2:0:13	0/0:0,15,121:5:0:24	0/0:0,6,61:2:0:15
+pseudoscaff_000013	17623	.	A	G	999	.	DP=991;VDB=0.000000e+00;RPB=1.889632e+01;AF1=0.1205;G3=0.7957,0.1638,0.04048;HWE=0.0153;AC1=53;DP4=833,0,143,0;MQ=44;FQ=999;PV4=1,0.0069,0.007,1;AF1=0.1205;G3=0.7957,0.1638,0.04048;HWE=0.0153;AC1=53;FQ=999;AF1=0.1205;G3=0.7957,0.1638,0.04048;HWE=0.0153;AC1=53;FQ=999;AF1=0.1447;AC1=5;FQ=999	GT:PL:DP:SP:GQ	0/0:0,9,95:3:0:15	0/0:0,3,39:1:0:9	0/1:120,0,52:7:0:64	0/0:0,18,154:6:0:24	0/0:0,15,133:5:0:21	0/0:0,18,148:6:0:24	0/1:103,0,104:8:0:97	0/0:0,6,71:2:0:12	0/0:0,9,94:3:0:15	0/0:0,6,71:2:0:12	0/0:0,6,70:2:0:12	0/1:67,0,149:10:0:61	0/0:0,21,165:7:0:27	0/1:78,0,106:7:0:72	0/1:40,3,0:1:0:9	0/0:0,6,75:2:0:12	0/0:0,24,175:8:0:30	0/0:0,24,175:8:0:30	0/0:0,27,180:9:0:33	0/0:0,6,74:2:0:12
+pseudoscaff_000013	17627	.	T	C	999	.	DP=991;VDB=0.000000e+00;RPB=1.755783e+01;AF1=0.9082;G3=0.03873,0.1073,0.8539;HWE=0.000456;AC1=402;DP4=119,0,847,0;MQ=44;FQ=999;PV4=1,1,0.21,1;AF1=0.9082;G3=0.03873,0.1073,0.8539;HWE=0.000456;AC1=402;FQ=999;AF1=0.9082;G3=0.03873,0.1073,0.8539;HWE=0.000456;AC1=402;FQ=999;AF1=0.9162;AC1=37;FQ=109	GT:PL:DP:SP:GQ	0/1:43,0,23:3:0:16	1/1:38,3,0:1:0:10	1/1:153,21,0:7:0:28	1/1:137,18,0:6:0:25	1/1:138,15,0:5:0:22	1/1:139,18,0:6:0:25	1/1:175,24,0:8:0:31	1/1:67,6,0:2:0:13	1/1:93,9,0:3:0:16	1/1:70,6,0:2:0:13	1/1:66,6,0:2:0:13	0/1:49,0,120:8:0:62	1/1:160,21,0:7:0:28	1/1:165,21,0:7:0:28	1/1:39,3,0:1:0:10	0/1:31,0,29:2:0:22	1/1:175,24,0:8:0:31	1/1:169,24,0:8:0:31	1/1:177,24,0:8:0:31	1/1:65,6,0:2:0:13
+pseudoscaff_000013	18733	.	A	T	59.7	.	DP=1469;VDB=0.000000e+00;RPB=1.676037e+01;AF1=0.05158;G3=0.9159,0.06117,0.02288;HWE=0.000563;AC1=22;DP4=1348,0,102,0;MQ=44;FQ=999;PV4=1,0.031,0.0058,1;AF1=0.05158;G3=0.9159,0.06117,0.02288;HWE=0.000563;AC1=22;FQ=999;AF1=0.05158;G3=0.9159,0.06117,0.02288;HWE=0.000563;AC1=22;FQ=999;AF1=0.04736;AC1=2;FQ=59.9	GT:PL:DP:SP:GQ	0/0:0,15,123:5:0:25	0/0:0,27,178:9:0:37	0/0:0,27,175:9:0:37	0/0:0,15,130:5:0:25	0/0:0,21,166:7:0:31	0/1:15,0,96:5:0:6	0/0:0,27,180:9:0:37	0/1:98,0,24:5:0:40	0/0:0,15,134:5:0:25	0/0:0,48,201:16:0:58	0/0:0,24,161:8:0:34	0/0:0,12,119:4:0:22	0/0:0,12,118:4:0:22	0/0:0,30,181:10:0:40	0/0:0,3,41:1:0:13	0/0:0,9,97:3:0:19	0/0:0,15,128:5:0:25	0/0:0,6,69:2:0:16	0/0:0,6,75:2:0:16	0/0:0,42,196:14:0:52
+pseudoscaff_000013	18739	.	G	T	61.5	.	DP=1469;VDB=0.000000e+00;RPB=1.683601e+01;AF1=0.05191;G3=0.9151,0.06205,0.02287;HWE=0.000605;AC1=23;DP4=1347,0,103,0;MQ=44;FQ=999;PV4=1,0.16,0.00041,1;AF1=0.05191;G3=0.9151,0.06205,0.02287;HWE=0.000605;AC1=23;FQ=999;AF1=0.05191;G3=0.9151,0.06205,0.02287;HWE=0.000605;AC1=23;FQ=999;AF1=0.0516;AC1=2;FQ=61.7	GT:PL:DP:SP:GQ	0/0:0,15,123:5:0:25	0/0:0,27,177:9:0:37	0/0:0,27,169:9:0:37	0/0:0,15,126:5:0:25	0/0:0,21,161:7:0:31	0/1:20,0,93:5:0:11	0/0:0,24,171:8:0:34	0/1:96,0,22:5:0:38	0/0:0,15,133:5:0:25	0/0:0,48,191:16:0:58	0/0:0,24,156:8:0:34	0/0:0,12,111:4:0:22	0/0:0,12,115:4:0:22	0/0:0,30,174:10:0:40	0/0:0,3,39:1:0:13	0/0:0,9,97:3:0:19	0/0:0,15,133:5:0:25	0/0:0,6,62:2:0:16	0/0:0,6,71:2:0:16	0/0:0,42,187:14:0:52
+pseudoscaff_000013	18880	.	A	G	999	.	DP=945;VDB=0.000000e+00;RPB=2.508786e+01;AF1=0.5971;G3=0.2075,0.3954,0.3971;HWE=0.0312;AC1=264;DP4=367,0,575,1;MQ=36;FQ=999;PV4=1,0.046,4e-12,1;AF1=0.5971;G3=0.2075,0.3954,0.3971;HWE=0.0312;AC1=264;FQ=999;AF1=0.5971;G3=0.2075,0.3954,0.3971;HWE=0.0312;AC1=264;FQ=999;AF1=0.7409;AC1=30;FQ=999	GT:PL:DP:SP:GQ	0/1:0,3,38:1:0:4	1/1:143,18,0:6:0:17	0/1:81,0,93:9:0:85	0/1:0,0,0:0:0:3	0/1:61,0,18:5:0:19	1/1:109,15,0:5:0:14	0/1:0,4,113:7:0:3	1/1:101,15,0:5:0:14	0/1:0,3,64:3:0:4	1/1:116,18,0:6:0:17	0/1:81,0,25:4:0:26	0/0:0,6,64:2:0:4	1/1:123,15,0:5:0:14	1/1:147,21,0:7:0:20	0/1:21,0,84:4:0:26	1/1:37,3,0:1:0:4	1/1:37,3,0:1:0:4	1/1:180,33,0:11:0:32	1/1:147,21,0:7:0:20	1/1:129,15,0:5:0:14
+pseudoscaff_000013	18896	.	G	T	34.1	.	DP=955;VDB=4.683992e-05;RPB=5.360446e+00;AF1=0.0177;AC1=7;DP4=931,1,17,0;MQ=36;FQ=999;PV4=1,0.43,0.032,0.012;AF1=0.0177;AC1=7;FQ=999;AF1=0.0177;AC1=7;FQ=999;AF1=0.05418;AC1=2;FQ=34.4	GT:PL:DP:SP:GQ	0/0:0,3,38:1:0:18	0/0:0,21,142:7:0:35	0/0:0,27,157:9:0:41	0/0:0,0,0:0:0:15	0/0:0,15,97:5:0:29	0/0:0,15,115:5:0:29	0/0:0,21,133:7:0:35	0/0:0,15,97:5:0:29	0/0:0,9,70:3:0:23	0/0:0,18,116:6:0:32	0/0:0,12,113:4:0:26	0/0:0,6,64:2:0:20	0/1:71,0,53:5:0:56	0/1:16,0,113:7:0:4	0/0:0,12,115:4:0:26	0/0:0,3,37:1:0:18	0/0:0,3,37:1:0:18	0/0:0,33,180:11:0:47	0/0:0,21,145:7:0:35	0/0:0,15,129:5:0:29
+pseudoscaff_000013	18925	.	T	A	124	.	DP=978;VDB=4.523984e-11;RPB=5.926368e+00;AF1=0.02396;AC1=10;DP4=940,2,27,0;MQ=35;FQ=999;PV4=1,1e-07,0.44,1;AF1=0.02396;AC1=10;FQ=999;AF1=0.02396;AC1=10;FQ=999;AF1=0.08827;AC1=3;FQ=124	GT:PL:DP:SP:GQ	0/0:0,3,36:1:0:16	0/0:0,21,141:7:0:34	0/0:0,27,155:9:0:40	0/0:0,0,0:0:0:13	0/0:0,15,93:5:0:28	0/0:0,15,112:5:0:28	0/0:0,21,127:7:0:34	0/0:0,15,91:5:0:28	0/0:0,9,67:3:0:22	0/0:0,21,114:7:0:34	0/0:0,12,109:4:0:25	0/0:0,6,62:2:0:19	0/1:51,0,71:5:0:38	0/1:112,0,16:7:0:35	0/1:24,0,79:4:0:11	0/0:0,3,37:1:0:16	0/0:0,3,37:1:0:16	0/0:0,33,172:11:0:46	0/0:0,24,146:8:0:37	0/0:0,21,130:7:0:34
+pseudoscaff_000013	18936	.	G	A	61.8	.	DP=974;VDB=2.269103e-18;RPB=7.420665e+00;AF1=0.04225;AC1=18;DP4=925,2,35,0;MQ=35;FQ=999;PV4=1,1,0.12,1;AF1=0.04225;AC1=18;FQ=999;AF1=0.04225;AC1=18;FQ=999;AF1=0.08372;AC1=3;FQ=62.2	GT:PL:DP:SP:GQ	0/0:0,3,35:1:0:14	0/0:0,21,131:7:0:32	0/0:0,27,145:9:0:38	0/0:0,0,0:0:0:11	0/0:0,15,88:5:0:26	0/1:41,0,63:5:0:30	0/0:0,18,108:6:0:29	0/0:0,15,93:5:0:26	0/0:0,9,65:3:0:20	0/0:0,21,111:7:0:32	0/0:0,12,106:4:0:23	0/0:0,6,60:2:0:17	0/1:69,0,50:5:0:58	0/1:14,0,112:7:0:5	0/0:0,12,106:4:0:23	0/0:0,3,35:1:0:14	0/0:0,3,35:1:0:14	0/0:0,33,169:11:0:44	0/0:0,24,138:8:0:35	0/0:0,21,126:7:0:32
+pseudoscaff_000013	18949	.	G	T	83	.	DP=902;VDB=1.884945e-19;RPB=9.319826e+00;AF1=0.03315;AC1=14;DP4=852,0,32,0;MQ=37;FQ=999;PV4=1,4e-40,0.3,1;AF1=0.03315;AC1=14;FQ=999;AF1=0.03315;AC1=14;FQ=999;AF1=0.1182;AC1=4;FQ=83.6	GT:PL:DP:SP:GQ	0/0:0,3,29:1:0:15	0/1:47,0,69:7:0:35	0/0:0,21,145:7:0:33	0/0:0,0,0:0:0:12	0/1:39,0,25:3:0:27	0/0:0,15,107:5:0:27	0/0:0,15,119:5:0:27	0/1:18,0,55:3:0:7	0/0:0,6,64:2:0:18	0/0:0,12,106:4:0:24	0/1:49,0,23:4:0:36	0/0:0,6,63:2:0:18	0/0:0,15,116:5:0:27	0/0:0,21,139:7:0:33	0/0:0,12,105:4:0:24	0/0:0,3,35:1:0:15	0/0:0,3,35:1:0:15	0/0:0,33,169:11:0:45	0/0:0,24,139:8:0:36	0/0:0,21,126:7:0:33
+pseudoscaff_000013	19301	.	A	T	10.6	.	DP=833;VDB=1.987360e-06;RPB=6.388716e+00;AF1=0.01472;AC1=6;DP4=805,0,14,0;MQ=44;FQ=999;PV4=1,1,1.9e-05,1;AF1=0.01472;AC1=6;FQ=999;AF1=0.01472;AC1=6;FQ=999;AF1=0.03266;AC1=1;FQ=10.7	GT:PL:DP:SP:GQ	0/0:0,6,66:2:0:21	0/0:0,3,35:1:0:18	0/0:0,15,123:5:0:30	0/0:0,15,124:5:0:30	0/0:0,21,148:7:0:36	0/0:0,6,65:2:0:21	0/0:0,6,52:2:0:21	0/0:0,3,36:1:0:18	0/0:0,15,125:5:0:30	0/0:0,18,138:6:0:33	0/0:0,6,66:2:0:21	0/0:0,27,163:9:0:42	0/1:52,0,51:4:0:37	0/0:0,9,90:3:0:24	0/0:0,0,0:0:0:15	0/0:0,6,66:2:0:21	0/0:0,9,83:3:0:24	0/0:0,18,136:6:0:33	0/0:0,0,0:0:0:15	0/0:0,18,138:6:0:33
+pseudoscaff_000013	19309	.	G	A	10.8	.	DP=833;VDB=4.191340e-05;RPB=5.672800e+00;AF1=0.01624;AC1=7;DP4=800,0,11,0;MQ=44;FQ=124;PV4=1,1,1,1;AF1=0.01624;AC1=7;FQ=124;AF1=0.01624;AC1=7;FQ=124;AF1=0.03441;AC1=1;FQ=10.9	GT:PL:DP:SP:GQ	0/0:0,6,64:2:0:21	0/0:0,3,35:1:0:18	0/0:0,15,113:5:0:30	0/0:0,15,121:5:0:30	0/0:0,21,144:7:0:36	0/0:0,6,64:2:0:21	0/1:58,6,0:2:0:15	0/0:0,3,35:1:0:18	0/0:0,15,121:5:0:30	0/0:0,18,134:6:0:33	0/0:0,6,64:2:0:21	0/0:0,27,160:9:0:42	0/0:0,12,106:4:0:27	0/0:0,9,87:3:0:24	0/0:0,0,0:0:0:15	0/0:0,6,63:2:0:21	0/0:0,9,82:3:0:24	0/0:0,18,134:6:0:33	0/0:0,0,0:0:0:15	0/0:0,18,135:6:0:33
+pseudoscaff_000013	19313	.	A	T	10.6	.	DP=833;VDB=8.264144e-07;RPB=6.608100e+00;AF1=0.01478;AC1=6;DP4=798,0,15,0;MQ=44;FQ=999;PV4=1,1,3.9e-05,1;AF1=0.01478;AC1=6;FQ=999;AF1=0.01478;AC1=6;FQ=999;AF1=0.03272;AC1=1;FQ=10.7	GT:PL:DP:SP:GQ	0/0:0,6,64:2:0:21	0/0:0,3,35:1:0:18	0/0:0,15,118:5:0:30	0/0:0,12,102:4:0:27	0/0:0,21,143:7:0:36	0/0:0,6,63:2:0:21	0/0:0,6,59:2:0:21	0/0:0,3,35:1:0:18	0/0:0,15,120:5:0:30	0/0:0,18,134:6:0:33	0/0:0,6,63:2:0:21	0/0:0,27,159:9:0:42	0/1:52,0,52:4:0:37	0/0:0,9,87:3:0:24	0/0:0,0,0:0:0:15	0/0:0,6,64:2:0:21	0/0:0,9,78:3:0:24	0/0:0,18,134:6:0:33	0/0:0,0,0:0:0:15	0/0:0,21,143:7:0:36
+pseudoscaff_000013	19979	.	G	C	999	.	DP=878;VDB=0.000000e+00;RPB=2.004879e+01;AF1=0.1884;G3=0.6906,0.2308,0.07859;HWE=0.00851;AC1=83;DP4=708,0,169,0;MQ=44;FQ=999;PV4=1,1,0.23,0.24;AF1=0.1884;G3=0.6906,0.2308,0.07859;HWE=0.00851;AC1=83;FQ=999;AF1=0.1884;G3=0.6906,0.2308,0.07859;HWE=0.00851;AC1=83;FQ=999;AF1=0.3267;AC1=13;FQ=999	GT:PL:DP:SP:GQ	0/0:0,9,102:3:0:13	0/1:74,6,0:2:0:5	0/1:26,0,87:5:0:23	0/0:0,18,157:6:0:21	0/1:127,0,163:15:0:99	0/0:0,15,143:5:0:18	0/0:0,15,144:5:0:18	0/0:0,12,123:4:0:15	0/0:0,12,125:4:0:15	0/0:0,18,158:6:0:21	1/1:121,12,0:4:0:5	1/1:144,15,0:5:0:7	0/1:87,0,85:6:0:83	0/1:59,6,0:2:0:5	0/1:75,6,0:2:0:5	0/0:0,9,90:3:0:13	0/1:92,0,29:4:0:38	0/0:0,9,102:3:0:13	0/0:0,3,41:1:0:7	0/0:0,12,125:4:0:15
+pseudoscaff_000013	19980	.	T	C	64	.	DP=879;VDB=0.000000e+00;RPB=1.536258e+01;AF1=0.1105;AC1=48;DP4=783,0,94,0;MQ=44;FQ=999;PV4=1,1,1,0.31;AF1=0.1105;AC1=48;FQ=999;AF1=0.1105;AC1=48;FQ=999;AF1=0.06096;AC1=2;FQ=64.3	GT:PL:DP:SP:GQ	0/1:98,9,0:3:0:5	0/0:0,6,66:2:0:12	0/0:0,15,125:5:0:21	0/0:0,18,151:6:0:24	0/0:0,45,207:15:0:51	0/0:0,15,133:5:0:21	0/0:0,15,138:5:0:21	0/1:29,0,85:4:0:23	0/0:0,12,119:4:0:18	0/0:0,18,153:6:0:24	0/0:0,12,122:4:0:18	0/0:0,15,144:5:0:21	0/0:0,18,156:6:0:24	0/0:0,6,59:2:0:12	0/0:0,6,75:2:0:12	0/0:0,9,95:3:0:15	0/0:0,12,125:4:0:18	0/0:0,9,99:3:0:15	0/0:0,3,38:1:0:10	0/0:0,12,121:4:0:18
+pseudoscaff_000013	19981	.	A	G	999	.	DP=879;VDB=1.999977e-26;RPB=1.108352e+01;AF1=0.0481;AC1=21;DP4=834,0,44,0;MQ=44;FQ=999;PV4=1,0.002,1,0.37;AF1=0.0481;AC1=21;FQ=999;AF1=0.0481;AC1=21;FQ=999;AF1=0.1659;AC1=6;FQ=999	GT:PL:DP:SP:GQ	0/0:0,9,99:3:0:19	0/0:0,6,71:2:0:16	0/1:102,0,26:5:0:42	0/0:0,18,155:6:0:28	0/1:158,0,126:15:0:99	0/0:0,15,139:5:0:25	0/0:0,15,142:5:0:25	0/0:0,12,123:4:0:22	0/0:0,12,122:4:0:22	0/0:0,18,155:6:0:28	0/0:0,12,122:4:0:22	0/0:0,15,144:5:0:25	0/0:0,18,158:6:0:28	0/0:0,6,59:2:0:16	0/0:0,6,75:2:0:16	0/1:31,0,62:3:0:21	0/0:0,12,124:4:0:22	0/1:32,0,65:3:0:22	0/1:39,3,0:1:0:13	0/1:88,0,29:4:0:45
+pseudoscaff_000013	19987	.	T	G	999	.	DP=879;VDB=3.467220e-21;RPB=9.915926e+00;AF1=0.03541;AC1=15;DP4=844,0,35,0;MQ=44;FQ=999;PV4=1,1,1,0.4;AF1=0.03541;AC1=15;FQ=999;AF1=0.03541;AC1=15;FQ=999;AF1=0.1315;AC1=5;FQ=999	GT:PL:DP:SP:GQ	0/0:0,9,102:3:0:20	0/1:75,6,0:2:0:12	0/0:0,15,142:5:0:26	0/0:0,18,159:6:0:29	0/0:0,45,213:15:0:56	0/0:0,15,144:5:0:26	0/0:0,15,132:5:0:26	0/0:0,12,125:4:0:23	0/0:0,12,125:4:0:23	0/0:0,18,158:6:0:29	0/1:123,12,0:4:0:6	0/1:89,0,61:5:0:75	0/0:0,18,155:6:0:29	0/0:0,6,59:2:0:17	0/0:0,6,75:2:0:17	0/0:0,9,98:3:0:20	0/1:90,0,29:4:0:46	0/0:0,9,102:3:0:20	0/0:0,3,41:1:0:15	0/0:0,12,125:4:0:23
+pseudoscaff_000013	20011	.	G	A	999	.	DP=878;VDB=0.000000e+00;RPB=1.704193e+01;AF1=0.1169;G3=0.8049,0.1488,0.04623;HWE=0.00486;AC1=51;DP4=758,0,116,0;MQ=44;FQ=999;PV4=1,1,1,1;AF1=0.1169;G3=0.8049,0.1488,0.04623;HWE=0.00486;AC1=51;FQ=999;AF1=0.1169;G3=0.8049,0.1488,0.04623;HWE=0.00486;AC1=51;FQ=999;AF1=0.2662;AC1=11;FQ=999	GT:PL:DP:SP:GQ	0/0:0,9,95:3:0:15	0/0:0,6,73:2:0:12	0/0:0,15,137:5:0:21	1/1:157,18,0:6:0:7	0/0:0,45,213:15:0:51	0/0:0,15,143:5:0:21	1/1:144,15,0:5:0:5	0/1:90,0,29:4:0:41	1/1:125,12,0:4:0:3	0/1:58,0,107:6:0:52	0/0:0,12,118:4:0:18	0/0:0,15,144:5:0:21	0/0:0,18,156:6:0:24	0/0:0,3,41:1:0:9	0/0:0,6,74:2:0:12	0/1:61,0,32:3:0:43	0/0:0,12,125:4:0:18	0/1:63,0,32:3:0:44	0/0:0,3,41:1:0:9	0/0:0,12,125:4:0:18
+pseudoscaff_000013	20030	.	T	G	82.6	.	DP=876;VDB=8.763003e-04;RPB=4.497496e+00;AF1=0.002876;AC1=1;DP4=865,0,7,0;MQ=44;FQ=72.6;PV4=1,1,5e-120,1;AF1=0.002876;AC1=1;FQ=72.6;AF1=0.002876;AC1=1;FQ=72.6;AF1=0.02841;AC1=1;FQ=82.7	GT:PL:DP:SP:GQ	0/0:0,9,92:3:0:31	0/0:0,6,72:2:0:28	0/0:0,15,139:5:0:37	0/0:0,18,158:6:0:40	0/1:125,0,162:15:0:99	0/0:0,15,135:5:0:37	0/0:0,15,144:5:0:37	0/0:0,12,121:4:0:34	0/0:0,12,125:4:0:34	0/0:0,18,158:6:0:40	0/0:0,12,124:4:0:34	0/0:0,15,144:5:0:37	0/0:0,18,156:6:0:40	0/0:0,3,41:1:0:25	0/0:0,6,74:2:0:28	0/0:0,9,93:3:0:31	0/0:0,12,113:4:0:34	0/0:0,9,102:3:0:31	0/0:0,3,41:1:0:25	0/0:0,12,123:4:0:34
+pseudoscaff_000013	20043	.	T	G	999	.	DP=875;VDB=0.000000e+00;RPB=1.570932e+01;AF1=0.1097;AC1=48;DP4=767,0,95,0;MQ=44;FQ=999;PV4=1,0.23,6.3e-13,0.0077;AF1=0.1097;AC1=48;FQ=999;AF1=0.1097;AC1=48;FQ=999;AF1=0.09213;AC1=3;FQ=999	GT:PL:DP:SP:GQ	0/1:84,9,0:3:0:5	0/0:0,6,69:2:0:12	0/0:0,15,126:5:0:21	0/0:0,18,137:6:0:24	0/1:120,0,143:15:0:99	0/0:0,15,121:5:0:21	0/0:0,15,136:5:0:21	0/1:24,0,76:4:0:18	0/0:0,12,119:4:0:18	0/0:0,18,143:6:0:24	0/0:0,12,108:4:0:18	0/0:0,15,136:5:0:21	0/0:0,18,147:6:0:24	0/0:0,3,36:1:0:10	0/0:0,6,71:2:0:12	0/0:0,9,87:3:0:15	0/0:0,12,119:4:0:18	0/0:0,9,92:3:0:15	0/0:0,3,37:1:0:10	0/0:0,12,111:4:0:18
+pseudoscaff_000013	20052	.	A	C	63.6	.	DP=875;VDB=8.763003e-04;RPB=4.496706e+00;AF1=0.002885;AC1=1;DP4=857,0,7,0;MQ=44;FQ=53.7;PV4=1,0.01,6.2e-119,1;AF1=0.002885;AC1=1;FQ=53.7;AF1=0.002885;AC1=1;FQ=53.7;AF1=0.02872;AC1=1;FQ=63.7	GT:PL:DP:SP:GQ	0/0:0,9,87:3:0:31	0/0:0,6,66:2:0:28	0/0:0,15,122:5:0:37	0/0:0,18,135:6:0:40	0/1:106,0,139:15:0:84	0/0:0,15,122:5:0:37	0/0:0,15,125:5:0:37	0/0:0,12,106:4:0:34	0/0:0,12,110:4:0:34	0/0:0,18,137:6:0:40	0/0:0,12,106:4:0:34	0/0:0,15,126:5:0:37	0/0:0,18,137:6:0:40	0/0:0,3,36:1:0:25	0/0:0,6,66:2:0:28	0/0:0,9,85:3:0:31	0/0:0,9,90:3:0:31	0/0:0,6,63:2:0:28	0/0:0,3,36:1:0:25	0/0:0,12,107:4:0:34
+pseudoscaff_000013	20186	.	T	A	18.3	.	DP=1244;VDB=1.230597e-06;RPB=6.693563e+00;AF1=0.01348;AC1=6;DP4=1221,2,17,0;MQ=42;FQ=999;PV4=1,0.012,1,1;AF1=0.01348;AC1=6;FQ=999;AF1=0.01348;AC1=6;FQ=999;AF1=0.02635;AC1=1;FQ=18.4	GT:PL:DP:SP:GQ	0/0:0,12,115:4:0:28	0/0:0,6,72:2:0:22	0/0:0,12,122:4:0:28	0/0:0,18,157:6:0:34	0/0:0,15,143:5:0:31	0/0:0,15,92:5:0:31	0/1:61,0,73:5:0:45	0/0:0,24,142:8:0:40	0/0:0,18,111:6:0:34	0/0:0,27,169:9:0:43	0/0:0,9,80:3:0:25	0/0:0,6,74:2:0:22	0/0:0,30,161:10:0:46	0/0:0,27,172:9:0:43	0/0:0,12,125:4:0:28	0/0:0,24,169:8:0:40	0/0:0,12,108:4:0:28	0/0:0,21,163:7:0:37	0/0:0,39,188:13:0:55	0/0:0,21,170:7:0:37
+pseudoscaff_000013	20202	.	A	G	61.8	.	DP=1244;VDB=0.000000e+00;RPB=2.090690e+01;AF1=0.1772;G3=0.7169,0.202,0.08104;HWE=0.000312;AC1=78;DP4=983,4,219,0;MQ=42;FQ=999;PV4=1,0.0011,1,1;AF1=0.1772;G3=0.7169,0.202,0.08104;HWE=0.000312;AC1=78;FQ=999;AF1=0.1772;G3=0.7169,0.202,0.08104;HWE=0.000312;AC1=78;FQ=999;AF1=0.05296;AC1=2;FQ=62	GT:PL:DP:SP:GQ	0/1:28,0,88:4:0:24	0/0:0,6,71:2:0:10	0/0:0,12,121:4:0:16	0/0:0,18,158:6:0:22	0/1:89,0,60:5:0:70	0/0:0,15,98:5:0:19	0/0:0,15,133:5:0:19	0/0:0,24,140:8:0:28	0/0:0,6,58:2:0:10	0/0:0,15,140:5:0:19	0/0:0,9,80:3:0:13	0/0:0,6,75:2:0:10	0/0:0,30,159:10:0:34	0/0:0,27,173:9:0:31	0/0:0,12,123:4:0:16	0/0:0,24,167:8:0:28	0/0:0,12,103:4:0:16	0/0:0,21,162:7:0:25	0/0:0,33,189:11:0:37	0/0:0,21,171:7:0:25
+pseudoscaff_000013	20207	.	T	C	999	.	DP=1242;VDB=0.000000e+00;RPB=-1.567032e+01;AF1=0.1043;G3=0.7875,0.2125,2.052e-09;HWE=0.0271;AC1=46;DP4=1109,4,118,0;MQ=42;FQ=999;PV4=1,2.1e-33,2.3e-225,1;AF1=0.1043;G3=0.7875,0.2125,2.052e-09;HWE=0.0271;AC1=46;FQ=999;AF1=0.1043;G3=0.7875,0.2125,2.052e-09;HWE=0.0271;AC1=46;FQ=999;AF1=0.216;AC1=9;FQ=999	GT:PL:DP:SP:GQ	0/0:0,12,114:4:0:18	0/0:0,6,69:2:0:13	0/0:0,12,125:4:0:18	0/0:0,18,158:6:0:24	0/0:0,15,144:5:0:21	0/1:59,0,25:5:0:37	0/0:0,15,134:5:0:21	0/1:21,0,112:8:0:15	0/0:0,18,113:6:0:24	0/0:0,27,169:9:0:33	0/1:18,0,35:2:0:12	0/0:0,6,75:2:0:13	0/1:60,0,117:10:0:54	0/1:36,0,137:9:0:30	0/0:0,12,125:4:0:18	0/1:19,0,137:8:0:13	0/1:12,0,81:4:0:7	0/0:1,0,136:7:0:6	0/1:27,0,162:13:0:21	0/0:0,21,170:7:0:27
+pseudoscaff_000013	20228	.	A	T	85.4	.	DP=1208;VDB=8.438108e-17;RPB=-8.213677e+00;AF1=0.02079;AC1=9;DP4=1158,5,28,0;MQ=42;FQ=999;PV4=1,1,6.5e-32,1;AF1=0.02079;AC1=9;FQ=999;AF1=0.02079;AC1=9;FQ=999;AF1=0.07433;AC1=3;FQ=85.8	GT:PL:DP:SP:GQ	0/0:0,12,102:4:0:26	0/0:0,6,69:2:0:20	0/0:0,12,115:4:0:26	0/0:0,15,122:5:0:29	0/0:0,15,136:5:0:29	0/0:0,15,94:5:0:29	0/0:0,12,118:4:0:26	0/0:0,15,111:5:0:29	0/1:72,0,19:5:0:39	0/1:63,0,104:9:0:49	0/0:0,9,76:3:0:23	0/0:0,6,71:2:0:20	0/0:0,30,148:10:0:44	0/0:0,27,162:9:0:41	0/0:0,12,120:4:0:26	0/0:0,24,158:8:0:38	0/0:0,12,96:4:0:26	0/0:0,21,145:7:0:35	0/1:14,0,159:13:0:3	0/0:0,21,153:7:0:35
+pseudoscaff_000013	20231	.	T	C	999	.	DP=1208;VDB=0.000000e+00;RPB=1.225551e+01;AF1=0.07517;AC1=33;DP4=1104,5,90,0;MQ=42;FQ=999;PV4=1,0.18,1,1;AF1=0.07517;AC1=33;FQ=999;AF1=0.07517;AC1=33;FQ=999;AF1=0.1761;AC1=7;FQ=999	GT:PL:DP:SP:GQ	0/0:0,12,110:4:0:20	0/0:0,6,69:2:0:14	0/1:81,0,25:4:0:39	0/0:0,18,140:6:0:26	0/0:0,15,136:5:0:23	0/0:0,15,95:5:0:23	0/1:60,0,60:4:0:52	0/0:0,15,115:5:0:23	0/0:0,15,108:5:0:23	0/0:0,27,156:9:0:35	0/0:0,9,76:3:0:17	0/1:33,0,33:2:0:25	0/0:0,4,131:10:0:12	0/1:123,0,36:9:0:50	0/1:117,12,0:4:0:4	0/0:0,24,158:8:0:32	0/0:0,12,103:4:0:20	0/0:0,21,147:7:0:29	0/1:61,0,141:13:0:53	0/0:0,21,154:7:0:29
+pseudoscaff_000013	21138	.	G	A	90.5	.	DP=1292;VDB=0.000000e+00;RPB=2.707249e+01;AF1=0.2581;G3=0.5822,0.3173,0.1005;HWE=0.0274;AC1=114;DP4=950,0,333,0;MQ=44;FQ=999;PV4=1,0.094,1,1;AF1=0.2581;G3=0.5822,0.3173,0.1005;HWE=0.0274;AC1=114;FQ=999;AF1=0.2581;G3=0.5822,0.3173,0.1005;HWE=0.0274;AC1=114;FQ=999;AF1=0.02776;AC1=1;FQ=90.6	GT:PL:DP:SP:GQ	0/1:133,0,5:10:0:13	0/0:0,24,170:8:0:26	0/0:0,27,174:9:0:29	0/0:0,12,113:4:0:14	0/0:0,18,149:6:0:20	0/0:0,15,120:5:0:17	0/0:0,18,143:6:0:20	0/0:0,12,111:4:0:14	0/0:0,18,151:6:0:20	0/0:0,12,118:4:0:14	0/0:0,33,176:11:0:35	0/0:0,3,40:1:0:6	0/0:0,27,176:9:0:29	0/0:0,21,162:7:0:23	0/0:0,6,75:2:0:8	0/0:0,3,40:1:0:6	0/0:0,6,69:2:0:8	0/0:0,12,112:4:0:14	0/0:0,24,172:8:0:26	0/0:0,15,136:5:0:17
+pseudoscaff_000013	21156	.	C	G	999	.	DP=1290;VDB=2.195470e-39;RPB=1.367083e+01;AF1=0.04845;AC1=21;DP4=1199,0,66,0;MQ=44;FQ=999;PV4=1,2.9e-95,1,1;AF1=0.04845;AC1=21;FQ=999;AF1=0.04845;AC1=21;FQ=999;AF1=0.1078;AC1=4;FQ=999	GT:PL:DP:SP:GQ	0/0:0,30,165:10:0:40	0/1:79,0,66:8:0:69	0/0:0,24,152:8:0:34	0/0:0,12,106:4:0:22	0/0:0,18,134:6:0:28	0/1:56,0,49:5:0:46	0/0:0,15,118:5:0:25	0/0:0,12,105:4:0:22	0/0:0,18,134:6:0:28	0/1:14,0,76:4:0:6	0/0:0,33,165:11:0:43	0/0:0,3,35:1:0:13	0/1:95,0,38:9:0:54	0/0:0,21,145:7:0:31	0/0:0,6,64:2:0:16	0/0:0,3,35:1:0:13	0/0:0,3,35:1:0:13	0/0:0,12,106:4:0:22	0/0:0,21,146:7:0:31	0/0:0,15,122:5:0:25
+pseudoscaff_000013	21305	.	G	A	999	.	DP=1191;VDB=0.000000e+00;RPB=2.758164e+01;AF1=0.6774;AC1=300;DP4=378,0,798,0;MQ=44;FQ=999;PV4=1,0.29,1.8e-22,1;AF1=0.6774;AC1=300;FQ=999;AF1=0.6774;AC1=300;FQ=999;AF1=0.814;AC1=33;FQ=999	GT:PL:DP:SP:GQ	1/1:88,9,0:3:0:10	1/1:120,12,0:4:0:12	0/1:112,0,22:6:0:22	1/1:150,18,0:6:0:18	1/1:179,24,0:8:0:24	0/1:60,0,61:4:0:60	0/1:31,0,66:3:0:37	0/1:74,0,131:9:0:80	1/1:137,15,0:5:0:15	1/1:141,15,0:5:0:15	0/1:84,0,103:7:0:90	0/1:63,0,63:4:0:62	0/1:23,0,125:6:0:29	1/1:154,18,0:6:0:18	1/1:35,3,0:1:0:5	1/1:102,9,0:3:0:10	1/1:97,9,0:3:0:10	1/1:125,12,0:4:0:12	1/1:175,24,0:8:0:24	1/1:169,24,0:8:0:24
+pseudoscaff_000013	21309	.	A	C	999	.	DP=1191;VDB=0.000000e+00;RPB=2.935869e+01;AF1=0.5448;AC1=241;DP4=538,0,638,0;MQ=44;FQ=999;PV4=1,0.00031,2e-39,1;AF1=0.5448;AC1=241;FQ=999;AF1=0.5448;AC1=241;FQ=999;AF1=0.5633;AC1=23;FQ=999	GT:PL:DP:SP:GQ	1/1:91,9,0:3:0:8	1/1:120,12,0:4:0:10	0/1:121,0,23:6:0:25	0/1:81,0,86:6:0:83	0/0:0,24,180:8:0:20	0/0:0,12,123:4:0:9	0/0:0,9,99:3:0:6	0/1:75,0,129:9:0:79	0/0:0,15,141:5:0:12	0/1:92,0,26:5:0:28	0/1:84,0,108:7:0:88	0/1:61,0,63:4:0:62	0/0:0,18,158:6:0:14	1/1:151,18,0:6:0:16	1/1:32,3,0:1:0:3	1/1:102,9,0:3:0:8	0/1:63,0,31:3:0:33	1/1:125,12,0:4:0:10	1/1:172,24,0:8:0:22	1/1:168,21,0:7:0:19
+pseudoscaff_000013	21312	.	A	G	999	.	DP=1190;VDB=0.000000e+00;RPB=2.752044e+01;AF1=0.3355;AC1=148;DP4=799,0,375,0;MQ=44;FQ=999;PV4=1,2e-08,7e-83,1;AF1=0.3355;AC1=148;FQ=999;AF1=0.3355;AC1=148;FQ=999;AF1=0.5353;AC1=21;FQ=999	GT:PL:DP:SP:GQ	1/1:81,9,0:3:0:5	1/1:119,12,0:4:0:7	0/1:118,0,22:6:0:28	0/1:81,0,83:6:0:80	0/0:0,24,180:8:0:24	0/0:0,12,119:4:0:12	0/0:0,9,102:3:0:9	0/0:0,27,185:9:0:27	0/0:0,15,141:5:0:15	0/1:110,0,26:5:0:32	0/1:83,0,103:7:0:83	0/1:62,0,63:4:0:61	0/0:0,18,157:6:0:18	1/1:145,18,0:6:0:12	0/1:34,3,0:1:0:5	1/1:102,9,0:3:0:5	0/1:60,0,32:3:0:38	1/1:119,12,0:4:0:7	1/1:174,24,0:8:0:18	1/1:169,24,0:8:0:18
+pseudoscaff_000013	21478	.	A	G	999	.	DP=1720;VDB=1.315149e-37;RPB=1.343816e+01;AF1=0.02431;G3=0.9605,0.02999,0.009464;HWE=0.00387;AC1=10;DP4=1643,0,63,0;MQ=44;FQ=999;PV4=1,2.1e-06,0.45,1;AF1=0.02431;G3=0.9605,0.02999,0.009464;HWE=0.00387;AC1=10;FQ=999;AF1=0.02431;G3=0.9605,0.02999,0.009464;HWE=0.00387;AC1=10;FQ=999;AF1=0.05177;AC1=2;FQ=999	GT:PL:DP:SP:GQ	0/0:0,30,187:10:0:43	0/0:0,18,152:6:0:31	0/0:0,30,188:10:0:43	0/0:0,42,205:14:0:55	0/0:0,39,208:13:0:52	0/0:0,27,176:9:0:40	0/0:0,24,179:8:0:37	0/0:0,15,138:5:0:28	0/0:0,15,140:5:0:28	0/0:0,21,167:7:0:34	0/0:0,24,177:8:0:37	0/0:0,24,176:8:0:37	0/0:0,18,158:6:0:31	0/0:0,15,143:5:0:28	0/0:0,3,41:1:0:16	0/0:0,21,167:7:0:34	0/0:0,36,197:12:0:49	0/1:92,0,136:10:0:79	0/1:177,0,129:20:0:99	0/0:0,18,157:6:0:31
+pseudoscaff_000013	23110	.	T	C	53	.	DP=1415;VDB=0.000000e+00;RPB=1.589842e+01;AF1=0.05724;G3=0.9012,0.08122,0.01756;HWE=0.0181;AC1=25;DP4=1293,0,120,0;MQ=21;FQ=999;PV4=1,1.7e-05,0.00024,0.36;AF1=0.05724;G3=0.9012,0.08122,0.01756;HWE=0.0181;AC1=25;FQ=999;AF1=0.05724;G3=0.9012,0.08122,0.01756;HWE=0.0181;AC1=25;FQ=999;AF1=0.1328;AC1=5;FQ=53.7	GT:PL:DP:SP:GQ	0/0:0,18,105:6:0:27	0/0:0,6,32:2:0:15	0/0:0,54,79:18:0:63	0/1:18,0,65:5:0:9	0/0:0,21,64:7:0:30	0/0:0,15,101:5:0:24	0/0:0,9,40:3:0:18	0/0:0,21,55:7:0:30	0/0:0,6,34:2:0:15	0/0:0,24,69:8:0:33	0/0:0,7,77:7:0:16	1/1:72,36,0:12:0:21	0/1:23,0,30:8:0:14	0/0:0,9,45:3:0:18	0/1:24,0,14:5:0:15	0/0:0,6,16:2:0:15	0/0:0,18,53:6:0:27	0/0:0,36,85:12:0:45	0/0:0,12,43:4:0:21	0/0:0,33,142:11:0:42
+pseudoscaff_000013	23841	.	C	A	43.1	.	DP=1283;VDB=8.345994e-41;RPB=1.355580e+01;AF1=0.05055;G3=0.915,0.06042,0.02456;HWE=0.00118;AC1=22;DP4=1202,5,69,0;MQ=21;FQ=999;PV4=1,0.11,0.00029,0.28;AF1=0.05055;G3=0.915,0.06042,0.02456;HWE=0.00118;AC1=22;FQ=999;AF1=0.05055;G3=0.915,0.06042,0.02456;HWE=0.00118;AC1=22;FQ=999;AF1=0.0892;AC1=4;FQ=43.5	GT:PL:DP:SP:GQ	0/0:0,18,93:6:0:28	0/0:0,18,71:6:0:28	0/0:0,15,64:5:0:25	0/0:0,24,125:8:0:34	0/0:0,18,60:6:0:28	0/1:37,0,6:5:0:21	0/0:0,12,50:4:0:22	0/0:0,12,49:4:0:22	0/1:50,12,0:4:0:5	0/1:31,0,5:4:0:18	0/0:0,15,108:5:0:25	0/0:0,21,64:7:0:31	0/0:0,15,64:5:0:25	0/0:0,12,78:4:0:22	0/0:0,9,46:3:0:19	0/0:0,18,65:6:0:28	0/0:0,12,46:4:0:22	0/0:0,33,76:11:0:43	0/0:0,18,60:6:0:28	0/0:0,30,111:10:0:40
+pseudoscaff_000013	23898	.	G	T	18.3	.	DP=1278;VDB=0.000000e+00;RPB=2.103272e+01;AF1=0.1334;AC1=59;DP4=1055,5,195,0;MQ=21;FQ=999;PV4=1,0.007,8e-10,1;AF1=0.1334;AC1=59;FQ=999;AF1=0.1334;AC1=59;FQ=999;AF1=0.09355;AC1=4;FQ=18.8	GT:PL:DP:SP:GQ	0/1:26,0,52:6:0:21	0/0:0,1,51:6:0:7	0/1:17,0,36:5:0:12	0/1:8,0,100:8:0:5	0/1:36,0,9:6:0:20	0/0:0,15,61:5:0:20	0/0:0,12,50:4:0:17	0/0:0,12,49:4:0:17	0/0:0,12,50:4:0:17	0/0:0,12,50:4:0:17	0/0:0,15,108:5:0:20	0/0:0,21,61:7:0:26	0/0:0,15,64:5:0:20	0/0:0,12,86:4:0:17	0/0:0,9,46:3:0:14	0/0:0,18,65:6:0:23	0/0:0,12,46:4:0:17	0/0:0,36,76:12:0:41	0/0:0,18,60:6:0:23	0/0:0,30,111:10:0:35
+pseudoscaff_000013	23914	.	C	G	35.2	.	DP=1271;VDB=0.000000e+00;RPB=1.973859e+01;AF1=0.1033;AC1=45;DP4=1062,5,163,0;MQ=21;FQ=999;PV4=1,6e-61,1.3e-29,0.038;AF1=0.1033;AC1=45;FQ=999;AF1=0.1033;AC1=45;FQ=999;AF1=0.1728;AC1=7;FQ=36	GT:PL:DP:SP:GQ	0/0:0,15,83:5:0:21	0/0:0,18,71:6:0:24	0/0:0,15,64:5:0:21	0/0:0,24,125:8:0:30	0/1:11,0,29:5:0:6	0/0:6,0,37:5:0:3	0/0:2,0,33:4:0:6	0/0:0,12,49:4:0:18	0/0:0,12,50:4:0:18	0/0:0,12,50:4:0:18	0/0:0,15,108:5:0:21	0/1:19,0,31:6:0:13	0/0:0,15,64:5:0:21	0/0:0,12,83:4:0:18	0/0:0,9,46:3:0:16	0/1:19,0,33:6:0:13	0/1:14,0,20:4:0:8	0/1:29,0,40:11:0:23	0/0:0,18,60:6:0:24	0/1:20,0,81:9:0:14
+pseudoscaff_000013	23916	.	T	C	29.7	.	DP=1271;VDB=0.000000e+00;RPB=1.864292e+01;AF1=0.08719;AC1=38;DP4=1076,5,142,0;MQ=21;FQ=999;PV4=1,1.5e-14,1.1e-30,0.022;AF1=0.08719;AC1=38;FQ=999;AF1=0.08719;AC1=38;FQ=999;AF1=0.1455;AC1=6;FQ=30.3	GT:PL:DP:SP:GQ	0/0:0,15,82:5:0:22	0/0:0,18,71:6:0:25	0/0:0,15,64:5:0:22	0/0:0,24,124:8:0:31	0/1:11,0,29:5:0:5	0/0:0,15,61:5:0:22	0/0:0,12,50:4:0:19	0/0:0,12,49:4:0:19	0/0:0,12,50:4:0:19	0/0:0,12,50:4:0:19	0/0:0,15,107:5:0:22	0/1:19,0,31:6:0:12	0/0:0,15,64:5:0:22	0/0:0,12,81:4:0:19	0/0:0,9,46:3:0:16	0/1:19,0,33:6:0:12	0/1:14,0,20:4:0:8	0/1:29,0,40:11:0:22	0/0:0,15,56:5:0:22	0/1:20,0,81:9:0:13
+pseudoscaff_000013	24035	.	C	A	60.7	.	DP=1339;VDB=6.431525e-05;RPB=5.363566e+00;AF1=0.007673;AC1=3;DP4=1324,0,10,0;MQ=25;FQ=51.1;PV4=1,1,0.41,0.47;AF1=0.007673;AC1=3;FQ=51.1;AF1=0.007673;AC1=3;FQ=51.1;AF1=0.05333;AC1=2;FQ=60.9	GT:PL:DP:SP:GQ	0/0:0,6,62:2:0:24	0/0:0,9,38:3:0:27	0/0:0,21,63:7:0:39	0/0:0,21,127:7:0:39	0/0:0,27,92:9:0:45	0/0:0,21,123:7:0:39	0/0:0,18,63:6:0:36	0/0:0,15,50:5:0:33	0/1:39,0,23:4:0:21	0/1:77,0,28:7:0:51	0/0:0,24,133:8:0:42	0/0:0,9,38:3:0:27	0/0:0,9,57:3:0:27	0/0:0,9,66:3:0:27	0/0:0,6,65:2:0:24	0/0:0,9,41:3:0:27	0/0:0,36,97:12:0:54	0/0:0,39,99:13:0:57	0/0:0,42,109:14:0:60	0/0:0,24,138:8:0:42
+pseudoscaff_000013	25339	.	T	C	118	.	DP=1131;VDB=2.682682e-18;RPB=8.707829e+00;AF1=0.02128;G3=0.9633,0.03042,0.006283;HWE=0.0478;AC1=9;DP4=1098,0,30,0;MQ=35;FQ=999;PV4=1,0.11,0.47,1;AF1=0.02128;G3=0.9633,0.03042,0.006283;HWE=0.0478;AC1=9;FQ=999;AF1=0.02128;G3=0.9633,0.03042,0.006283;HWE=0.0478;AC1=9;FQ=999;AF1=0.05488;AC1=2;FQ=118	GT:PL:DP:SP:GQ	0/0:0,33,175:11:0:47	0/0:0,18,146:6:0:32	0/0:0,30,170:10:0:44	0/0:0,15,127:5:0:29	0/0:0,9,84:3:0:23	0/0:0,9,84:3:0:23	0/0:0,15,105:5:0:29	0/1:77,0,81:6:0:63	0/0:0,9,92:3:0:23	0/0:0,24,159:8:0:38	0/0:0,3,37:1:0:17	0/1:96,0,59:7:0:77	0/0:0,15,108:5:0:29	0/0:0,15,129:5:0:29	0/0:0,12,113:4:0:26	0/0:0,6,67:2:0:20	0/0:0,9,92:3:0:23	0/0:0,6,67:2:0:20	0/0:0,21,138:7:0:35	0/0:0,24,162:8:0:38
+pseudoscaff_000013	25346	.	A	C	64.1	.	DP=1152;VDB=9.164714e-06;RPB=5.563335e+00;AF1=0.007732;AC1=3;DP4=1127,1,12,0;MQ=35;FQ=143;PV4=1,0.37,1,1;AF1=0.007732;AC1=3;FQ=143;AF1=0.007732;AC1=3;FQ=143;AF1=0.05455;AC1=2;FQ=64.3	GT:PL:DP:SP:GQ	0/0:0,33,169:11:0:51	0/0:0,18,145:6:0:36	0/0:0,30,169:10:0:48	0/0:0,15,127:5:0:33	0/0:0,6,67:2:0:24	0/0:0,9,84:3:0:27	0/0:0,18,120:6:0:36	0/0:0,15,126:6:0:33	0/0:0,9,92:3:0:27	0/0:0,24,158:8:0:42	0/0:0,3,37:1:0:21	0/0:0,21,149:7:0:39	0/0:0,15,106:5:0:33	0/0:0,15,129:5:0:33	0/0:0,12,108:4:0:30	0/0:0,6,67:2:0:24	0/1:28,0,58:3:0:10	0/0:0,6,67:2:0:24	0/1:91,0,40:6:0:64	0/0:0,21,149:7:0:39
+pseudoscaff_000013	25362	.	T	A	999	.	DP=1156;VDB=0.000000e+00;RPB=1.477467e+01;AF1=0.08937;AC1=39;DP4=1046,6,89,0;MQ=35;FQ=999;PV4=1,0.05,1,1;AF1=0.08937;AC1=39;FQ=999;AF1=0.08937;AC1=39;FQ=999;AF1=0.2355;AC1=9;FQ=999	GT:PL:DP:SP:GQ	0/0:0,30,171:10:0:37	0/1:50,0,101:6:0:43	0/0:0,30,170:10:0:37	0/0:0,18,129:6:0:25	0/0:0,6,67:2:0:13	0/0:0,9,84:3:0:16	0/0:0,18,123:6:0:25	0/0:0,18,147:6:0:25	0/0:0,12,90:4:0:19	0/0:0,24,158:8:0:31	0/0:0,3,37:1:0:10	0/1:66,0,95:7:0:59	0/1:10,0,83:5:0:5	0/1:75,0,53:5:0:64	0/1:56,0,54:4:0:49	0/1:31,0,31:2:0:24	0/0:0,9,88:3:0:16	0/1:31,0,31:2:0:24	0/0:0,21,134:7:0:28	1/1:161,24,0:8:0:11
+pseudoscaff_000013	25363	.	T	G	999	.	DP=1158;VDB=3.406158e-09;RPB=6.879903e+00;AF1=0.01864;AC1=8;DP4=1116,6,22,0;MQ=35;FQ=999;PV4=1,1,1,1;AF1=0.01864;AC1=8;FQ=999;AF1=0.01864;AC1=8;FQ=999;AF1=0.08245;AC1=3;FQ=999	GT:PL:DP:SP:GQ	0/0:0,27,168:9:0:41	0/1:101,0,50:6:0:70	0/0:0,30,170:10:0:44	0/0:0,18,128:6:0:32	0/0:0,6,67:2:0:20	0/0:0,9,84:3:0:23	0/1:70,0,51:6:0:56	0/1:81,0,77:6:0:67	0/0:0,12,92:4:0:26	0/0:0,24,159:8:0:38	0/0:0,3,37:1:0:17	0/0:0,21,149:7:0:35	0/0:0,15,108:5:0:29	0/0:0,15,129:5:0:29	0/0:0,12,107:4:0:26	0/0:0,6,67:2:0:20	0/0:0,9,89:3:0:23	0/0:0,6,67:2:0:20	0/0:0,21,138:7:0:35	0/0:0,24,163:8:0:38
+pseudoscaff_000013	25911	.	G	T	999	.	DP=1069;VDB=0.000000e+00;RPB=1.813642e+01;AF1=0.1233;AC1=54;DP4=932,0,125,0;MQ=44;FQ=999;PV4=1,1,0.0052,1;AF1=0.1233;AC1=54;FQ=999;AF1=0.1233;AC1=54;FQ=999;AF1=0.2469;AC1=10;FQ=999	GT:PL:DP:SP:GQ	0/1:28,0,57:3:0:23	0/1:26,0,100:5:0:21	0/1:77,0,105:7:0:71	0/0:0,12,116:4:0:18	0/0:0,6,71:2:0:12	0/0:0,12,113:4:0:18	0/0:0,12,124:4:0:18	0/0:0,6,70:2:0:12	0/1:66,0,27:3:0:39	0/1:105,0,19:5:0:31	0/0:0,36,189:12:0:42	0/0:0,9,88:3:0:15	0/1:90,0,29:4:0:41	0/1:99,0,82:7:0:91	0/1:38,3,0:1:0:9	0/0:0,15,142:5:0:21	0/0:0,15,140:5:0:21	0/0:0,12,120:4:0:18	0/1:64,0,32:3:0:43	0/0:0,9,71:3:0:15
+pseudoscaff_000013	28090	.	T	C	999	.	DP=712;VDB=0.000000e+00;RPB=1.993668e+01;AF1=0.6911;G3=0.1438,0.3309,0.5253;HWE=0.0139;AC1=306;DP4=248,0,460,0;MQ=34;FQ=999;PV4=1,1,4e-41,0.087;AF1=0.6911;G3=0.1438,0.3309,0.5253;HWE=0.0139;AC1=306;FQ=999;AF1=0.6911;G3=0.1438,0.3309,0.5253;HWE=0.0139;AC1=306;FQ=999;AF1=0.8205;AC1=33;FQ=999	GT:PL:DP:SP:GQ	1/1:125,76,69:7:0:8	1/1:87,12,0:4:0:13	1/1:113,12,0:4:0:13	1/1:54,6,0:2:0:7	1/1:45,6,0:2:0:7	1/1:37,3,0:1:0:5	1/1:70,12,0:4:0:13	0/1:6,0,103:5:0:13	0/1:50,0,17:5:0:17	0/1:6,0,102:5:0:13	1/1:75,15,0:5:0:16	0/1:0,3,38:1:0:5	1/1:54,6,0:2:0:7	0/1:24,0,84:4:0:30	0/1:15,0,32:2:0:21	1/1:57,6,0:2:0:7	1/1:67,6,0:2:0:7	1/1:106,12,0:4:0:13	1/1:36,6,0:2:0:7	1/1:114,15,0:5:0:16
+pseudoscaff_000013	28091	.	T	G	247	.	DP=712;VDB=1.999977e-26;RPB=1.095072e+01;AF1=0.05544;G3=0.9176,0.02072,0.06172;HWE=2.75e-08;AC1=24;DP4=664,0,44,0;MQ=34;FQ=999;PV4=1,0.044,1,0.4;AF1=0.05544;G3=0.9176,0.02072,0.06172;HWE=2.75e-08;AC1=24;FQ=999;AF1=0.05544;G3=0.9176,0.02072,0.06172;HWE=2.75e-08;AC1=24;FQ=999;AF1=0.1744;G3=0.8,1.932e-06,0.2;HWE=0.000605;AC1=7;FQ=248	GT:PL:DP:SP:GQ	0/0:0,21,123:7:0:30	0/0:0,12,87:4:0:21	0/0:0,12,113:4:0:21	0/0:0,6,54:2:0:15	0/0:0,6,45:2:0:15	0/0:0,3,37:1:0:13	0/0:0,12,70:4:0:21	0/0:0,15,124:5:0:24	0/0:0,15,82:5:0:24	0/0:0,15,124:5:0:24	0/0:0,15,75:5:0:24	0/0:0,3,38:1:0:13	0/0:0,6,54:2:0:15	0/0:0,12,115:4:0:21	0/0:0,6,55:2:0:15	0/1:57,6,0:2:0:10	0/1:67,6,0:2:0:10	0/1:106,12,0:4:0:5	0/0:0,6,36:2:0:15	0/1:116,15,0:5:0:3
+pseudoscaff_000013	28114	.	A	G	999	.	DP=712;VDB=0.000000e+00;RPB=1.555122e+01;AF1=0.1481;AC1=65;DP4=602,0,100,0;MQ=34;FQ=999;PV4=1,0.035,2.5e-100,1;AF1=0.1481;AC1=65;FQ=999;AF1=0.1481;AC1=65;FQ=999;AF1=0.2754;AC1=11;FQ=999	GT:PL:DP:SP:GQ	0/1:69,0,46:7:0:56	0/0:0,12,87:4:0:17	0/0:0,12,104:4:0:17	0/1:15,0,31:2:0:11	0/0:0,6,45:2:0:11	0/0:0,3,35:1:0:8	0/1:27,0,34:4:0:22	0/1:6,0,100:5:0:4	0/1:50,0,11:5:0:22	0/1:6,0,100:5:0:4	1/1:65,12,0:4:0:4	0/0:0,3,38:1:0:8	0/1:15,0,31:2:0:11	0/0:0,12,115:4:0:17	0/0:0,6,55:2:0:11	0/0:0,6,57:2:0:11	0/0:0,6,67:2:0:11	0/0:0,12,101:4:0:17	0/1:36,6,0:2:0:6	0/0:0,15,111:5:0:20
+pseudoscaff_000013	29206	.	A	T	999	.	DP=7624;VDB=0.000000e+00;RPB=6.888183e+01;AF1=0.7476;G3=0.02001,0.4618,0.5182;HWE=0.000886;AC1=330;DP4=2430,0,5151,0;MQ=21;FQ=999;PV4=1,1,2.5e-45,0.44;AF1=0.7476;G3=0.02001,0.4618,0.5182;HWE=0.000886;AC1=330;FQ=999;AF1=0.7476;G3=0.02001,0.4618,0.5182;HWE=0.000886;AC1=330;FQ=999;AF1=1;AC1=40;FQ=-39.7	GT:PL:DP:SP:GQ	0/1:49,0,2:5:0:3	1/1:89,54,0:24:0:56	1/1:96,39,0:13:0:41	1/1:96,39,0:13:0:41	1/1:92,126,0:42:0:99	1/1:91,30,0:10:0:32	1/1:88,27,0:9:0:29	1/1:136,255,0:170:0:99	1/1:38,6,0:2:0:8	1/1:94,90,0:30:0:91	1/1:95,36,0:12:0:38	1/1:113,51,0:17:0:53	1/1:70,15,0:5:0:17	1/1:49,9,0:3:0:11	1/1:78,18,0:6:0:20	1/1:90,27,0:9:0:29	1/1:98,48,0:16:0:50	1/1:94,90,0:30:0:91	1/1:92,135,0:45:0:99	1/1:86,24,0:8:0:26
+pseudoscaff_000013	29219	.	G	A	999	.	DP=7602;VDB=0.000000e+00;RPB=6.901749e+01;AF1=0.7477;G3=0.02026,0.4613,0.5184;HWE=0.000959;AC1=331;DP4=2424,0,5111,0;MQ=21;FQ=999;PV4=1,1,4.6e-46,0.45;AF1=0.7477;G3=0.02026,0.4613,0.5184;HWE=0.000959;AC1=331;FQ=999;AF1=0.7477;G3=0.02026,0.4613,0.5184;HWE=0.000959;AC1=331;FQ=999;AF1=1;AC1=40;FQ=-39.7	GT:PL:DP:SP:GQ	0/1:49,0,2:5:0:3	1/1:89,51,0:23:0:53	1/1:96,39,0:13:0:41	1/1:96,39,0:13:0:41	1/1:92,126,0:42:0:99	1/1:91,30,0:10:0:32	1/1:88,27,0:9:0:29	1/1:136,255,0:169:0:99	1/1:38,6,0:2:0:8	1/1:94,90,0:30:0:91	1/1:95,36,0:12:0:38	1/1:97,48,0:16:0:50	1/1:70,15,0:5:0:17	1/1:49,9,0:3:0:11	1/1:78,18,0:6:0:20	1/1:91,27,0:9:0:29	1/1:98,48,0:16:0:50	1/1:94,90,0:30:0:91	1/1:92,135,0:45:0:99	1/1:86,24,0:8:0:26
+pseudoscaff_000013	29242	.	G	A	16.7	.	DP=7573;VDB=0.000000e+00;RPB=2.483782e+01;AF1=0.02511;AC1=11;DP4=7196,0,218,0;MQ=22;FQ=129;PV4=1,1,5.4e-16,0.13;AF1=0.02511;AC1=11;FQ=129;AF1=0.02511;AC1=11;FQ=129;AF1=0.1127;AC1=5;FQ=17.2	GT:PL:DP:SP:GQ	0/1:17,0,40:5:0:6	0/0:0,24,75:24:0:37	0/0:11,0,69:13:0:4	0/0:11,0,69:13:0:4	0/0:0,55,67:42:0:68	0/0:0,27,90:9:0:40	0/0:0,24,83:8:0:37	0/0:0,255,135:166:0:99	0/0:0,6,38:2:0:19	0/0:0,84,95:28:0:97	0/0:0,33,95:11:0:46	0/0:0,51,97:17:0:64	0/1:24,0,36:5:0:11	0/1:30,0,8:3:0:17	0/0:0,18,78:6:0:31	0/0:0,27,91:9:0:40	0/0:0,48,98:16:0:61	0/0:0,90,94:30:0:99	0/0:0,132,92:44:0:99	0/0:0,24,86:8:0:37
+pseudoscaff_000013	29958	.	G	T	69.2	.	DP=937;VDB=9.421102e-03;RPB=3.183113e+00;AF1=0.005644;AC1=2;DP4=919,0,4,0;MQ=44;FQ=49.1;PV4=1,1,1,1;AF1=0.005644;AC1=2;FQ=49.1;AF1=0.005644;AC1=2;FQ=49.1;AF1=0.05649;AC1=2;FQ=69.4	GT:PL:DP:SP:GQ	0/0:0,9,89:3:0:28	0/0:0,6,75:2:0:25	0/0:0,15,135:5:0:34	0/0:0,27,182:9:0:46	0/0:0,30,184:10:0:49	0/0:0,15,131:5:0:34	0/0:0,15,143:5:0:34	0/0:0,3,26:1:0:22	0/0:0,9,101:3:0:28	0/0:0,9,86:3:0:28	0/0:0,9,100:3:0:28	0/0:0,12,110:4:0:31	0/0:0,12,116:4:0:31	0/0:0,24,178:8:0:43	0/0:0,9,101:3:0:28	0/1:63,0,63:4:0:44	0/0:0,9,98:3:0:28	0/0:0,3,40:1:0:22	0/1:61,0,89:5:0:42	0/0:0,21,166:7:0:40
+pseudoscaff_000013	31412	.	A	T	999	.	DP=1709;VDB=5.603162e-40;RPB=1.368276e+01;AF1=0.03442;AC1=15;DP4=1619,0,67,0;MQ=44;FQ=999;PV4=1,0.00076,0.16,1;AF1=0.03442;AC1=15;FQ=999;AF1=0.03442;AC1=15;FQ=999;AF1=0.153;AC1=6;FQ=999	GT:PL:DP:SP:GQ	0/0:0,9,87:3:0:21	0/0:0,21,166:7:0:32	0/0:0,30,190:10:0:41	0/0:0,45,196:15:0:56	0/0:0,21,156:7:0:32	0/0:0,15,120:5:0:26	0/0:0,15,139:5:0:26	0/0:0,12,113:4:0:23	0/0:0,15,132:5:0:26	0/0:0,21,160:7:0:32	0/0:0,15,135:5:0:26	0/0:0,18,153:6:0:29	0/0:0,18,151:6:0:29	0/0:0,24,157:8:0:35	0/0:0,12,106:4:0:23	0/1:19,0,136:7:0:8	0/1:141,0,73:10:0:90	1/1:186,39,0:13:0:22	0/1:111,0,157:15:0:99	0/1:101,0,54:6:0:71
+pseudoscaff_000013	32320	.	T	A	999	.	DP=1058;VDB=0.000000e+00;RPB=8.976105e+00;AF1=0.9787;AC1=433;DP4=40,0,1015,0;MQ=12;FQ=999;PV4=1,1,4.8e-193,1;AF1=0.9787;AC1=433;FQ=999;AF1=0.9787;AC1=433;FQ=999;AF1=0.9718;AC1=39;FQ=19.7	GT:PL:DP:SP:GQ	1/1:43,27,0:9:0:40	1/1:20,6,0:2:0:20	1/1:39,18,0:6:0:31	1/1:36,15,0:5:0:28	1/1:20,6,0:2:0:20	1/1:36,15,0:5:0:28	1/1:20,6,0:2:0:20	1/1:32,12,0:4:0:25	0/1:12,0,62:6:0:31	1/1:39,18,0:6:0:31	1/1:20,6,0:2:0:20	1/1:32,12,0:4:0:25	1/1:41,21,0:7:0:34	1/1:32,12,0:4:0:25	1/1:11,3,0:1:0:17	1/1:36,15,0:5:0:28	1/1:27,9,0:3:0:23	1/1:20,6,0:2:0:20	1/1:36,15,0:5:0:28	1/1:42,24,0:8:0:37
+pseudoscaff_000013	34515	.	T	A	999	.	DP=1544;VDB=0.000000e+00;RPB=2.605625e+01;AF1=0.1871;G3=0.7482,0.125,0.1268;HWE=4.18e-13;AC1=82;DP4=1248,0,293,0;MQ=44;FQ=999;PV4=1,0.0024,9.8e-17,0.25;AF1=0.1871;G3=0.7482,0.125,0.1268;HWE=4.18e-13;AC1=82;FQ=999;AF1=0.1871;G3=0.7482,0.125,0.1268;HWE=4.18e-13;AC1=82;FQ=999;AF1=0.2844;AC1=11;FQ=999	GT:PL:DP:SP:GQ	0/1:153,0,39:10:0:48	0/0:0,12,125:4:0:15	1/1:191,30,0:10:0:21	0/1:60,0,89:5:0:57	0/1:32,0,66:3:0:29	0/1:29,0,86:4:0:26	0/1:68,0,126:8:0:65	0/1:56,0,110:6:0:53	0/1:11,0,163:10:0:8	1/1:216,51,0:17:0:42	0/0:0,18,158:6:0:21	0/0:0,39,205:13:0:42	0/0:0,30,195:10:0:33	0/0:0,21,168:7:0:24	0/0:0,3,41:1:0:7	0/0:0,12,125:4:0:15	0/0:0,15,143:5:0:18	0/0:0,30,195:10:0:33	0/0:0,27,187:9:0:30	0/0:0,12,123:4:0:15
+pseudoscaff_000013	34541	.	C	T	121	.	DP=1543;VDB=1.371709e-21;RPB=9.566681e+00;AF1=0.02024;AC1=9;DP4=1505,0,36,0;MQ=44;FQ=999;PV4=1,0.11,1,1;AF1=0.02024;AC1=9;FQ=999;AF1=0.02024;AC1=9;FQ=999;AF1=0.02636;AC1=1;FQ=121	GT:PL:DP:SP:GQ	0/0:0,30,189:10:0:44	0/0:0,12,125:4:0:26	0/0:0,33,199:11:0:47	0/0:0,15,143:5:0:29	0/0:0,9,102:3:0:23	0/0:0,12,115:4:0:26	0/0:0,24,180:8:0:38	0/0:0,18,158:6:0:32	0/1:164,0,10:10:0:30	0/0:0,51,217:17:0:65	0/0:0,18,157:6:0:32	0/0:0,39,202:13:0:53	0/0:0,30,195:10:0:44	0/0:0,21,165:7:0:35	0/0:0,3,41:1:0:17	0/0:0,12,125:4:0:26	0/0:0,15,143:5:0:29	0/0:0,30,192:10:0:44	0/0:0,27,188:9:0:41	0/0:0,12,125:4:0:26
+pseudoscaff_000013	34550	.	G	T	999	.	DP=1542;VDB=0.000000e+00;RPB=1.711110e+01;AF1=0.9252;G3=0.06052,0.04334,0.8961;HWE=5.07e-11;AC1=409;DP4=109,0,1430,0;MQ=44;FQ=999;PV4=1,1,0.0089,1;AF1=0.9252;G3=0.06052,0.04334,0.8961;HWE=5.07e-11;AC1=409;FQ=999;AF1=0.9252;G3=0.06052,0.04334,0.8961;HWE=5.07e-11;AC1=409;FQ=999;AF1=0.9475;AC1=38;FQ=79.8	GT:PL:DP:SP:GQ	0/1:151,0,43:10:0:35	0/1:29,0,92:4:0:43	1/1:197,33,0:11:0:41	1/1:144,15,0:5:0:23	1/1:102,9,0:3:0:17	1/1:119,12,0:4:0:20	1/1:180,24,0:8:0:32	1/1:158,18,0:6:0:26	1/1:191,30,0:10:0:38	1/1:215,51,0:17:0:59	1/1:158,18,0:6:0:26	1/1:204,39,0:13:0:47	1/1:194,30,0:10:0:38	1/1:165,21,0:7:0:29	1/1:41,3,0:1:0:11	1/1:125,12,0:4:0:20	1/1:144,15,0:5:0:23	1/1:193,30,0:10:0:38	1/1:187,27,0:9:0:35	1/1:120,12,0:4:0:20
+pseudoscaff_000013	34582	.	C	T	999	.	DP=1541;VDB=0.000000e+00;RPB=2.564971e+01;AF1=0.1825;G3=0.755,0.1228,0.1222;HWE=6.86e-13;AC1=80;DP4=1221,0,290,0;MQ=44;FQ=999;PV4=1,1,6.3e-75,1;AF1=0.1825;G3=0.755,0.1228,0.1222;HWE=6.86e-13;AC1=80;FQ=999;AF1=0.1825;G3=0.755,0.1228,0.1222;HWE=6.86e-13;AC1=80;FQ=999;AF1=0.2791;AC1=11;FQ=999	GT:PL:DP:SP:GQ	0/1:124,0,24:9:0:34	0/0:0,12,106:4:0:16	1/1:167,33,0:11:0:23	0/1:50,0,74:5:0:46	0/1:26,0,54:3:0:23	0/1:23,0,72:4:0:20	0/1:66,0,104:8:0:62	0/1:47,0,91:6:0:43	0/1:5,0,135:10:0:4	1/1:181,51,0:17:0:41	0/0:0,18,134:6:0:22	0/0:0,36,172:12:0:40	0/0:0,30,165:10:0:34	0/0:0,21,143:7:0:25	0/0:0,3,35:1:0:7	0/0:0,12,106:4:0:16	0/0:0,15,122:5:0:19	0/0:0,30,162:10:0:34	0/0:0,27,160:9:0:31	0/0:0,12,101:4:0:16
+pseudoscaff_000013	36385	.	A	C	999	.	DP=1139;VDB=0.000000e+00;RPB=1.443690e+01;AF1=0.9321;G3=0.07379,0.02222,0.904;HWE=3.28e-12;AC1=412;DP4=85,0,1039,0;MQ=17;FQ=999;PV4=1,1,0,1;AF1=0.9321;G3=0.07379,0.02222,0.904;HWE=3.28e-12;AC1=412;FQ=999;AF1=0.9321;G3=0.07379,0.02222,0.904;HWE=3.28e-12;AC1=412;FQ=999;AF1=1;AC1=40;FQ=-40	GT:PL:DP:SP:GQ	1/1:53,21,0:7:0:29	1/1:46,15,0:5:0:23	1/1:34,9,0:3:0:17	1/1:34,9,0:3:0:17	1/1:56,27,0:9:0:35	1/1:46,15,0:5:0:23	1/1:46,15,0:5:0:23	1/1:34,9,0:3:0:17	1/1:45,15,0:5:0:23	1/1:52,21,0:7:0:29	1/1:14,3,0:1:0:12	1/1:46,15,0:5:0:23	1/1:46,15,0:5:0:23	1/1:50,18,0:6:0:26	1/1:46,15,0:5:0:23	1/1:14,3,0:1:0:12	1/1:46,15,0:5:0:23	1/1:50,18,0:6:0:26	1/1:34,9,0:3:0:17	1/1:41,12,0:4:0:20
+pseudoscaff_000013	37480	.	A	G	999	.	DP=1371;VDB=0.000000e+00;RPB=1.638219e+01;AF1=0.06845;G3=0.8866,0.08775,0.02563;HWE=0.00158;AC1=30;DP4=1267,0,100,0;MQ=39;FQ=999;PV4=1,0.051,1,1;AF1=0.06845;G3=0.8866,0.08775,0.02563;HWE=0.00158;AC1=30;FQ=999;AF1=0.06845;G3=0.8866,0.08775,0.02563;HWE=0.00158;AC1=30;FQ=999;AF1=0.1482;AC1=6;FQ=999	GT:PL:DP:SP:GQ	0/0:0,24,169:8:0:32	0/0:0,27,173:9:0:35	0/0:0,21,160:7:0:29	0/0:0,18,151:6:0:26	0/0:0,0,0:0:0:9	0/0:0,12,119:4:0:20	0/0:0,18,148:6:0:26	0/0:0,21,158:7:0:29	0/0:0,21,161:7:0:29	0/1:103,0,116:9:0:95	0/1:40,0,161:12:0:32	0/1:87,0,57:5:0:71	0/1:117,0,127:11:0:99	0/1:89,0,57:5:0:71	0/0:0,9,92:3:0:17	0/0:0,6,71:2:0:14	0/0:0,0,0:0:0:9	0/0:0,3,39:1:0:12	0/0:0,12,118:4:0:20	0/0:0,33,187:11:0:41
+pseudoscaff_000013	37526	.	T	A	999	.	DP=1365;VDB=0.000000e+00;RPB=1.518467e+01;AF1=0.05929;G3=0.9053,0.0686,0.02606;HWE=0.000309;AC1=26;DP4=1267,0,83,0;MQ=39;FQ=999;PV4=1,0.022,1,1;AF1=0.05929;G3=0.9053,0.0686,0.02606;HWE=0.000309;AC1=26;FQ=999;AF1=0.05929;G3=0.9053,0.0686,0.02606;HWE=0.000309;AC1=26;FQ=999;AF1=0.1184;AC1=4;FQ=999	GT:PL:DP:SP:GQ	0/0:0,24,160:8:0:33	0/0:0,27,169:9:0:36	0/0:0,21,151:7:0:30	0/0:0,18,140:6:0:27	0/0:0,0,0:0:0:9	0/0:0,12,111:4:0:21	0/0:0,18,132:6:0:27	0/0:0,21,145:7:0:30	0/0:0,21,152:7:0:30	0/0:0,27,165:9:0:36	0/1:31,0,149:12:0:22	0/1:79,0,53:5:0:66	0/1:104,0,120:11:0:95	0/1:78,0,53:5:0:65	0/0:0,9,92:3:0:18	0/0:0,6,67:2:0:15	0/0:0,0,0:0:0:9	0/0:0,3,37:1:0:12	0/0:0,12,110:4:0:21	0/0:0,33,177:11:0:42
+pseudoscaff_000013	37659	.	A	C	999	.	DP=997;VDB=0.000000e+00;RPB=2.563207e+01;AF1=0.6251;G3=0.3417,0.1074,0.5509;HWE=1.66e-21;AC1=276;DP4=358,0,632,0;MQ=21;FQ=999;PV4=1,0.28,9.3e-51,0.092;AF1=0.6251;G3=0.3417,0.1074,0.5509;HWE=1.66e-21;AC1=276;FQ=999;AF1=0.6251;G3=0.3417,0.1074,0.5509;HWE=1.66e-21;AC1=276;FQ=999;AF1=0.4567;G3=0.5777,7.991e-05,0.4223;HWE=0.000118;AC1=18;FQ=999	GT:PL:DP:SP:GQ	0/0:0,6,62:2:0:3	1/1:44,9,0:3:0:9	0/0:0,18,66:6:0:13	1/1:63,12,0:4:0:12	0/1:9,0,24:3:0:14	1/1:63,12,0:4:0:12	0/0:0,12,53:4:0:8	0/0:0,9,44:3:0:5	1/1:69,15,0:5:0:14	0/0:0,15,61:5:0:10	1/1:52,9,0:3:0:9	1/1:71,21,0:7:0:20	1/1:44,9,0:3:0:9	1/1:71,15,0:5:0:14	0/1:0,0,0:0:0:3	0/0:0,12,53:4:0:8	0/0:0,6,33:2:0:3	0/0:0,9,44:3:0:5	0/0:0,18,66:6:0:13	0/0:0,6,62:2:0:3

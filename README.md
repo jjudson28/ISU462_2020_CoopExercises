@@ -1,4 +1,4 @@
-#ISU462_2020_CoopExercises
+#ISU462.2020.CoopExercises
 Repository of all R exercises associated with the Coop PopGen Notes for GEN462
 
 ##Repository Contents:  
@@ -49,6 +49,29 @@ Chapter08
 ```
 Chapter09
 |->   9_Computational_Activity.Rmd 
+```
+```
+Chapter10
+|->   10.0.2_Computational_Activity.Rmd 
+|->   10.0.3_Computational_Activity.Rmd
+|->   10.1_Computational_Activity.Rmd
+```
+```
+Chapter11
+|->   11_Computational_Activity.Rmd 
+```
+```
+Chapter12
+|->   12_Computational_Activity.Rmd 
+```
+```
+Chapter13
+|->   13_Computational_Activity.Rmd 
+|->   PopGenome_data
+```
+```
+Chapter14
+|->   14_Computational_Activity.Rmd 
 ```
 
 **FILE LIST**
@@ -116,3 +139,36 @@ Chapter09
 	**Contents**
 
 	>1. `9_Computational_Activity.Rmd`: Computational activity corresponding to chapter 9 of Coop (2020).
+
+9. `Chapter10`: Folder containing Chapter 10 ("One-Locus Models of Selection") exercises for Population and Quantitative Genetics text (Coop 2020)  
+
+	**Contents**
+
+	>1. `10.0.2_Computational_Activity.Rmd`: Computational activity setting up simulation function for chapter 10 of Coop (2020).
+	>2. `10.0.3_Computational_Activity.Rmd`: Computational activity of directional selection for chapter 10 of Coop (2020).
+	>3. `10.1_Computational_Activity.Rmd`: Computational activity of heterozygote advantage/underdominance for chapter 10 of Coop (2020).
+	
+10. `Chapter11`: Folder containing Chapter 11 ("The Interaction of Selection, Mutation, and Migration") exercise for Population and Quantitative Genetics text (Coop 2020)  
+
+	**Contents**
+
+	>1. `11_Computational_Activity.Rmd`: Computational activity corresponding to chapter 11 of Coop (2020).
+	
+11. `Chapter12`: Folder containing Chapter 12 ("The Impact of Genetic Drift on Selected Alleles") exercise for Population and Quantitative Genetics text (Coop 2020)  
+
+	**Contents**
+
+	>1. `12_Computational_Activity.Rmd`: Computational activity corresponding to chapter 12 of Coop (2020).
+	
+12. `Chapter13`: Folder containing Chapter 13 ("The Effects of Linked Selection") exercise for Population and Quantitative Genetics text (Coop 2020)  
+
+	**Contents**
+
+	>1. `13_Computational_Activity.Rmd`: Computational activity corresponding to chapter 13 of Coop (2020).
+	>2. `PopGenome_data`: Folder containing needed files for computational activity. Data sourced from both Coop's resources/code and from tonig-evo's tutorial on the PopGenome R package: <http://tonig-evo.github.io/workshop-popgenome/>
+	
+13. `Chapter14`: Folder containing Chapter 14 ("Interaction of Multiple Selected Loci") exercise for Population and Quantitative Genetics text (Coop 2020)  
+
+	**Contents**
+
+	>1. `14_Computational_Activity.Rmd`: Computational activity corresponding to chapter 14 of Coop (2020).

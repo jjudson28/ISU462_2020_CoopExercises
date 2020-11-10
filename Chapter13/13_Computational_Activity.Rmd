@@ -1,0 +1,97 @@
+---
+title: "Chapter 13 Computational Activity"
+output: html_notebook
+---
+
+#Chapter 13: The Effects of Linked Selection
+
+###Preparation:
+1. Set your working directory to where you downloaded the PopGenome_data folder (mine is in my downloads): 
+```{r}
+
+```
+
+2. We will need the package PopGenome for this exercise.
+```{r}
+install.packages("PopGenome")
+library(PopGenome)
+```
+
+#Selective Sweeps
+
+##As selection acts to increase or decrease a more fit genotype/allele, the alleles surrounding that selected allele will also be subject to selection pressures due to linkage disequilibrium, the physical linkage of alleles along a chromosome. If selection acts strongly on an allele, the resulting sweep can decrease variation in the entire region of the genome, as one haplotype is pushed to fixation.
+
+#How can we identify selective sweeps?
+
+1. Heterozygosity (Fig. 13.8 in Coop 2020)
+```{r}
+dhfr<-read.csv(file="~/Downloads/PopGenome_data/dhfr_sweep.csv")
+
+par(mar=c(5,5,1,1))
+plot(dhfr$dist_dhfr_kb,dhfr$het_sweep,type="b",pch=19,ylim=c(0,1),xlim=c(-200,200),cex.axis=1.2,cex.lab=1.4,xlab="Distance from dhfr (kb)",ylab="Heterozygosity (He)")
+regional.het<-mean(dhfr$het_non_sweep)
+abline(h=regional.het,lty=3)
+dhfr$genetic.dist<-abs(dhfr$dist_dhfr_kb/(1500))
+nls(het_sweep~ regional.het*(1-exp(-genetic.dist*tau)),data=dhfr,start=list(tau=10))
+tau<-37.95 ##from nls fit
+my.dists<-seq(min(dhfr$dist_dhfr_kb),max(dhfr$dist_dhfr_kb),length=1000)
+my.genetic.dists<- abs(my.dists) /1500
+my.pred.pi<-regional.het*(1-exp(-my.genetic.dists*tau))
+lines(my.dists,my.pred.pi,lty=2)
+legend(x="bottomright",lty=1:3,pch=c(19,NA,NA),legend=c("Observed","Fitted sweep","background levels"),cex=1.0)
+```
+
+
+
+2. Ratio of nucleotide diversity (π) to segregating sites (θ) (Fig. 13.5 in Coop 2020)
+```{r}
+sel=c(0.01,0.001)
+tau = 2*log(2*10000)/sel[1]
+physical.pos<-seq(-150e3,150e3,length=2000)
+rec.dist<-abs(physical.pos)*1e-8
+plot(physical.pos,(1-exp(-rec.dist*tau)),ylim=c(0,1),typ="l",lwd=2,xlab="Physical Position",ylab=expression(pi/theta),cex.axis=1.5,cex.lab=1.3)
+tau = 2*log(2*10000)/sel[2]
+rec.dist<-abs(physical.pos)*1e-8
+lines(physical.pos,(1-exp(-rec.dist*tau)),lty=2,lwd=2,col="red")
+legend("bottomright",legend=paste("s = ",sel),col=c("black","red"),lty=c(1,2),lwd=1.5,cex=1.0)
+```
+
+#We can also measure Tajima's D, which is the difference between the nucleotide diversity and segregating sites among individuals, using genome scanning to look at different regions of the genome.
+
+##Reminder: Interpretation of Tajima's D
+A) D = 0; no selection occurring, mutation-drift equilibrium
+B) D > 0; population bottleneck, OR balancing selection (variation maintained, excess intermediate frequency variants)
+C) D < 0; population expansion, OR selective sweep (variation removed, excess rare variants)
+
+#Let's take some data from Parus major (the great tit), from tonig-evo's tutorial (here: http://tonig-evo.github.io/workshop-popgenome/), and calculate Tajima's D of a chromosome using the sliding window approach:
+
+```{r}
+#this reads in our data from the folder you downloaded from Canvas as a vcf file. These files commonly contain variant calls, like SNPs
+
+#Set working directory here again
+setwd("~/Downloads/PopGenome_data/")
+GENOME.class <-readVCF("great_tit/vcf/LGE22.vcf.gz", 6000,"chrLGE22_Parus_Major_build_1.0.2",1,773534)
+
+#Get summary statistics:
+sprintf("Summary Stats")
+get.sum.data(GENOME.class)
+
+#Now we will set up our sliding window sizes:
+GENOME.class.slide  <- sliding.window.transform(GENOME.class,width=100000, jump=10000,type=2,whole.data=TRUE) #type 1 is based on SNP counts, type 2 is based on nucleotide counts
+```
+#We can now calculate Tajima's D along the chromosome and plot it:
+```{r}
+GENOME.class.slide  <- neutrality.stats(GENOME.class.slide)
+plot(GENOME.class.slide@Tajima.D)
+abline(h = 0, lty = "dashed", col = "red")
+```
+##What might you conclude from this analysis?
+
+#Let's look at a published study that shows the changes in Tajima's D:
+Genomic regions exhibiting positive selection identified from dense genotype data
+Christopher S. Carlson, Daryl J. Thomas, Michael A. Eberle, Johanna E. Swanson, Robert J. Livingston, Mark J. Rieder, and Deborah A. Nickerson
+Genome Res. 2005 Nov; 15(11): 1553–1565.
+doi: 10.1101/gr.4326505
+
+#You should set the photo location below to be wherever you have the CarlsonFig3.png on your computer. It is included in the PopGenome_data folder and Canvas as well.
+![](/Users/jessicajudson/Desktop/CarlsonFig3.png)

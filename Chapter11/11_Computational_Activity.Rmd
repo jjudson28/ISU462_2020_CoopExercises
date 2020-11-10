@@ -1,0 +1,213 @@
+---
+title: "Chapter 11 Computational Activity"
+output: html_notebook
+---
+
+#11.0.1: Mutation-Selection Balance
+
+#While selection may be acting to remove certain unfit phenotypes from the population, resulting in the loss of certain alleles, mutation is always acting across the genome to add variation that may ultimately result in loss of fitness. The counteracting forces of selection removing deleterious variation and mutation adding deleterious variation thus can reach a balance, such that deleterious variation is maintained as a result.
+
+#We can use our simulations from Chapter 10 to observe what we might expect in natural populations, starting with our simulation of directional selection.
+
+#Reminders:
+##In terms of relative fitness, the relative fitness of the A1A1 genotype (aa in our simulation below), is 1 (the maximum of the fitnesses for the three genotypes). 
+
+##The relative fitness of the A1A2 heterozygote (genotype ab) is 1 − sh, where "the selection coefficient s is the difference in relative fitness between the two homozygotes", and h is the dominance coefficient
+
+##The relative fitness of the A2A2 genotype (bb) is 1-s. 
+
+##For directional selection, the dominance coefficient (h) must be between 0 and 1. When h=0, the A1 allele (a in our simulation) is completely dominant to the b allele, which is fully recessive. When h=1, the opposite is true. This is important because it changes the fitness of the heterozygote genotype to match either the aa homozygote (h=0) or the bb homozygote (h=1)
+
+#We will use the threshold 1 > h > 0 for our dominance coefficient, such that the a allele is not completely dominant to the b allele, as in Coop 2020:
+```{r}
+number_of_generations = 1000 #how many generations do you want the simulation to run?
+
+#relative fitnesses
+##here we are setting the relative fitnesses of each of the genotypes, and now we are incorporating s and h.
+s = 0.1 #set s, the selection coefficient (difference in relative fitnesses of homozygotes). We will set S to be relatively low, as described in the scenario by Coop 2020.
+h = 0.1 #set h, the dominance coefficient, to greater than zero, such that the a allele is not completely dominant to the b allele.
+
+fitness_aa = 1 #stays 1, see the table in the text
+fitness_ab = 1-s*h
+fitness_bb = 1-s
+
+#Starting frequencies of alleles and genotypes
+freq_a = 0.95 #Set this to be high, so that the b allele is rare in the population
+ 
+freq_b = 1 - freq_a
+freq_aa = freq_a^2
+freq_ab = 2 * freq_a * freq_b
+freq_bb = freq_b^2
+ 
+#create dataframes for allele and genotype frequencies:
+genotypes = data.frame(t = 0, cbind(freq_aa, freq_ab, freq_bb))
+alleles_frequency = data.frame(t = 0, cbind(freq_a, freq_b))
+ 
+#Now we will simulate over each subsequent generation. 
+for (t in 1 : number_of_generations) {
+ 
+    x_freq_a = freq_aa + 0.5 * freq_ab #get starting freq. of a allele
+    x_freq_b = freq_bb + 0.5 * freq_ab #and b allele. Need to redo this for each generation as selection changes allele frequencies.
+ 
+    x_freq_aa = freq_aa * fitness_aa #here you calculate the frequency of a genotype multiplied by its relative fitness, which we need for each genotype to calculate wbar, the mean fitness of the population of zygotes (equation 10.22)
+    x_freq_ab = freq_ab * fitness_ab
+    x_freq_bb = freq_bb * fitness_bb
+     
+    wbar = x_freq_aa + x_freq_ab + x_freq_bb #here we add those together as in eq. 10.22 to get wbar
+     
+    freq_a = ((freq_aa*fitness_aa)+(freq_a*freq_b*fitness_ab))/wbar #see equation 10.26
+    freq_b = 1 - freq_a #to get the freq. of the other allele, 1-p
+    
+    #recalculate genotype frequencies in next generation:
+    freq_aa = freq_a^2
+    freq_ab = 2 * freq_a * freq_b
+    freq_bb = freq_b^2
+      
+    #add information to table
+    genotypes = rbind(genotypes, data.frame(t, cbind(freq_aa, freq_ab, freq_bb)))
+    alleles_frequency = rbind(alleles_frequency, data.frame(t, cbind(freq_a, freq_b)))
+}
+```
+
+#Our resulting fitnesses:
+```{r}
+fitness_aa #=1
+fitness_ab #=1-s*h
+fitness_bb #=1-s
+```
+
+#We can plot these changes over time:
+```{r}
+plot(alleles_frequency$t, alleles_frequency$freq_a,type="l",col="red", xlab="Generations", ylab="Allele Frequency", ylim = c(0,1)) 
+lines(alleles_frequency$t, alleles_frequency$freq_b,type="l",col="blue")
+
+plot(genotypes$t, genotypes$freq_aa,type="l",col="red", xlab="Generations", ylab="Genotype Frequency", ylim = c(0,1))
+lines(genotypes$t, genotypes$freq_ab,type="l",col="green")
+lines(genotypes$t, genotypes$freq_bb,type="l",col="blue")
+```
+
+
+#So far, this is similar to what we have already done. But what if we added a coefficient for the mutation rate of the a allele to the b allele? 
+
+```{r}
+number_of_generations = 1000 #how many generations do you want the simulation to run?
+
+#relative fitnesses
+##here we are setting the relative fitnesses of each of the genotypes, and now we are incorporating s and h.
+s = 0.1 #set s, the selection coefficient (difference in relative fitnesses of homozygotes).
+h = 0.1 #set h, the dominance coefficient, to greater than zero, such that the a allele is not completely dominant to the b allele.
+u = 0.0001 #mutation rate of the a -> b allele. Should be << s
+
+fitness_aa = 1 #stays 1, see the table in the text
+fitness_ab = 1-s*h
+fitness_bb = 1-s
+
+#Starting frequencies of alleles and genotypes
+freq_a = 0.95 #Set this to be high, so that the b allele is rare in the population
+ 
+freq_b = 1 - freq_a
+freq_aa = freq_a^2
+freq_ab = 2 * freq_a * freq_b
+freq_bb = freq_b^2
+ 
+#create dataframes for allele and genotype frequencies:
+genotypes = data.frame(t = 0, cbind(freq_aa, freq_ab, freq_bb))
+alleles_frequency = data.frame(t = 0, cbind(freq_a, freq_b))
+ 
+#Now we will simulate over each subsequent generation. 
+for (t in 1 : number_of_generations) {
+ 
+    x_freq_a = freq_aa + 0.5 * freq_ab #get starting freq. of a allele
+    x_freq_b = freq_bb + 0.5 * freq_ab #and b allele. Need to redo this for each generation as selection changes allele frequencies.
+ 
+    x_freq_aa = freq_aa * fitness_aa #here you calculate the frequency of a genotype multiplied by its relative fitness, which we need for each genotype to calculate wbar, the mean fitness of the population of zygotes (equation 10.22)
+    x_freq_ab = freq_ab * fitness_ab
+    x_freq_bb = freq_bb * fitness_bb
+     
+    wbar = x_freq_aa + x_freq_ab + x_freq_bb #here we add those together as in eq. 10.22 to get wbar
+     
+    freq_a = (((freq_aa*fitness_aa)+(freq_a*freq_b*fitness_ab))/wbar) - u #see equation 10.26
+    freq_b = 1 - freq_a #to get the freq. of the other allele, 1-p
+    
+    #recalculate genotype frequencies in next generation:
+    freq_aa = freq_a^2
+    freq_ab = 2 * freq_a * freq_b
+    freq_bb = freq_b^2
+      
+    #add information to table
+    genotypes = rbind(genotypes, data.frame(t, cbind(freq_aa, freq_ab, freq_bb)))
+    alleles_frequency = rbind(alleles_frequency, data.frame(t, cbind(freq_a, freq_b)))
+}
+
+plot(alleles_frequency$t, alleles_frequency$freq_b,type="l",col="blue", xlab="Generations", ylab="Allele Frequency") 
+```
+#I have zoomed in on this plot y axis, because I want you to notice that even with selection acting against the b allele, it remains at low frequency in the population due to the addition of b alleles through mutation of the a allele to the b allele. 
+
+#There is an equilibrium frequency we might expect for the b allele due to the actions of selection and mutation (similar to drift and mutation), and we can calculate that equilibrium expectation given the assumptions mentioned in your textbook (equation 11.6)
+```{r}
+u/(h*s)
+```
+
+#But what is selection acting on here? The homozygous recessive genotypes, or the heterozygotes? If you look at the above equation, h (the dominance coefficient) determines the equilibrium frequency of the b allele, if all else is constant. Thus, it is the action of selection on heterozygotes, not recessive homozygotes, that is shaping the frequency of the b allele, since bb homozygotes are so rare as to not be considered by the equation. To demonstrate the effects of h on the equilibrium frequency of the b allele, we will change h.
+```{r}
+number_of_generations = 1000 #how many generations do you want the simulation to run?
+
+#relative fitnesses
+##here we are setting the relative fitnesses of each of the genotypes, and now we are incorporating s and h.
+s = 0.1 #set s, the selection coefficient (difference in relative fitnesses of homozygotes).
+h = 0.4 #set h, the dominance coefficient, to greater than zero, such that the a allele is not completely dominant to the b allele.
+u = 0.0001 #mutation rate of the a -> b allele. Should be << s
+
+fitness_aa = 1 #stays 1, see the table in the text
+fitness_ab = 1-s*h
+fitness_bb = 1-s
+
+#Starting frequencies of alleles and genotypes
+freq_a = 0.95 #Set this to be high, so that the b allele is rare in the population
+ 
+freq_b = 1 - freq_a
+freq_aa = freq_a^2
+freq_ab = 2 * freq_a * freq_b
+freq_bb = freq_b^2
+ 
+#create dataframes for allele and genotype frequencies:
+genotypes = data.frame(t = 0, cbind(freq_aa, freq_ab, freq_bb))
+alleles_frequency = data.frame(t = 0, cbind(freq_a, freq_b))
+ 
+#Now we will simulate over each subsequent generation. 
+for (t in 1 : number_of_generations) {
+ 
+    x_freq_a = freq_aa + 0.5 * freq_ab #get starting freq. of a allele
+    x_freq_b = freq_bb + 0.5 * freq_ab #and b allele. Need to redo this for each generation as selection changes allele frequencies.
+ 
+    x_freq_aa = freq_aa * fitness_aa #here you calculate the frequency of a genotype multiplied by its relative fitness, which we need for each genotype to calculate wbar, the mean fitness of the population of zygotes (equation 10.22)
+    x_freq_ab = freq_ab * fitness_ab
+    x_freq_bb = freq_bb * fitness_bb
+     
+    wbar = x_freq_aa + x_freq_ab + x_freq_bb #here we add those together as in eq. 10.22 to get wbar
+     
+    freq_a = (((freq_aa*fitness_aa)+(freq_a*freq_b*fitness_ab))/wbar) - u #see equation 10.26
+    freq_b = 1 - freq_a #to get the freq. of the other allele, 1-p
+    
+    #recalculate genotype frequencies in next generation:
+    freq_aa = freq_a^2
+    freq_ab = 2 * freq_a * freq_b
+    freq_bb = freq_b^2
+      
+    #add information to table
+    genotypes = rbind(genotypes, data.frame(t, cbind(freq_aa, freq_ab, freq_bb)))
+    alleles_frequency = rbind(alleles_frequency, data.frame(t, cbind(freq_a, freq_b)))
+}
+
+plot(alleles_frequency$t, alleles_frequency$freq_b,type="l",col="blue", xlab="Generations", ylab="Allele Frequency") 
+
+sprintf("relative fitnesses:")
+fitness_aa #=1
+fitness_ab #=1-s*h
+fitness_bb #=1-s
+
+sprintf("equilibrium frequency of the b allele")
+u/(h*s)
+```
+#You can see that when the dominance coefficient is higher, the relative fitness of the heterozygote decreases, thus increasing the strength of selection on that heterozygote. The result is decreased equilibrium frequency of the b allele.
+

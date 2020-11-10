@@ -1,0 +1,186 @@
+---
+title: "Chapter 14 Computational Activity"
+output: html_notebook
+---
+
+#Chapter 14: Interaction of Multiple Selected Loci
+
+###Preparation:
+1. Set your working directory
+```{r}
+
+```
+
+2. We will need the package "sf" for this exercise. You may already have this package installed, so I have commented this command out. If the library command works, you shouldn't need to install it.
+```{r}
+#install.packages("sf")
+library(sf)
+```
+
+3. Set up the functions to create the figures seen in Coop 2020. These are sourced from Dr. Coop's code that accompanies the text.
+
+```{r}
+#Function #1: Simulations
+
+#example values so I can show you what the function is doing:
+n.gens<-500
+#haplotype frequencies:
+p<-  c(0.001,0.099,0,0.9); names(p)<-c("AB","Ab","aB","ab")
+#relative fitnesses of each haplotype:
+w.add<-c(1,0.95,1,0.95);names(w.add)<-names(p)
+w.mat<-outer(w.add,w.add,FUN="+")
+
+#function
+two.loc.sims<-function(p,w.mat,r){
+  #If the haplotype frequencies don't add to one, stop
+	stopifnot(sum(p)==1)
+  #create an empty matrix to fill with changing haplotype frequencies
+	p.array<-matrix(NA,nrow=n.gens,ncol=4)
+	#Create empty matrix for our D values
+	d.array<-NA
+	#Set our first row to be equal to the initial haplotype frequencies set when you call the function.
+	p.array[1,]<-p
+	colnames(p.array)<-names(p)
+	#Begin our loop to measure changes in haplotype frequencies over time.
+	for(gen in 2:n.gens){
+	  #Multiply haplotype frequencies by their relative fitnesses. Remember that each diploid individual has two haplotypes, so the number of haplotypes with a beneficial/deleterious allele matters. This is recreating the table you see on p.229
+		w.marg<-apply(w.mat,1,function(w.marg){w.marg*p}) 
+		#get the sums of the columns of the table to get our marginal haplotype frequencies
+		w.marg<-colSums(w.marg)
+		#calculate our D, which measures "the excess of coupling to repulsion gametes". In other words, the haplotype associations. "If D = 0 we’ll say the two loci are in linkage equilibrium, while if D > 0 or D < 0 we’ll say that the loci are in linkage disequilibrium"
+		D<-p["AB"] - (p["AB"]+p["Ab"])*(p["AB"]+p["aB"])
+		d.array<-c(d.array,D)
+		#"where the coupling haplotypes 1 and 4 use +D and repulsion haplotypes 2 and 3 use −D"
+		D.vec<- c(-D,+D,+D,-D)
+		
+		#"Our mean fitness wbar is the sum of all the entries in the table"
+		wbar<-sum(p*w.marg)
+		
+		##Eq. 14.3 to calculate new haplotype frequencies
+		p.new<- (p*w.marg + r*D.vec*w.mat["AB","ab"])/wbar
+		p.array[gen,]<-p.new
+		p<-p.new
+	}
+	return(cbind(p.array,d.array))
+}
+```
+
+#Function 2, Plotting function:
+```{r}
+stack.freqs.plot<-function(p.out,my.title=""){
+	stacked.freqs<-t(apply(p.out[,c("Ab","AB","ab","aB")],1,cumsum))
+	plot(stacked.freqs[,"Ab"],ylim=c(0,1),type="l",xlab="Generations",ylab="Frequencies",cex.lab=1.4,cex.axis=1.2,main=my.title,cex.main=1.4)
+	my.x<-1:n.gens
+	x.polygon<-c(my.x,rev(my.x))
+#	recover()
+	polygon(x=x.polygon,c(stacked.freqs[,"Ab"],rep(0,n.gens)),col="blue")
+ 	pol <-st_polygon(list(cbind(c(x.polygon,1), c(stacked.freqs[,"Ab"],rep(0,n.gens),stacked.freqs[,"Ab"][1]))))
+ 	centroid<-st_centroid(pol)
+	text(centroid[1],centroid[2],col="white","Ab",cex=1.4) 
+
+	polygon(x=x.polygon,c(stacked.freqs[,"AB"],rev(stacked.freqs[,"Ab"])),col="purple")
+ 	pol <-st_polygon(list(cbind(c(x.polygon,1), c(stacked.freqs[,"AB"],rev(stacked.freqs[,"Ab"]),stacked.freqs[,"AB"][1]))))
+ 	centroid<-st_centroid(pol)
+	text(centroid[1],centroid[2],col="white","AB",cex=1.4) 
+	
+	polygon(x=x.polygon,c(stacked.freqs[,"AB"],rev(stacked.freqs[,"aB"])),col="white")
+	pol <-st_polygon(list(cbind(c(x.polygon,1) ,c(stacked.freqs[,"AB"],rev(stacked.freqs[,"aB"]),stacked.freqs[,"AB"][1]))))
+ 	centroid<-st_centroid(pol)
+	text(centroid[1]/3,centroid[2],col="black","ab",cex=1.4) 
+		
+	polygon(x=x.polygon,c(stacked.freqs[,"aB"],rev(stacked.freqs[,"ab"])),col="red")
+	pol <-st_polygon(list(cbind(c(x.polygon,1) ,c(stacked.freqs[,"aB"],rev(stacked.freqs[,"ab"]),stacked.freqs[,"aB"][1]))))
+ 	centroid<-st_centroid(pol)
+	if(any(stacked.freqs[,"aB"]<0.98)) text(centroid[1],centroid[2],col="black","aB",cex=1.4) 
+
+}
+```
+
+##14.3.1 The hitchhiking of neutral alleles, Fig. 14.1
+
+#In this scenario, "A beneficial mutation B arises on the background of a neutral allele whose initial frequency is pA = 10%. The beneficial allele has a strong, additive selection coefficient of hs = 0.05."
+```{r}
+###Neutral Hitchhiking
+n.gens<-500
+
+#B starts at low freq. on the A background
+p<-  c(0.001,0.099,0,0.9); names(p)<-c("AB","Ab","aB","ab")
+
+#w.add sets up the relative fitnesses of the four haplotypes. The haplotypes with our beneficial allele "B" have a slight increase in relative fitness (hs = 0.05)
+w.add<-c(1,0.95,1,0.95);names(w.add)<-names(p)
+#need to set up relative fitnesses of haplotypes differently. How many copies of B allele? add up number and their relative fitnesses.
+w.mat<-outer(w.add,w.add,FUN="+")
+layout(t(1:3))
+par(mar=c(4,4,3,1))
+
+#run function for three different recombination rates, 0.0005, 0.005, 0.05
+p.out<-two.loc.sims(p,w.mat,r=0.0005); stack.freqs.plot(p.out,my.title="r=0.0005")
+p.out<-two.loc.sims(p,w.mat,r=0.005); stack.freqs.plot(p.out,my.title="r=0.005")
+p.out<-two.loc.sims(p,w.mat,r=0.05);
+stack.freqs.plot(p.out,my.title="r=0.05")
+```
+##Based on the above plots, at what level of recombination is the A allele hitchhiking with selection on the B allele? At what level of recombination does the neutral allele no longer hitchhike with selection on the B allele?
+
+
+##14.3.2 The hitchhiking of deleterious alleles, Fig. 14.2
+In this case, our B allele is still beneficial, but now our A allele is no longer neutral, but instead deleterious.
+```{r}
+par(mar=c(4,4.1,3,1))
+n.gens<-1000
+
+#same initial haplotype frequencies as above.
+p<-  c(0.001,0.099,0,0.9); names(p)<-c("AB","Ab","aB","ab")
+
+#we have changed our relative fitness such that the ab haplotype has the highest relative fitness. Our B beneficial allele shows up in a haplotype with the deleterious A allele.
+w.add<-c(0.97,0.93,1,0.95);names(w.add)<-names(p)
+w.mat<-outer(w.add,w.add,FUN="+")
+
+layout(t(1:3))
+ p.out<-two.loc.sims(p,w.mat,r=0.00);stack.freqs.plot(p.out,my.title="r=0.0");
+ p.out<-two.loc.sims(p,w.mat,r=0.000005);stack.freqs.plot(p.out,my.title="r=0.000005");
+ p.out<-two.loc.sims(p,w.mat,r=0.0002);stack.freqs.plot(p.out,my.title="r=0.0002")
+```
+#What is happening to the Ab haplotype? Why? What is the difference between the three plots in patterns of AB frequency?
+
+#14.3.3: Clonal interference between favourable alleles Fig 14.3. Beneficial alleles A and B arise on different haplotypes.
+```{r}
+layout(t(1:2))
+n.gens<-1000
+#There are no AB individuals to begin
+p<-  c(0.0,0.01,0.01,0.98); names(p)<-c("AB","Ab","aB","ab")
+w.add<-c(1.14,1.08,1.06,1);names(w.add)<-names(p)
+w.mat<-outer(w.add,w.add,FUN="+")
+p.out<-two.loc.sims(p,w.mat,r=0.00)
+stack.freqs.plot(p.out, my.title="r=0.00")
+#ignore the AB label on this plot
+
+p<-  c(0.0,0.01,0.01,0.98); names(p)<-c("AB","Ab","aB","ab")
+w.add<-c(1.1,1.06,1.055,1);names(w.add)<-names(p)
+w.mat<-outer(w.add,w.add,FUN="+")
+p.out<-two.loc.sims(p,w.mat,r=0.001)
+stack.freqs.plot(p.out, my.title="r=0.001")
+```
+#What is the difference in the two plots above? Which is the more beneficial allele, A or B? How does that relate to what haplotype will fix with no recombination?
+
+
+#14.3.4: Epistatic combinations of alleles and the cost of recombination.
+"Imagine a pair of alleles A and B at two loci that work very well together, and offer a fitness advantage over the ancestral combination of allele a and b. You could for example imagine that A and B are changes in a protein and its receptor, and that they offer a much more efficient signaling response. However, imagine that A doesn’t work with b, nor does the allele a work well with B."
+```{r}
+n.gens<-200
+layout(t(1:3))
+p<-  c(0.3,0.0,0.0,0.7); names(p)<-c("AB","Ab","aB","ab")
+w.add<-c(1.05,0.1,0.1,1.0);names(w.add)<-names(p);w.mat<-outer(w.add,w.add,FUN="+")
+p.out<-two.loc.sims(p,w.mat,r=0.00)
+stack.freqs.plot(p.out, my.title="r=0.00")
+
+p<-  c(0.3,0.0,0.0,0.7); names(p)<-c("AB","Ab","aB","ab")
+w.add<-c(1.05,0.1,0.1,1.0);names(w.add)<-names(p);w.mat<-outer(w.add,w.add,FUN="+")
+p.out<-two.loc.sims(p,w.mat,r=0.05)
+stack.freqs.plot(p.out, my.title="r=0.05")
+
+
+p<-  c(0.3,0.0,0.0,0.7); names(p)<-c("AB","Ab","aB","ab")
+w.add<-c(1.05,0.1,0.1,1.0);names(w.add)<-names(p);w.mat<-outer(w.add,w.add,FUN="+")
+p.out<-two.loc.sims(p,w.mat,r=0.1)
+stack.freqs.plot(p.out, my.title="r=0.1")
+```

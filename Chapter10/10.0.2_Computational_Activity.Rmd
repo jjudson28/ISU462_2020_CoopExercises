@@ -1,0 +1,100 @@
+---
+title: "Chapter 10.0.2 Computational Activity"
+output: html_notebook
+---
+
+#Chapter 10: One-Locus Models of Selection
+
+###Preparation:
+1. Set your working directory: 
+```{r}
+
+```
+
+2. We don't need any packages for this exercise.
+```{r}
+options(scipen=10)
+```
+
+
+#10.0.2 Diploid model
+
+##We will start by considering the diploid model of selection ("single locus with two segregating alleles" Coop 2020). Let's build a simulation of selection using some code I wrote. The code is somewhat similar to that provided by Dr. Coop for figure 10.8, but mine is a bit more step-by-step so you can see the process.
+```{r}
+number_of_generations = 100 #how many generations do you want the simulation to run?
+
+#relative fitnesses
+##here we are setting the relative fitnesses of each of the genotypes.
+fitness_aa = 1
+fitness_ab = 0.8
+fitness_bb = 0.8
+
+#Starting frequencies of alleles and genotypes
+freq_a = 0.7
+ 
+freq_b = 1 - freq_a
+freq_aa = freq_a^2
+freq_ab = 2 * freq_a * freq_b
+freq_bb = freq_b^2
+ 
+#create dataframes for allele and genotype frequencies:
+genotypes = data.frame(t = 0, cbind(freq_aa, freq_ab, freq_bb))
+alleles_frequency = data.frame(t = 0, cbind(freq_a, freq_b))
+ 
+#Now we will simulate over each subsequent generation. 
+for (t in 1 : number_of_generations) {
+ 
+    x_freq_a = freq_aa + 0.5 * freq_ab #get starting freq. of a allele
+    x_freq_b = freq_bb + 0.5 * freq_ab #and b allele. Need to redo this for each generation as selection changes allele frequencies.
+ 
+    x_freq_aa = freq_aa * fitness_aa #here you calculate the frequency of a genotype multiplied by its relative fitness, which we need for each genotype to calculate wbar, the mean fitness of the population of zygotes (equation 10.22)
+    x_freq_ab = freq_ab * fitness_ab
+    x_freq_bb = freq_bb * fitness_bb
+     
+    wbar = x_freq_aa + x_freq_ab + x_freq_bb #here we add those together as in eq. 10.22 to get wbar
+     
+    freq_a = ((freq_aa*fitness_aa)+(freq_a*freq_b*fitness_ab))/wbar #see equation 10.26
+    freq_b = 1 - freq_a #to get the freq. of the other allele, 1-p
+    
+    #recalculate genotype frequencies in next generation:
+    freq_aa = freq_a^2
+    freq_ab = 2 * freq_a * freq_b
+    freq_bb = freq_b^2
+      
+    #add information to table
+    genotypes = rbind(genotypes, data.frame(t, cbind(freq_aa, freq_ab, freq_bb)))
+    alleles_frequency = rbind(alleles_frequency, data.frame(t, cbind(freq_a, freq_b)))
+}
+```
+
+#You should now see two tables to the right, an allele frequency table and a genotype table. What do you notice about the frequencies?
+
+#We can plot these changes over time much like we have done in the past. To plot the a allele frequency over time, for example:
+```{r}
+plot(alleles_frequency$t, alleles_frequency$freq_a,type="l",col="red", xlab="Generations", ylab="Frequency of A allele", ylim = c(0,1)) 
+#ylim command sets y limits of axis; 0 is the lower limit and 1 is the upper limit, since we are working with frequencies, it can't be less than 0 or more than 1
+```
+#We can plot both alleles at once:
+```{r}
+plot(alleles_frequency$t, alleles_frequency$freq_a,type="l",col="red", xlab="Generations", ylab="Allele Frequency", ylim = c(0,1)) 
+lines(alleles_frequency$t, alleles_frequency$freq_b,type="l",col="blue")
+```
+#What is happening here? You can see that the response of the b allele (blue) is opposite that of the a allele (red), as when the frequency of the a allele goes up, the frequency of the blue allele must go down.
+
+#We can also plot the genotype frequencies over time.
+```{r}
+plot(genotypes$t, genotypes$freq_aa,type="l",col="red", xlab="Generations", ylab="Genotype Frequency", ylim = c(0,1))
+lines(genotypes$t, genotypes$freq_ab,type="l",col="green")
+lines(genotypes$t, genotypes$freq_bb,type="l",col="blue")
+```
+
+#Now that we have familiarized ourselves with how the above simulation works, we can find delta(p), the change in allele frequency of p from time t to time t+1:
+```{r}
+#Easy way, use equation 10.27 and the tables we created for allele frequencies using our simulation. 
+
+#create a dataframe that includes p at time t+1 minus p at time t.
+#let's use our handy apply function, like we did to get midparent means in chapter 7 and 8.
+deltap <- apply(alleles_frequency[,-1], 2, diff) #the -1 excludes the first column, which is just time in generations. The 2 iterates over different rows within the same column (as opposed to before with the means, where we were taking the mean of two columns in the same row), and the diff command subtracts the preceding row's value from the following row to get a difference in p for the two generations.
+```
+
+#While we have plotted the relationships for these relative fitnesses already, and it is already apparent what is happening to the frequencies of these alleles (a allele increases, b decreases), we can formalize that with delta(p). If delta(p) is positive, we expect that the frequency of the "p" allele (which we are calling a in our simulation) will increase over time. Correspondingly, you should see that delta(b), or the change in the b allele frequency over time, is negative to indicate decreasing frequency.
