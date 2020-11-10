@@ -12,6 +12,7 @@ output: html_notebook
 ```
 
 2. We need some packages for this exercise.
+**Note**: Those with Windows machines may have trouble with the gsg package. I had students just not run the fitness landscape part and just plot the points generated from the different simulations without the line.
 ```{r}
 install.packages("devtools")
 library(devtools)
